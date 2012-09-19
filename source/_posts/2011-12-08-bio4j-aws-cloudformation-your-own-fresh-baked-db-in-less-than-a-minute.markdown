@@ -16,7 +16,7 @@ tag:
 - release
 ---
 
-> **UPDATE:** You can now use this template from **all zones but ap-southeast-1 ! **
+> **UPDATE:** You can now use this template from **all zones but `ap-southeast-1`! **
 
 
 Hi!
@@ -36,7 +36,7 @@ This template is available in the following address:
 
 So, let's see how easy it actually is to create your stack. First you should go to the `CloudFormation` tab in the amazon console and click the button: `Create New Stack`:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CloudFormationCreateStackScreenShot.jpg)](http://blog.bio4j.com/wp-content/uploads/2011/12/CloudFormationCreateStackScreenShot.jpg)
+{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CloudFormationCreateStackScreenShot.jpg %}
 
 You will see this new window now where you should choose the option **Provide a template URL'** and paste there the URL I just provided before. You should also give your stack a name filling the field `Stack name`. Then click `Continue`.
 

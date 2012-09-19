@@ -29,7 +29,7 @@ As a source for the graph I used the [public EHEC GO annotations](https://s3-eu-
 
 When I first loaded the gexf file in Gephi without applying any kind of filters this is what I got:
 
-{% http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncDraft.png %}
+{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncDraft.png %}
 
 As you (maybe) can see, the size of GO term nodes is proportional to the number of proteins they annotate; still it pretty much looks just like a big hair-ball...
 
