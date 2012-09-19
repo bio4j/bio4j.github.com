@@ -42,7 +42,7 @@ We've included Reactome terms references included in Uniprot files, so from now 
 For those using [AWS](http://aws.amazon.com) (or willing to...) there's a new public EBS snapshot containing the last version of Bio4j DB.
 The snapshot details are the following:
 
-- Snapshot id: **snap-aa5cd3c2**
+- Snapshot id: `snap-aa5cd3c2`
 - Snapshot region: EU West (Ireland)
 - Snapshot size: 100 GB
 
@@ -51,16 +51,17 @@ In order to use it, just create a [Bio4jManager](http://www.bio4j.com/docs/bio4j
 
 ## UP 2011 Bio4j presentation
 
-We're really pleased to announce our presence in this year's UP 2011 Cloud Computing Conference. 
-The presentation will be held on day 4 Thursday, December 8 2011. Check the agenda for the conference [here](http://up-con.com/agenda).
-
 [{% img http://d34uahzum2tefy.cloudfront.net/UP2011_1_LOGOv2.png UP Cloud Computing Conference 2011 %}](http://up-con.com/)
+
+We're really pleased to announce our presence in this year's UP 2011 Cloud Computing Conference. The presentation will be held on day 4 Thursday, December 8 2011. Check the agenda for the conference [here](http://up-con.com/agenda).
+
+
 
 Enjoy!
 
 and happy Thanksgiving!  ;)
 
-[@pablopareja](http://twitter.com/pablopareja)
+[**@pablopareja**](http://twitter.com/pablopareja)
 
 
 

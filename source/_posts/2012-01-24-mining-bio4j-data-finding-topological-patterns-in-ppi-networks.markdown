@@ -49,7 +49,6 @@ circuit = (p) -[:PROTEIN_PROTEIN_INTERACTION]-> (p2) -[:PROTEIN_PROTEIN_INTERACT
 As you can see it's really simple and straightforward. In the first two lines we match the proteins from Swiss-Prot dataset for later retrieving the ones which form a 3-length cycle as described before. Once the query has finished, you should be getting something like this:
 
 ```
-> 
 cypher> 
 ==> +---------------------------------------------------------+
 p.accession | p2.accession | p3.accession | 
@@ -63,9 +62,9 @@ Q8GXA4 Q9FH18 Q8L7E5
 ==> 6632 rows, 1019211 ms
 ```
 
-As you can see the query took **about 17 minutes** to be completed **in a 100% fresh DB** -_there was no information cached at all yet_; with a [**m1.large** AWS machine](http://aws.amazon.com/ec2/instance-types/) -_this machine has **7.5 GB of RAM**_.
+As you can see the query took **about 17 minutes** to be completed **in a 100% fresh DB** -there was no information cached at all yet; with a [**m1.large** AWS machine](http://aws.amazon.com/ec2/instance-types/) -this machine has **7.5GB** of **RAM**.
 
-Not bad, right!?
+Not bad, right!? 
 
 We have to beware of something though, this query returns cycles such as:
 
@@ -75,8 +74,8 @@ We have to beware of something though, this query returns cycles such as:
 as different cycles when they are actually not. That's why I developed a [**simple program**](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/RemoveRepetitionsFromPPICircuits.java) to remove these repetitions as well as for fetching some statistics information.
 After running the program you get two files:
 
-1. **PPICircuitsLength3NoRepeats** file: download it [_here_](https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtNoRepeats.txt)
-2. **PPICircuitsProteinsFreq** file: download it [_here_](https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtProteinsFreq.txt).
+1. **PPICircuitsLength3NoRepeats** file: download it [here](https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtNoRepeats.txt)
+2. **PPICircuitsProteinsFreq** file: download it [here](https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtProteinsFreq.txt).
 
 The **final circuits found** were reduced after performing the filtering to **2226 records**.
 

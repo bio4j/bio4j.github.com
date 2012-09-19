@@ -16,7 +16,7 @@ tag:
 - release
 ---
 
-> **UPDATE:** You can now use this template from **all zones but `ap-southeast-1`! **
+**UPDATE:** You can now use this template from **all zones but `ap-southeast-1`! **
 
 
 Hi!
@@ -32,7 +32,7 @@ This is really useful because thanks to CloudFormation templates, you don't have
 
 This template is available in the following address:
 
-- [**https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicInstanceTemplate.txt**](https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicInstanceTemplate.txt)
+- [**Bio4jBasicInstanceTemplate.txt**](https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicInstanceTemplate.txt)
 
 So, let's see how easy it actually is to create your stack. First you should go to the `CloudFormation` tab in the amazon console and click the button: `Create New Stack`:
 
@@ -41,6 +41,7 @@ So, let's see how easy it actually is to create your stack. First you should go 
 You will see this new window now where you should choose the option **Provide a template URL'** and paste there the URL I just provided before. You should also give your stack a name filling the field `Stack name`. Then click `Continue`.
 
 {% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackSecondStepScreenShot.jpg %}
+
 Ok, now you should be seeing this:
 
 {% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackThirdStepScreenShot1.jpg %}
@@ -65,4 +66,4 @@ Whenever you are done, just select delete stack in the amazon console and don't 
 
 > The only thing you have to do is umount the volumes you have attached, it seems that CloudFormation cannot do that for you right now...
 
-[@pablopareja](http://www.twitter.com/pablopareja)
+[**@pablopareja**](http://www.twitter.com/pablopareja)

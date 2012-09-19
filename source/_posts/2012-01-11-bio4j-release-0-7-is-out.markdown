@@ -47,7 +47,7 @@ From now on, every node present in the database has a property _**nodeType**_ in
 
 ## Availability in all Regions
 
-[{% img left http://d36cz9buwru1tt.cloudfront.net/logo_aws.gif %}](http://aws.amazon.com)
+[{% img right http://d36cz9buwru1tt.cloudfront.net/logo_aws.gif %}](http://aws.amazon.com)
 
 The AWS region you are based in won't be a problem for using Bio4j anymore. EBS Snapshots have been created in all regions as well as CloudFormation templates have been updated so that they can now be used regardless the region where you want to create the stack. 
 
@@ -84,14 +84,13 @@ In order to get visualizations like the one shown above, you should make use of 
   
 {% img http://blog.bio4j.com/wp-content/uploads/2012/01/Bio4jDataBrowserVizProfile-1024x752.png %}
 
-> Just beware of one thing, the behavior of the tool is such that it does not distinguish between highly connected nodes and more isolated ones. Because of this, clicking nodes such as **Trembl** dataset node is not advisable unless you want to see it freeze forever -_ this node has more than 15 million relationships linking it to proteins_.
+> Just beware of one thing, the behavior of the tool is such that it does not distinguish between highly connected nodes and more isolated ones. Because of this, clicking nodes such as **Trembl** dataset node is not advisable unless you want to see it freeze forever -_this node has more than 15 million relationships linking it to proteins_.
 
 ## Run queries with Cypher
 
-[{% img left http://a1.twimg.com/profile_images/195275920/square-logo-no-text-2_normal.png %}](http://docs.neo4j.org/chunked/milestone/cypher-query-lang.html)
-  
 Cypher what?!
 
+> [{% img right http://a1.twimg.com/profile_images/195275920/square-logo-no-text-2_normal.png %}](http://docs.neo4j.org/chunked/milestone/cypher-query-lang.html)
 > **Cypher **is a **declarative language** which allows for expressive and efficient querying of the graph store without having to write traversers in code. It **focuses on the clarity of expressing what to retrieve** from a graph, **not how to do it**, in contrast to imperative languages like Java, and scripting languages like Gremlin.
 
 A query to retrieve protein interaction circuits of length 3 with proteins belonging to Swiss-Prot dataset (limited to 5 results) would look like this in Cypher:
@@ -106,15 +105,11 @@ START d=node:dataset_name_index(dataset_name_index = "Swiss-Prot")
 
 If you want to check out more examples of Bio4j + Cypher, check our [**Bio4j cypher cheat sheet**](https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet) that we will be updating from time to time.
 
-[![](https://github.com/tinkerpop/gremlin/raw/master/doc/images/gremlin-logo.png)](https://github.com/tinkerpop/gremlin/wiki)
-
-
 ## Querying Bio4j with Gremlin
-
-[{% img left https://github.com/tinkerpop/gremlin/raw/master/doc/images/gremlin-logo.png %}](https://github.com/tinkerpop/gremlin/wiki)
   
 Gremlins? What do they have to do with Bio4j!?
 
+> [{% img right https://raw.github.com/tinkerpop/gremlin/master/doc/images/gremlin-standing-small.png %}](https://github.com/tinkerpop/gremlin/wiki)
 > **Gremlin is a graph traversal language that can be natively used in various JVM languages** - it currently provides native support for Java, Groovy, and Scala. However, it can express in a few lines of code what it would take many, many lines of code in Java to express.
 
 Querying proteins associated to the interpro motif with id `IPR023306` in Bio4j with Gremlin would look like this: (limited to 5 results)

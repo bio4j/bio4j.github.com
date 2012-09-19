@@ -39,9 +39,9 @@ Then I applied the following set of filters:
 
 in order to get the GO terms with at least 6 protein annotations plus the proteins which are annotating these terms _(their neighborhoods)_; and this is what it looked like (after applying a _Parallel Force Atlas_ layout algorithm):
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncPreliminary.png) %}
+{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncPreliminary.png %}
 
-I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: `Hide nodes/edges labels if not in filtered graph`.
+I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: "Hide nodes/edges labels if not in filtered graph".
 After doing this and applying the black background preview setting, the visualization finally looked pretty decent:
 
 {% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncFinal.png %}
@@ -53,8 +53,10 @@ Just press the button highlighted in the screenshot and enter the URL for your G
 
 {% img http://blog.bio4j.com/wp-content/uploads/2011/11/gexfButtonBio4jGOToolsScreenshot.jpg %}
 
-You can use the public EHEC GO annotation results URL I used as a sample for this post: `https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml`
+You can use the public EHEC GO annotation results URL I used as a sample for this post: 
+
+- `https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml`
 
 So, that's all for now, please let me know if you play around with this and get some cool visualizations!
 
-[@pablopareja](https://twitter.com/pablopareja)
+[**@pablopareja**](https://twitter.com/pablopareja)

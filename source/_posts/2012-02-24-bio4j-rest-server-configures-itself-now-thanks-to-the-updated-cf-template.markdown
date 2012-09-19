@@ -34,8 +34,8 @@ to the characteristics of the instance type the server is running in, so that it
 
 For that I created these two new mappings in the template:
 
-  * `AWSInstanceType2WrapperConfFile`
-  * `AWSInstanceType2Neo4jPropertiesFile`
+- `AWSInstanceType2WrapperConfFile`
+- `AWSInstanceType2Neo4jPropertiesFile`
 
 Default configuration values are available in the **bio4j-public S3 bucket**. For example in order to have access to the server configuration files of a `m1.xlarge` instance, just go to this url:
 
@@ -45,8 +45,8 @@ same thing for the other file:
 
 - [neo4j.properties - m1.xlarge](https://s3-eu-west-1.amazonaws.com/bio4j-public/server/conf-files/m1.xlarge/neo4j.properties)
 
-If you want to check the conf files for any other instance type, you just have to change the _instance type name_ in the urls linked above.
+If you want to check the conf files for any other instance type, you just have to change the **instance type name** in the urls linked above.
 
 Have a good weekend!
 
-[@pablopareja](http://www.twitter.com/pablopareja)
+**[@pablopareja](http://www.twitter.com/pablopareja)**

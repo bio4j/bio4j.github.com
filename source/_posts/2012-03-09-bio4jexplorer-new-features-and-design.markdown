@@ -28,7 +28,7 @@ I'm happy to announce a new set of features for our tool Bio4jExplorer plus some
 You can now check with Bio4jExplorer the properties that has either a node or relationship in the table situated on the lower part of the interface. Five columns are included:
 
 - **Name:** property name
-- **Type:** property type (`String`, `int`, `float`, `String[ ]`, ...)
+- **Type:** property type (`String`, `int`, `float`, `String[]`, ...)
 - **Indexed:** either the property is indexed or not (yes/no)
 - **Index name**: name of the index associated to this property -if there's any 
 **Index name**: type of the index associated to this property -if there's any 
@@ -77,6 +77,6 @@ In case you are interested on how the tool is implemented, please go to [the pre
 
 I wish you all a great weekend!
 
-_I'll have mine at the beach enjoying our great springy weather with lots of sun down here in Andalucia ;) _
+I'll have mine at the beach enjoying our great springy weather with lots of sun down here in Andalucia ;)
 
 [**@pablopareja**](http://www.twitter.com/pablopareja)

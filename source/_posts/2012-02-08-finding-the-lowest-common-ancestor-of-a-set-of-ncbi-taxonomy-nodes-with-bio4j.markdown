@@ -40,14 +40,14 @@ The last thing we have to do is simply get the first element of the resulting li
 
 {% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAsixthStep.png %}
 
-This algorithm is encapsulated in the class [**TaxonomyAlgo**](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/TaxonomyAlgo.java), specifically in the static method **`lowestCommonAncestor()`** that expects a list of **NCBITaxonNode** as parameter and returns their LCA node.
+This algorithm is encapsulated in the class [**TaxonomyAlgo**](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/TaxonomyAlgo.java), specifically in the static method `lowestCommonAncestor()` that expects a list of **NCBITaxonNode** as parameter and returns their LCA node.
 
 You can also check the class [**LowestCommonAncestorTest**](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/taxonomy/LowestCommonAncestorTest.java) where a simple test program that makes use of this method is implemented. 
 
 This program expects as parameters:
 
 1. Bio4j DB folder
-2. `X`. An arbitrary number of NCBI taxonomy IDs representing the node set
+2. An arbitrary number of NCBI taxonomy IDs representing the node set
 
 The Scientific name and the NCBI tax ID of the LCA are printed in the console as result.
 

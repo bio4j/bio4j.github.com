@@ -1,0 +1,149 @@
+Comments:
+
+Bio4j Go Tools (first version available)
+
+	Pingback from: http://blog.ohnosequences.com/?p=198
+	
+	alper yilmaz
+	When I put a protein id, the tools is asking for location of GoSlim.xml file, where can I retrieve this file? I checked the download page of Gene Ontology (http://www.geneontology.org/GO.downloads.ontology.shtml) but couldn’t find it.
+	thanks.
+	
+	alper yilmaz
+	Nevermind, it was asking location and filename to save the results. So, there’s no problem..
+	Thanks..
+	
+	Pablo Pareja
+	Hi Alper,
+	You’re right it can be a bit confusing the way the app asks for a file location to save the results.
+	I just made some small changes to the app so that things are more straightforward. This version (v 1.01) is already available at Bio4jGoTools github repository
+	
+Bio4j Go Tools goes web
+
+	Pingback from: http://blog.ohnosequences.com/2011/04/bio4j-go-tools-goes-web/
+
+GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project
+
+	Pingback from: tm.durusau.net/?p=10143
+
+Bio4j includes RefSeq data now !
+
+	Pingback from: tm.durusau.net/?p=11335
+	Pingback from: http://blog.ohnosequences.com/2011/05/bio4j-includes-refseq-data-now/
+	
+Improvements in Bio4j Go Tools (Graph visualization)
+
+	Pingback from: tm.durusau.net/?p=11645
+	
+Bio4j current release now available as an AWS snapshot
+
+	Pingback from: tm.durusau.net/?p=11999
+	
+Bio4jExplorer: familiarize yourself with Bio4j nodes and relationships
+
+	Pingback from: tm.durusau.net/?p=16245
+	Pingback from: http://www.scoop.it/t/big-data-news/p/550906385/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships-bio4j-blog
+	Pingback from: http://www.scoop.it/t/social-network-data-analysis/p/2673962637/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships-bio4j-blog
+	
+Cool GO annotation visualizations with Gephi + Bio4j
+
+	Pingback from: tm.durusau.net/?p=18750
+	Pingback from: http://blog.ohnosequences.com/2011/12/gene-ontology-go-graph-visualizations-for-ehec-automatic-annotation-of-bgi-v4-assembly/
+	Amrit
+	Good to know it. Does it take expression data also. I have expression data with gene name and probe I’d only. Would you mind to suggest whether it work or not for this kind of data. Thank u so much for your help.
+	Pablo Pareja
+	Hi Amrit,
+	There is no restriction for the input data, the only thing is that the tool expects Uniprot accessions as parameters. You would just need to map your gene names to Uniprot accessions using a ID mapping tool such as that available at uniprot website:
+	http://www.uniprot.org/
+	(ID mapping tab)
+	Cheers,
+	Pablo
+	
+Bio4j + AWS CloudFormation = your own fresh baked DB in less than a minute!
+
+	Pingback from: http://blog.bio4j.com/2012/01/bio4j-release-0-7-is-out/
+	Pingback from: http://blog.ohnosequences.com/2011/12/neo4j-server-and-aws-become-good-friends/
+	
+Using Bio4j + Neo4j Graph-algo component for finding protein-protein interaction paths
+
+	alper yilmaz
+	it’s getting more interesting.. :)
+	that’s what I meant by “data-mining” during our skype conference.. cool..
+	Pingback from: http://tm.durusau.net/?p=19985
+	Pingback from: http://blog.bio4j.com/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/
+	Roji
+	I follow neo4j which much itrneest. It is a novel approach, however i think property searches are very important and neo4j is not very good at this.So for example, implementing a complete social website with millions of users would not be feasible with neo4j i think. I am not sure off course.What is also itrneesting is the upcoming of native XML database. They also solve the imdependace mismatch to a certain expend. However their model are trees not graphs, graphs are more general in this sense, but i think more optimizations are possible if you choose trees.
+	ppareja
+	Hi Roji,
+	Could you provide some reasons why you think property searches are not good with Neo4j?
+	Regarding XML databases and other tree-oriented options, they definitely are great for many use cases, however when you have to deal with highly connected data they may not be enough. The case depicted in this blog post is a good example, even just modelling protein-protein interactions would not be possible with a tree – you get plenty of cycles which cannot be expressed with that paradigm…
+	
+Bio4j release 0.7 is out !
+
+	Pingback from: http://tm.durusau.net/?p=20453
+	
+Mining Bio4j data: finding topological patterns in PPI networks
+
+	Pingback from: http://tm.durusau.net/?p=20959
+	
+Finding the lowest common ancestor of a set of NCBI taxonomy nodes with Bio4j
+
+	Paul Agapow
+	Oddly enough, I had to solve this exact problem a few years ago (to see how much of a tree is left after an extinction, for calculating the biodiversity impact) and then just a few weeks ago (but for the unrooted case). Both times I was sure this had to be a solved problem, but there were no obvious solution out there.
+	
+	Victor de Jager
+	Hi Pablo,
+	interesting post. I solved a very similar problem a few years ago using an early version of the ETE toolkit. http://ete.cgenomics.org/
+	It’s a well documented with plenty of examples.
+	
+	ppareja
+	Hi Victor,
+	Thanks for the link. Just a quick question, is it open-source?
+	
+	Pablo Pareja
+	Hi Paul,
+	I was also quite surprised there wasn’t any ‘official’/obvious solution for this, specially when I’d say it’s quite a common problem.
+	Now that you mention it, I think I’ll extend the implementation for the unrooted case as well.
+	By the way, just out of curiosity, what kind of solution did you come up with in the end?
+	
+	Pingback from: http://tm.durusau.net/?p=22136
+	
+	Jaime
+	Hi,
+	You may be interested in this python script based on the ETE library: https://github.com/jhcepas/ncbi_taxonomy
+	BTW, ETE is free software
+	
+	Miguel
+	The LCA problem is closely related to the Range Minimum Query problem in graph theory. Working on metagenomics I had to implement a fast algorithm to search for LCA of an arbitrary number of leafs in a taxonomic tree. Given that the tree is always the same, you can pre-process it for fast searches. I ended up implemented the Sparse table algorithm for RMQ explained here:
+	http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=lowestCommonAncestor
+	You say in your post that you couldn’t find any solution out there for more than 2 nodes. The reason is simple: the LCA of N nodes can be decomposed to N-1 times the LCAs of 2 nodes (for example, the LCA of 3 nodes is the LCA of one of them and the LCA of the other 2).
+	
+	ppareja
+	Hi Miguel,
+	Thanks for the link ;)
+	In my case though I didn’t want to do any pre-processing on purpose. Having everything stored as a graph gives you a great advantage both in terms of speed and scalability and I didn’t want to throw that away. On the other hand this sort of algorithm is one that could be applied to other sub-graphs of Bio4j, not only the taxonomy tree, so once you implement it in this way it’d be trivial to adapt it to other such cases.
+	I know that the problem can be decomposed so that you end up with a set of 2-nodes problems, what I meant however was that I expected to find algorithms for this problem with some sort of specific optimizations when dealing with a big set of nodes, not only two. For example somehow not passing again through nodes already visited, which will happen when you do decomposing the problem in “isolated” pairs of nodes.
+	
+Bio4j 0.7, some numbers
+
+	Patrick Durusau
+	Excellent!
+	Question: When I checked at PubMed, I did not find Neo4j cited in any of the medical literature. I am not a medical professional but am interested in what might promote Bio4j in the medical research community?
+	It is too good of a resource to be unnoticed.
+	Patrick
+	
+	Pingback from: http://tm.durusau.net/?p=22535
+	
+	ppareja
+	Hi Patrick,
+	I’m glad you liked the post.
+	It’s true that Bio4j may not have caught the attention of many people yet who could definitely make a good use out of it. What are the reasons for that? Well, I think it could be a mixture of factors.
+	Some people don’t like too much learning new technologies/strategies/workflows… and tend to stick to things they already know as long as possible – which is totally respectable and undestandable. Other people though, may simply not have found about it yet… It’s also possible that due to the lack of a well structured project documentation, potential users get lost in their way when trying to figure out what’s Bio4j about and/or miss the parts they could be interested in.
+	I could keep on going with more possible reasons that are coming to my mind but still, couldn’t be really objective – it’s me who created this project  :D
+	The point you bring up is actually one of the reasons why we value so much any sort of feedback for the project, (specially constructive ‘bad’ feedback that help us realize its weaknesses)
+	Let me know if you come up with an idea to let more people know about Bio4j !
+	Pablo
+	
+Bio4jExplorer, new features and design!
+
+	Pingback from: http://tm.durusau.net/?p=22779
+	
