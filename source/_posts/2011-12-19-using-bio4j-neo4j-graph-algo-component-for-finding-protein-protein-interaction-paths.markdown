@@ -1,5 +1,6 @@
 ---
-comments: true
+comments: false
+author: Pablo Pareja
 date: 2011-12-19 21:35:41
 layout: post
 slug: using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths
@@ -14,20 +15,18 @@ tag:
 - topology
 ---
 
-Hi all !
+Hi all!
 
 Today I managed to find some time to check out the [**Graph-algo component**](http://wiki.neo4j.org/content/Graph-algo) from Neo4j and after playing with it plus Bio4j a bit, I have to say it seems pretty cool.
 For those who don't know what I'm talking about, here you have the description you can find in Neo4j wiki:
 
-
-> _This is a component that offers implementations of common graph algorithms on top of Neo4j. It is mostly focused around finding paths, like finding the shortest path between two nodes, but it also contains a few different centrality measures, like betweenness centrality for nodes. _
-
+> This is a component that offers implementations of common graph algorithms on top of Neo4j. It is mostly focused around finding paths, like finding the shortest path between two nodes, but it also contains a few different centrality measures, like betweenness centrality for nodes.
 
 The algorithm for finding the **shortest path between two nodes** caught my attention and I started to wonder how could I give it a try applying it to the data included in Bio4j. I realized then that **protein-protein interactions** could be a good candidate so I got down to work and created the utility method:
 
- `findShortestInteractionPath(ProteinNode proteinSource, ProteinNode proteinTarget, int maxDepth, int maxResultsNumber)`
+- `findShortestInteractionPath(ProteinNode proteinSource, ProteinNode proteinTarget, int maxDepth, int maxResultsNumber)`
 
-for getting at most 'maxResultsNumber' paths between 'proteinSource' and 'proteinTarget' with a maximum path depth of 'maxDepth'.
+for getting at most `maxResultsNumber` paths between `proteinSource` and `proteinTarget` with a maximum path depth of `maxDepth`.
 You can check the [**source code here** ](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/InteractionsPathFinder.java)
 
 I also did a **[small test program](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/FindInteractionPaths.java)** which prints out the paths found between two proteins.

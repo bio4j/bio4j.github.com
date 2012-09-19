@@ -1,5 +1,6 @@
 ---
-comments: true
+comments: false
+author: Pablo Pareja
 date: 2012-02-24 13:21:39
 layout: post
 slug: bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template
@@ -19,6 +20,7 @@ Hi all,
 I just wanted to write a very short post informing about the changes in the [**Bio4jBasicRestServerTemplate**](https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicRestServerTemplate.txt). 
 
 > Template what!? 
+
 If that's what you're thinking, please go [here](http://blog.ohnosequences.com/2011/12/neo4j-server-and-aws-become-good-friends/) to get an idea of what's this all about.
 
 From now on, this CloudFormation template adapts the server configuration files:
