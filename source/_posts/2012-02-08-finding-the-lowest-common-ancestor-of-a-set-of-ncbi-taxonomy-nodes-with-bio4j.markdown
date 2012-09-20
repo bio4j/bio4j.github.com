@@ -59,26 +59,32 @@ Enjoy!
 
 - **Paul Agapow**
   Oddly enough, I had to solve this exact problem a few years ago (to see how much of a tree is left after an extinction, for calculating the biodiversity impact) and then just a few weeks ago (but for the unrooted case). Both times I was sure this had to be a solved problem, but there were no obvious solution out there.
+
   - **Pablo Pareja**
     Hi Paul,
     I was also quite surprised there wasn’t any ‘official’/obvious solution for this, specially when I’d say it’s quite a common problem.
     Now that you mention it, I think I’ll extend the implementation for the unrooted case as well.
     By the way, just out of curiosity, what kind of solution did you come up with in the end?
+
 - **Victor de Jager**
   Hi Pablo,
   interesting post. I solved a very similar problem a few years ago using an early version of the ETE toolkit. http://ete.cgenomics.org/
   It’s a well documented with plenty of examples.
+
   - **ppareja**
     Hi Victor,
     Thanks for the link. Just a quick question, is it open-source?
+
 - **Jaime**
   Hi,
   You may be interested in this python script based on the ETE library: https://github.com/jhcepas/ncbi_taxonomy
   BTW, ETE is free software
+
 - **Miguel**
   The LCA problem is closely related to the Range Minimum Query problem in graph theory. Working on metagenomics I had to implement a fast algorithm to search for LCA of an arbitrary number of leafs in a taxonomic tree. Given that the tree is always the same, you can pre-process it for fast searches. I ended up implemented the Sparse table algorithm for RMQ explained here:
   [](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=lowestCommonAncestor)
   You say in your post that you couldn’t find any solution out there for more than 2 nodes. The reason is simple: the LCA of N nodes can be decomposed to N-1 times the LCAs of 2 nodes (for example, the LCA of 3 nodes is the LCA of one of them and the LCA of the other 2).
+  
   - **ppareja**
     Hi Miguel,
     Thanks for the link ;)

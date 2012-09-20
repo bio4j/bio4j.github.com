@@ -53,6 +53,7 @@ Have a good day!
   Question: When I checked at PubMed, I did not find Neo4j cited in any of the medical literature. I am not a medical professional but am interested in what might promote Bio4j in the medical research community?
   It is too good of a resource to be unnoticed.
   Patrick
+  
   - **ppareja**
     Hi Patrick,
     I’m glad you liked the post.
