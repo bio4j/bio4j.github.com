@@ -4,7 +4,7 @@ date: 2011-04-11 16:43:50
 layout: post
 author: Pablo Pareja
 slug: bio4j-go-tools-goes-web
-title: 'Bio4j Go Tools goes web '
+title: Bio4j Go Tools goes web
 wordpress_id: 24
 categories:
 - Bio4jGoTools

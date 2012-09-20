@@ -43,3 +43,4 @@ Enjoy it  ;)
   I just made some small changes to the app so that things are more straightforward. This version (v 1.01) is already available at Bio4jGoTools github repository
 - [**alper yilmaz**](http://alperyilmaz.org/blog) Nevermind, it was asking location and filename to save the results. So, there’s no problem..
   Thanks..
+  

@@ -37,3 +37,15 @@ Apart from that, I've been thinking how **Bio4j could open a lot of doors for to
 **With Bio4j however, you just have to move around the nodes and get the information you're looking for!** ;)
 
 [**@pablopareja**](http://www.twitter.com/pablopareja)
+
+## comments
+
+- **alper yilmaz**
+  it’s getting more interesting.. :)
+  that’s what I meant by “data-mining” during our skype conference.. cool..
+- **Roji**
+  I follow neo4j which much itrneest. It is a novel approach, however i think property searches are very important and neo4j is not very good at this.So for example, implementing a complete social website with millions of users would not be feasible with neo4j i think. I am not sure off course.What is also itrneesting is the upcoming of native XML database. They also solve the imdependace mismatch to a certain expend. However their model are trees not graphs, graphs are more general in this sense, but i think more optimizations are possible if you choose trees.
+    - **ppareja**
+    Hi Roji,
+    Could you provide some reasons why you think property searches are not good with Neo4j?
+    Regarding XML databases and other tree-oriented options, they definitely are great for many use cases, however when you have to deal with highly connected data they may not be enough. The case depicted in this blog post is a good example, even just modelling protein-protein interactions would not be possible with a tree – you get plenty of cycles which cannot be expressed with that paradigm…
