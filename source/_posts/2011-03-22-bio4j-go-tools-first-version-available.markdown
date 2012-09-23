@@ -35,11 +35,16 @@ Enjoy it  ;)
 
 ## comments
 
-- [**alper yilmaz**](http://alperyilmaz.org/blog) When I put a protein id, the tools is asking for location of GoSlim.xml file, where can I retrieve this file? I checked the download page of Gene Ontology (http://www.geneontology.org/GO.downloads.ontology.shtml) but couldn’t find it.
+- [**alper yilmaz**](http://alperyilmaz.org/blog) 
+  When I put a protein id, the tools is asking for location of GoSlim.xml file, where can I retrieve this file? I checked the download page of Gene Ontology (http://www.geneontology.org/GO.downloads.ontology.shtml) but couldn’t find it.
 
   thanks.
+
   - **Pablo Pareja** Hi Alper,
   You’re right it can be a bit confusing the way the app asks for a file location to save the results.
   I just made some small changes to the app so that things are more straightforward. This version (v 1.01) is already available at Bio4jGoTools github repository
-- [**alper yilmaz**](http://alperyilmaz.org/blog) Nevermind, it was asking location and filename to save the results. So, there’s no problem..
+
+- [**alper yilmaz**](http://alperyilmaz.org/blog) 
+  Nevermind, it was asking location and filename to save the results. So, there’s no problem..
   Thanks..
+  

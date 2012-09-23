@@ -46,4 +46,20 @@ Have a good day!
 
 [**@pablopareja**](http://twitter.com/pablopareja)
 
+## comments
 
+- **Patrick Durusau**
+  Excellent!
+  Question: When I checked at PubMed, I did not find Neo4j cited in any of the medical literature. I am not a medical professional but am interested in what might promote Bio4j in the medical research community?
+  It is too good of a resource to be unnoticed.
+  Patrick
+  
+  - **ppareja**
+    Hi Patrick,
+    I’m glad you liked the post.
+    It’s true that Bio4j may not have caught the attention of many people yet who could definitely make a good use out of it. What are the reasons for that? Well, I think it could be a mixture of factors.
+    Some people don’t like too much learning new technologies/strategies/workflows… and tend to stick to things they already know as long as possible – which is totally respectable and undestandable. Other people though, may simply not have found about it yet… It’s also possible that due to the lack of a well structured project documentation, potential users get lost in their way when trying to figure out what’s Bio4j about and/or miss the parts they could be interested in.
+    I could keep on going with more possible reasons that are coming to my mind but still, couldn’t be really objective – it’s me who created this project  :D
+    The point you bring up is actually one of the reasons why we value so much any sort of feedback for the project, (specially constructive ‘bad’ feedback that help us realize its weaknesses)
+    Let me know if you come up with an idea to let more people know about Bio4j !
+    Pablo

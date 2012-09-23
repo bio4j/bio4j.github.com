@@ -60,3 +60,16 @@ You can use the public EHEC GO annotation results URL I used as a sample for thi
 So, that's all for now, please let me know if you play around with this and get some cool visualizations!
 
 [**@pablopareja**](https://twitter.com/pablopareja)
+
+## comments
+
+- **Amrit** 
+  Good to know it. Does it take expression data also. I have expression data with gene name and probe I’d only. Would you mind to suggest whether it work or not for this kind of data. Thank u so much for your help.
+
+  - **Pablo Pareja** 
+    Hi Amrit,
+    There is no restriction for the input data, the only thing is that the tool expects Uniprot accessions as parameters. You would just need to map your gene names to Uniprot accessions using a ID mapping tool such as that available at uniprot website:
+    http://www.uniprot.org/
+    (ID mapping tab)
+    Cheers,
+    Pablo
