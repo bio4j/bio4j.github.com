@@ -43,11 +43,14 @@ Until now, Bio4jModel library included the core classes for the manipulation and
 
 ## New script for the importing process
 
-You don't have to worry anymore about manually downloading/decompressing/etc... the sources for the DB in case you want to import Bio4j in your own cluster/machine. Just run the script **DownloadAndPrepareBio4jSources.sh** and it will do it all for you.
+You don't have to worry anymore about manually downloading/decompressing/etc... the sources for the DB in case you want to import Bio4j in your own cluster/machine. Just run the script **[DownloadAndPrepareBio4jSources.sh](https://github.com/bio4j/Bio4j/blob/master/DownloadAndPrepareBio4jSources.sh)** and it will do it all for you.
 
 ## Bug fixes
 
 1. **MetalIonBindingSiteFeature** This feature relationship had an erroneous name assigned and it's been fixed.
 
+Well, that's all for now, I'll be posting more information about this new release soon ;)
+
+Cheers,
 
 [**@pablopareja**](http://www.twitter.com/pablopareja)
