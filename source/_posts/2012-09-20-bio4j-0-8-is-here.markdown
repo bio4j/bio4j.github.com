@@ -1,0 +1,53 @@
+---
+comments: false
+date: 2012-09-22 16:50:52
+layout: post
+slug: bio4j-0-8-is-here
+title: Bio4j 0.8 is here!
+categories:
+- Releases
+tag:
+- release
+- development
+---
+
+Hi everyone!
+
+I'm glad to announce the release of **Bio4j 0.8** including more than **5.488.000 new proteins** and **3.233.000 genes** among others,  plus the following improvements and features:
+
+## Pfam families 
+
+Bio4j includes now all Pfam families included in Uniprot KB (both Swiss-Prot and TrEMBL). For that, both a new node type and relationship type have been created: 
+
+- [PfamNode](http://www.bio4j.com/docs/bio4j/apidocs/com/era7/bioinfo/bio4j/model/nodes/PfamNode.html)
+
+- [ProteinPfamRel](http://www.bio4j.com/docs/bio4j/apidocs/com/era7/bioinfo/bio4j/model/relationships/protein/ProteinPfamRel.html) (this relationship connects a protein and the respective Pfam families associated to it)
+
+The following properties have been added to the Pfam node including:
+
+- ID
+- Name
+
+Besides, an exact index for the Pfam family ID property has also been created *( pfam\_id\_index ).*
+
+## NCBI taxonomy tree GI index improved
+
+Old merged node IDs have been incorporated to the Gene Identifier <--> Taxonomy units index. That means that now all the pairs GI-TaxID which included old merged Tax-ID are also part of the index, resulting on a higher rate of hits when using the index.
+For that we used the file **meged.dmp** provided in the [official tax dump file](ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz) provided by the NCBI.
+
+## Bio4j and Bio4jModel projects unification
+
+[Bio4j](https://github.com/bio4j/Bio4j) project has absorbed [Bio4jModel](https://github.com/bio4j/Bio4jModel) project from this release on.
+
+Until now, Bio4jModel library included the core classes for the manipulation and traversal of the graph while Bio4j project only included the importing programs. I've been thinking for a while that this could be confusing and, since there was no real need to keep them as independent projects, I decided to put it all under Bio4j *(you just need one jar file now ;) ).* 
+
+## New script for the importing process
+
+You don't have to worry anymore about manually downloading/decompressing/etc... the sources for the DB in case you want to import Bio4j in your own cluster/machine. Just run the script **DownloadAndPrepareBio4jSources.sh** and it will do it all for you.
+
+## Bug fixes
+
+1. **MetalIonBindingSiteFeature** This feature relationship had an erroneous name assigned and it's been fixed.
+
+
+[**@pablopareja**](http://www.twitter.com/pablopareja)
