@@ -7,10 +7,36 @@ sharing: true
 footer: true
 ---
 
-an awful lot of biological data, integrated in a graph DB. **Mark**Down _formatting_ works! 
 
-\[
-f = \sum_{i \in I}\int_J g_i
-\]
-
-even math :) 
+<p>
+    Bio4j is a bioinformatics graph based DB including most data available in <a href="http://www.uniprot.org/help/uniprotkb">UniProt KB</a> (SwissProt + Trembl), <a href="http://www.geneontology.org/">Gene Ontology</a> (GO), <a href="http://www.uniprot.org/help/uniref">UniRef</a> (50,90,100), <a href="http://www.ncbi.nlm.nih.gov/RefSeq/">RefSeq</a>, <a href="http://www.ncbi.nlm.nih.gov/Taxonomy/">NCBI taxonomy</a>, and <a href="http://enzyme.expasy.org/">Expasy Enzyme DB</a>. <em>(Manuscript in preparation)</em>
+    
+    Check <a href="http://www.slideshare.net/pablo_pareja/bio4j" target="_blank">this presentation</a> at slideshare for a general overview of the project.
+</p>
+<h3>Some numbers</h3>
+<p>
+    The current version of Bio4j (0.7) includes:
+    </p><ul id="numbersList">
+      <li>Relationships: <span style="font-weight:bold;">530.642.683</span></li>
+      <li>Nodes: <span style="font-weight:bold;">76.071.411</span></li>
+      <li>Relationship types: <span style="font-weight:bold;">139</span></li>
+      <li>Node types: <span style="font-weight:bold;">38</span></li>
+    </ul>
+<p></p>              
+<h3>technology</h3>
+<p>
+    Bio4j uses <a href="http://neo4j.org" target="_blank">Neo4j</a> technology.
+</p>
+<h3>scalability</h3>
+<p>
+    Since Bio4j is based on Neo4j graph-based DB it is highly scalable. 
+    New data sources and features will be added from time to time and what it's more important, the <a href="http://www.bio4j.com/docs/bio4jmodel/apidocs/" target="_blank">Java API</a> allows you to easily incorporate your own data to Bio4j so you can make the best out of it.                
+</p>         
+<h3>performance</h3>
+<p>
+    In Bio4j data is organized in a way semantically equivalent to what it represents thanks to the graph structure. That means that queries which would even be impossible to perform with a standard Relational DB, just take a couple of seconds with Bio4j.              
+</p>  
+<h3>licensing</h3>
+<p>
+    Bio4j is an open source platform released under <a href="http://www.gnu.org/licenses/agpl.html" target="_blank">AGPLv3</a>.            
+</p>
