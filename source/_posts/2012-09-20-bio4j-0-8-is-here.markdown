@@ -13,7 +13,7 @@ tag:
 
 Hi everyone!
 
-I'm glad to announce the release of **Bio4j 0.8** including more than **5.488.000 new proteins** and **3.233.000 genes** among others,  plus the following improvements and features:
+I'm glad to announce the release of [**Bio4j 0.8**](https://github.com/bio4j/Bio4j/wiki/Bio4j-0.8) including more than **5.488.000 new proteins** and **3.233.000 genes** among others,  plus the following improvements and features:
 
 ## Pfam families 
 
