@@ -279,8 +279,12 @@ task :set_root_dir, :dir do |t, args|
 end
 
 desc "Set up _deploy folder and deploy branch for Github Pages deployment"
-task :setup_github_pages do
-  repo_url = get_stdin("Enter the read/write url for your repository: ")
+task :setup_github_pages, :repo do |t, args|
+  if args.repo
+    repo_url = args.repo
+  else
+    repo_url = get_stdin("Enter the read/write url for your repository: ")
+  end
   user = repo_url.match(/:([^\/]+)/)[1]
   branch = (repo_url.match(/\/[\w-]+.github.com/).nil?) ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
@@ -326,28 +330,6 @@ task :setup_github_pages do
     end
   end
   puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
-end
-
-def ok_failed(condition)
-  if (condition)
-    puts "OK"
-  else
-    puts "FAILED"
-  end
-end
-
-def get_stdin(message)
-  print message
-  STDIN.gets.chomp
-end
-
-def ask(message, valid_options)
-  if valid_options
-    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
-  else
-    answer = get_stdin(message)
-  end
-  answer
 end
 
 desc "list tasks"
