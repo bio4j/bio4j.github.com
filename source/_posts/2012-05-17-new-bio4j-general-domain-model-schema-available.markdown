@@ -21,10 +21,10 @@ It's been a few months already since I published the last post but that doesn't 
 
 Ok, but let's get to the point of this post. Even though there already is available a web tool to explore Bio4j data structure ([**Bio4jExplorer**](http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html)), I was feeling that something else was missing in order to get the big picture of all the data included and how it's interrelated. So I got to work and created this general domain model including all node types and relationships (also specifying their cardinality).
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/05/Bio4jDomainModelWithCardinality1-1024x893.jpg %}
+{% img /images/Bio4jDomainModelWithCardinality1-1024x893.jpg %}
 
 I didn't include "auxiliary" relationships linked to the reference node in order to not pollute the schema with relationships that don't have any semantic meaning but rather indexing purposes. Also, the text included in both boxes represents different relationships all linking the same nodes -specifically Protein with CommentType and FeatureType. I could have drawn them as the rest but then I would have ended up with a hairball instead of a meaningful schema.
 
 As always, any feedback is welcome!
 
-[**@pablopareja **](http://twitter.com/pablopareja)
+[**@pablopareja**](http://twitter.com/pablopareja)

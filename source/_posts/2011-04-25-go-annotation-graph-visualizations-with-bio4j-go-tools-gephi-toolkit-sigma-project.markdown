@@ -31,4 +31,4 @@ Regarding to the client side, we're using the open-source project [SiGMa](https:
 
 Here you have a screenshot of a small sample of GO Annotation results:
 
-[{% img http://blog.bio4j.com/wp-content/uploads/2011/04/goAnnotationGraphScreenShot-1024x725.jpg %}](http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html)
+[{% img /images/goAnnotationGraphScreenShot-1024x725.jpg %}](http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html)

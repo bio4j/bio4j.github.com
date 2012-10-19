@@ -29,11 +29,11 @@ Just as a heads up, here are the **general numbers of Bio4j 0.7** :
 
 Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the **first 20 Relationship types** (click on the image below to check the interactive chart):
 
-[{% img http://blog.bio4j.com/wp-content/uploads/2012/03/first20RelTypesChart-1024x797.png %}](http://bio4j.com/imgs/release07/relsBarChart.html)
+[{% img /images/first20RelTypesChart-1024x797.png %}](http://bio4j.com/imgs/release07/relsBarChart.html)
 
 Here, the same thing but for the **first 20 Node types** (click on the image below to check the interactive chart):
 
-[{% img http://blog.bio4j.com/wp-content/uploads/2012/03/first20NodeTypesChart-1024x794.png %}](http://bio4j.com/imgs/release07/nodesBarChart.html)
+[{% img /images/first20NodeTypesChart-1024x794.png %}](http://bio4j.com/imgs/release07/nodesBarChart.html)
 
 You can also check these two files including the numbers from all existing types:
 

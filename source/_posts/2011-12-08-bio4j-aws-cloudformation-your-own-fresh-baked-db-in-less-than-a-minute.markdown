@@ -36,29 +36,29 @@ This template is available in the following address:
 
 So, let's see how easy it actually is to create your stack. First you should go to the `CloudFormation` tab in the amazon console and click the button: `Create New Stack`:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CloudFormationCreateStackScreenShot.jpg %}
+{% img /images/CloudFormationCreateStackScreenShot.jpg %}
 
 You will see this new window now where you should choose the option **Provide a template URL'** and paste there the URL I just provided before. You should also give your stack a name filling the field `Stack name`. Then click `Continue`.
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackSecondStepScreenShot.jpg %}
+{% img /images/CreateStackSecondStepScreenShot.jpg %}
 
 Ok, now you should be seeing this:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackThirdStepScreenShot1.jpg %}
+{% img /images/CreateStackThirdStepScreenShot1.jpg %}
 
 Provide then your key-pair name, availability zone, and finally enter the type of instance you want to launch.
 Once you clicked continue you'll see a review of all the parameters you entered so far like:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackFourthStepScreenShot1.jpg %}
+{% img /images/CreateStackFourthStepScreenShot1.jpg %}
 
 Check everything is as you wish and click continue.
 You should be seeing then something like this:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackFifthStepScreenShot.jpg %}
+{% img /images/CreateStackFifthStepScreenShot.jpg %}
 
 Now you just have to wait for about 30 seconds until after refreshing the stack state changes to green color and says "CREATE_COMPLETE". Click on the output tab and you will see the IP address you need to connect with SSH to your new instance.
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/12/CreateStackSixthStepScreenShot.jpg %}
+{% img /images/CreateStackSixthStepScreenShot.jpg %}
 
 So now you just have to connect to your instance and you should have your fresh backed Bio4j DB under the folder `/mnt/bio4j_volume/bio4jdb` ;)
 

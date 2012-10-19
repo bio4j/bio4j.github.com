@@ -30,7 +30,7 @@ That's where I came up with the idea of looking for **topological patterns** thr
 
 I decided to mine the data in order to find **circuits/simple cycles of length 3** where **at least one protein is from Swiss-Prot dataset**:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/01/PPICircuit.png %}
+{% img /images/PPICircuit.png %}
 
 I would like to point out that the **direction** here **is important** and these two cycles:
 
@@ -81,7 +81,7 @@ The **final circuits found** were reduced after performing the filtering to **22
 
 Finally, I also created a really simple chart including the absolute frequency of the first 20 proteins with more occurrences in the cycles that were found.
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/01/proteinsFrequencyChart.png %}
+{% img /images/proteinsFrequencyChart.png %}
 
 Well, that's all for now. Have a good day!
 

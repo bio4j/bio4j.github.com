@@ -29,29 +29,29 @@ As a source for the graph I used the [public EHEC GO annotations](https://s3-eu-
 
 When I first loaded the gexf file in Gephi without applying any kind of filters this is what I got:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncDraft.png %}
+{% img /images/EHECMolFuncDraft.png %}
 
 As you (maybe) can see, the size of GO term nodes is proportional to the number of proteins they annotate; still it pretty much looks just like a big hair-ball...
 
 Then I applied the following set of filters:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncFilters.jpg %}
+{% img /images/EHECMolFuncFilters.jpg %}
 
 in order to get the GO terms with at least 6 protein annotations plus the proteins which are annotating these terms _(their neighborhoods)_; and this is what it looked like (after applying a _Parallel Force Atlas_ layout algorithm):
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncPreliminary.png %}
+{% img /images/EHECMolFuncPreliminary.png %}
 
 I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: "Hide nodes/edges labels if not in filtered graph".
 After doing this and applying the black background preview setting, the visualization finally looked pretty decent:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/11/EHECMolFuncFinal.png %}
+{% img /images/EHECMolFuncFinal.png %}
 
 Please go [here](http://bio4j.com/imgs/EHEC_MolecularFunction_SeaDragon/) to check the version exported with [Sea Dragon plugin](https://gephi.org/plugins/seadragon/) where you can zoom and move around!
 
 Well, if you like the result _(or you don't but you want to play with this and get a better viz!)_, I just uploaded a new version of [Bio4j GO Tools](http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html) viewer where you can download the corresponding .gexf file for your GO annotations XML file. 
 Just press the button highlighted in the screenshot and enter the URL for your GO annotations XML file:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2011/11/gexfButtonBio4jGOToolsScreenshot.jpg %}
+{% img /images/gexfButtonBio4jGOToolsScreenshot.jpg %}
 
 You can use the public EHEC GO annotation results URL I used as a sample for this post: 
 

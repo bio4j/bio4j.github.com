@@ -21,7 +21,7 @@ Hello everyone,
 
 I'm happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.
 
-[{% img http://blog.bio4j.com/wp-content/uploads/2012/03/bio4jExplorerScreenshot-1024x712.png %}](http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html)
+[{% img /images/bio4jExplorerScreenshot-1024x712.png %}](http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html)
 
 ### Node & Relationship properties
 
@@ -33,19 +33,19 @@ You can now check with Bio4jExplorer the properties that has either a node or re
 - **Index name**: name of the index associated to this property -if there's any 
 **Index name**: type of the index associated to this property -if there's any 
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/03/bio4jExplorerPropertiesTable.png %}
+{% img /images/bio4jExplorerPropertiesTable.png %}
 
 ### Node & Relationship Data source
 
 You can also see now from which source a Node or Relationship was imported, _some examples would be Uniprot, Uniref, GO, RefSeq..._
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/03/bio4jExplorerDataSourceLabel.png %}
+{% img /images/bio4jExplorerDataSourceLabel.png %}
 
 ### Relationships Name property
 
 With this new version you can directly check here the "internal" name of relationships without having to go to the respective javadoc documentation. 
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/03/bio4jExplorerRelationshipsNameProperty.png %}
+{% img h/images/bio4jExplorerRelationshipsNameProperty.png %}
 
 This is quite useful when you are writing your Cypher or Gremlin queries, just check it, copy it, and paste it in your query.  An example using the relationship shown in the picture would be this query included in the [Bio4j Cypher cheatsheet](https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet):
 

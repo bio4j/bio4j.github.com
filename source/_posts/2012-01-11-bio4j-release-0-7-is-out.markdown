@@ -78,11 +78,11 @@ Once you get your server running thanks to the useful template I just mentioned 
 Using the data browser tab of the Web administration tool you can explore in real-time the contents of Bio4j!
 
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/01/Bio4jDataBrowser-1024x699.png %}
+{% img /images/Bio4jDataBrowser-1024x699.png %}
 
 In order to get visualizations like the one shown above, you should make use of **visualization profiles**. There you can specify different styles associated to customizable rules which can be expressed in terms of the node properties. Here's a screenshot showing how the visualization profile I used for the visualization above looks like:
   
-{% img http://blog.bio4j.com/wp-content/uploads/2012/01/Bio4jDataBrowserVizProfile-1024x752.png %}
+{% img /images/Bio4jDataBrowserVizProfile-1024x752.png %}
 
 > Just beware of one thing, the behavior of the tool is such that it does not distinguish between highly connected nodes and more isolated ones. Because of this, clicking nodes such as **Trembl** dataset node is not advisable unless you want to see it freeze forever -_this node has more than 15 million relationships linking it to proteins_.
 

@@ -18,27 +18,27 @@ Ok, but let's get into detail and see my algorithm:
 
 We start from a set of nodes with an arbitrary length -_4 in this sample_, which are spread through the taxonomy tree:
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAfirstStep.png %}
+{% img /images/LCAfirstStep.png %}
 
 We fetch then the first node from the set and calculate its whole ancestor list to the main root of the taxonomy.
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAsecondStep.png %}
+{% img /images/LCAsecondStep.png %}
 
 Now that we have the list, we take the second node of the set and check if it's contained in it, if not, we keep going up through its ancestors until we find a hit. Once the hit has been found, we get rid of the previous elements in the list (if any) so that they are not taken into account for the next iterations in the algorithm.
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAthirdStep.png %}
+{% img /images/LCAthirdStep.png %}
 
 We keep going trough our node set, and C also removes some elements of the list...
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAfourthStep.png %}
+{% img /images/LCAfourthStep.png %}
 
 Finally we reach the last node of our set, but no element is removed from our list as a result.
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAfifthStep.png %}
+{% img /images/LCAfifthStep.png %}
 
 The last thing we have to do is simply get the first element of the resulting list and there we have our lowest common ancestor!
 
-{% img http://blog.bio4j.com/wp-content/uploads/2012/02/LCAsixthStep.png %}
+{% img /images/LCAsixthStep.png %}
 
 This algorithm is encapsulated in the class [**TaxonomyAlgo**](https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/TaxonomyAlgo.java), specifically in the static method `lowestCommonAncestor()` that expects a list of **NCBITaxonNode** as parameter and returns their LCA node.
 
