@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://bio4j.github.com
+url: http://bio4j.com
 title: bio4j
 subtitle: bio data graph db
 author: oh no sequences!
@@ -91,7 +91,7 @@ disqus_short_name:
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-12161444-3
    
 # Facebook Like
 facebook_like: false  
