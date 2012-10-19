@@ -29,7 +29,7 @@ Both services results and client-server communication are XML based following a 
 
 A user-friendly [AIR application](https://github.com/pablopareja/Bio4jGoTools) has been developed allowing the user to directly use these services abstracting the logic of the different requests.
 
-[{% img http://blog.bio4j.com/wp-content/uploads/2011/03/Bio4jGoToolsScreenShot.jpg 739 Bio4j Go Tools AIR app screenshot %}](https://github.com/pablopareja/Bio4jGoTools)
+[{% img /images/Bio4jGoToolsScreenShot.jpg 739 Bio4j Go Tools AIR app screenshot %}](https://github.com/pablopareja/Bio4jGoTools)
 
 Enjoy it  ;)
 
