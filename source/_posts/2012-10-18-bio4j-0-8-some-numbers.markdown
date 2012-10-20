@@ -27,11 +27,11 @@ Bio4j 0.8 was recently released and now it's time to have a deeper look at its n
 
 Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the **first 20 Relationship types**:
 
-{% img /images/bio4j08first20NodeTypes.png %}
+[{% img /images/bio4j08first20NodeTypes.png %}](/images/bio4j08first20NodeTypes.png)
 
 Here, the same thing but for the **first 20 Node types**:
 
-{% img /images/bio4j08first20RelTypes.png %}
+[{% img /images/bio4j08first20RelTypes.png %}](/images/bio4j08first20NodeTypes.png)
 
 You can also check these two files including the numbers for all the existing types:
 
