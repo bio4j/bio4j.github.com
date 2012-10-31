@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Code"
+title: "Wiki"
 sharing: true
 footer: true
 ---
