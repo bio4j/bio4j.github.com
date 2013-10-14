@@ -49,10 +49,13 @@ This new release comes with many fixes including:
 6. ProteinUnpublishedObservationCitation relationship was missing
 7. The following node types were not properly indexed by their type till now: _BookNode, ArticleNode, OnlineArticleNode, SubmissionNode, PatentNode, PublisherNode, OnlineJournalNode, JournalNode_
 
+## Java 7
 
-That's all for now, I'll be posting much more information about this new release soon ;)
+Bio4j uses Java 7 now ;)
 
+That's all for now, I'll be posting much more information about this new release soon.
 
+Cheers!
 
 [**@pablopareja**](http://twitter.com/pablopareja)
 
