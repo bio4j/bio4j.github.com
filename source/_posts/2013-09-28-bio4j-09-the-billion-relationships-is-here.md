@@ -25,13 +25,13 @@ A lot of new features and improvements have been incorporated including the foll
 
 We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. All this can be found under the package _com.era7.bioinfo.bio4j.model_
 
-{% img /images/blueprints.png %} ## New Blueprints layer
+## New Blueprints layer
 
-Apart from the set of interfaces we've developed another layer for the domain layer using Blueprints. This way we're going one step further for making the domain model independent from the choice of database technology.
+{% img /images/blueprints.png %} Apart from the set of interfaces we've developed another layer for the domain layer using Blueprints. This way we're going one step further for making the domain model independent from the choice of database technology.
 
-{% img /images/titan.png %} ## New Titan implementation
+## New Titan implementation
 
-After the problems we had with the so called _**supernodes**_ - which are quite common indeed, we decided to give a try to [**Titan Graph Database**](http://thinkaurelius.github.io/titan/) technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you'll be hearing more about this pretty soon! ;)
+{% img /images/titan.png %} After the problems we had with the so called _**supernodes**_ - which are quite common indeed, we decided to give a try to [**Titan Graph Database**](http://thinkaurelius.github.io/titan/) technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you'll be hearing more about this pretty soon! ;)
 
 ## Bye bye reference node
 
