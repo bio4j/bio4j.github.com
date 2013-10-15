@@ -20,7 +20,7 @@ Hi!
 That's why **the importing process is modular and customizable, allowing you to import just the data you are interested in**. 
 Here's the big picture of where do entities and relationships come from in the general domain model:
 
-[{% img /images/DomainModelWithDataSourceView.png %}](/images/DomainModelWithDataSourceView.png)
+[{% img /images/DomainModelWithDataSourceView.png %}](https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg)
 
 
 There's however one thing that you have to **keep in mind, you must be coherent when choosing the data sources** you want to have included in your database; that's to say, you cannot have for example the Uniref clusters without previously importing Uniprot KB, otherwise there wouldn't be proteins to connect to when importing the clusters!
