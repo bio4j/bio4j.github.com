@@ -15,9 +15,9 @@ Hi everyone!
 
 So [**Bio4j 0.9**](https://github.com/bio4j/Bio4j/wiki/Bio4j-0.9) finally made its way out and it's here bringing you more than 1 billion relationships. These are approximately its main numbers:
 
-- 1.216.993.547 relationships
-- 190.625.351 nodes
-- 584.436.429 properties
+- **1.216.993.547** relationships
+- **190.625.351** nodes
+- **584.436.429** properties
 
 A lot of new features and improvements have been incorporated including the following, _(I will go into more detail in later posts specifically dedicated to each of them)_
 
@@ -28,11 +28,10 @@ We have introduced a new level of abstraction for the domain model by decoupling
 ## New Blueprints layer
 
 <img src="/images/blueprints.png" style="float:left"> Apart from the set of interfaces we've developed another layer for the domain layer using Blueprints. This way we're going one step further for making the domain model independent from the choice of database technology.
-</img>
 
 ## New Titan implementation
 
-{% img /images/titan.png %} After the problems we had with the so called _**supernodes**_ - which are quite common indeed, we decided to give a try to [**Titan Graph Database**](http://thinkaurelius.github.io/titan/) technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you'll be hearing more about this pretty soon! ;)
+<img src="/images/titan.png" style="float:left"> After the problems we had with the so called _**supernodes**_ - which are quite common indeed, we decided to give a try to [**Titan Graph Database**](http://thinkaurelius.github.io/titan/) technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you'll be hearing more about this pretty soon! ;)
 
 ## Bye bye reference node
 
