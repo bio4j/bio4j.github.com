@@ -27,7 +27,10 @@ We have introduced a new level of abstraction for the domain model by decoupling
 
 ## New Blueprints layer
 
-{% img /images/blueprints.png %} Apart from the set of interfaces we've developed another layer for the domain layer using Blueprints. This way we're going one step further for making the domain model independent from the choice of database technology.
+<div style="float: right">
+    ![](/images/blueprints.png)
+Apart from the set of interfaces we've developed another layer for the domain layer using Blueprints. This way we're going one step further for making the domain model independent from the choice of database technology.
+</div>
 
 ## New Titan implementation
 
