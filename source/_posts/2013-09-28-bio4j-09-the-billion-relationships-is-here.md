@@ -37,7 +37,9 @@ All this can be found under the package _com.era7.bioinfo.bio4j.model_
 
 ## Bye bye reference node
 
-We decided to finally stop using the reference node for indexing purposes _(actually there's no use for it anymore in Bio4j)_. I have to admit it, I never was a fan of it and it was about time to do it. So now auxiliary relationships such as, for instance, _MainTaxonRel_ or _MainDatasetRel_ have been replaced by a standard node index.
+We decided to finally stop using the reference node for indexing purposes _(actually there's no use for it anymore in Bio4j)_. 
+
+I have to admit it, I never was a fan of it and it was about time to do it. So now auxiliary relationships such as, for instance, _MainTaxonRel_ or _MainDatasetRel_ have been replaced by a standard node index.
 
 ## Bug fixes
 
@@ -55,7 +57,7 @@ This new release comes with many fixes including:
 
 Bio4j uses Java 7 now ;)
 
-That's all for now, I'll be posting much more information about this new release soon.
+OK, so that's all for now, I'll be posting much more information about this new release soon.
 
 Cheers!
 
