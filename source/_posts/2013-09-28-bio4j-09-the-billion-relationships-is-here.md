@@ -24,6 +24,7 @@ A lot of new features and improvements have been incorporated including the foll
 ## Refurbishing the domain model
 
 We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
+
 All this can be found under the package _com.era7.bioinfo.bio4j.model_
 
 ## New Blueprints layer
@@ -32,7 +33,7 @@ All this can be found under the package _com.era7.bioinfo.bio4j.model_
 
 ## New Titan implementation
 
-<img src="/images/titan.png" style="float:left"> After the problems we had with the so called _**supernodes**_ - which are quite common indeed, we decided to give a try to [**Titan Graph Database**](http://thinkaurelius.github.io/titan/) technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you'll be hearing more about this pretty soon! ;)
+<img src="/images/titan.png" style="float:left"> After the problems we had with the so called [_**supernodes**_](http://thinkaurelius.com/2012/10/25/a-solution-to-the-supernode-problem/) - which are quite common indeed, we decided to give a try to [**Titan Graph Database**](http://thinkaurelius.github.io/titan/) technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you'll be hearing more about this pretty soon! ;)
 
 ## Bye bye reference node
 
