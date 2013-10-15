@@ -3,8 +3,8 @@ comments: false
 author: Pablo Pareja
 date: 2013-10-15 04:33:27
 layout: post
-slug: Bio4j 0.9, and the billion relationships are here!
-title: Bio4j 0.9, and the billion relationships are here!
+slug: Bio4j 0.9 the billion relationships are here!
+title: Bio4j 0.9 the billion relationships are here!
 categories:
 - Releases
 tag:
