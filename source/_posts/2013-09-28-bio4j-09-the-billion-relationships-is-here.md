@@ -24,7 +24,6 @@ A lot of new features and improvements have been incorporated including the foll
 ## Refurbishing the domain model
 
 <img src="/images/domainModelThumbnail.png" style="float:right">We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
-
 All this can be found under the package _com.era7.bioinfo.bio4j.model_
 
 ## New Blueprints layer
@@ -38,7 +37,6 @@ All this can be found under the package _com.era7.bioinfo.bio4j.model_
 ## Bye bye reference node
 
 We decided to finally stop using the reference node for indexing purposes _(actually there's no use for it anymore in Bio4j)_. 
-
 I have to admit it, I never was a fan of it and it was about time to do it. So now auxiliary relationships such as, for instance, _MainTaxonRel_ or _MainDatasetRel_ have been replaced by a standard node index.
 
 ## Bug fixes
