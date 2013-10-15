@@ -23,7 +23,7 @@ A lot of new features and improvements have been incorporated including the foll
 
 ## Refurbishing the domain model
 
-We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
+<img src="/images/domainModelThumbnail.png" style="float:right">We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
 
 All this can be found under the package _com.era7.bioinfo.bio4j.model_
 
