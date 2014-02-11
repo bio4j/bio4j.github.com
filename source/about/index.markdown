@@ -5,7 +5,7 @@ sharing: true
 footer: true
 ---
 
-Bio4j is a project initiated and led by [Oh no sequences!](http://ohnosequences.com/) the [Era7 bioinformatics](http://www.era7bioinformatics.com) R&D group.
+Bio4j is a project initiated and led by **[Oh no sequences!](http://ohnosequences.com/)** the **[Era7 bioinformatics](http://www.era7bioinformatics.com)** R&D group.
 
 ### core team
 

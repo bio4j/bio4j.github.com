@@ -39,7 +39,7 @@ git commit -s -m "Commit message"
 
 #### Developer Certificate of Origin 1.1
 
-``` 
+``` yaml
 Developer's Certificate of Origin 1.1
 
 By making a contribution to this project, I certify that:
