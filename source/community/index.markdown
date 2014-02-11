@@ -1,12 +1,16 @@
 ---
 layout: page
-title: "about"
+title: "community"
 sharing: true
 footer: true
 ---
 
-Community
+- **[@bio4j](http://twitter.com/bio4j)** on Twitter
+- **[bio4j-user](http://groups.google.com/group/bio4j-user)** Google group
+- **[Bio4j](http://www.linkedin.com/groups/Bio4j-3890937)** LinkedIn group
 
-- Google groups Bio4j [user list](http://groups.google.com/group/bio4j-user)
-- Follow us on [twitter](http://twitter.com/bio4j)
-- Join the Bio4j [LinkedIn group](http://www.linkedin.com/groups/Bio4j-3890937)
+## issues, help, feedback
+
+The **[bio4j-user](http://groups.google.com/group/bio4j-user)** group is a good place for all sort of feedback, user experiences, generic questions, whatever.
+
+If you are having issues with something concrete about bio4j, though, it is probably better to open an issue in the corresponding repository; you can get a list from the [bio4j github org](https://github.com/bio4j) page. If you don't know where exactly this should go, [bio4j/bio4j](https://github.com/bio4j/bio4j) will do. You can make sure that the right kind of people by mentioning either **@bio4j/bio-people** or **@bio4j/coders** in your issue text.
