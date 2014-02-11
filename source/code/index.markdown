@@ -5,5 +5,4 @@ sharing: true
 footer: true
 ---
 
-
-Check out the specific [Bio4j github organization](https://github.com/bio4j).
+Bio4j is developed in Java and Scala, licensed under [AGPLv3](www.gnu.org/licenses/agpl-3.0.html). All development happens in GitHub, under the [bio4j](https://github.com/bio4j) organization; in particular the [bio4j/bio4j](https://github.com/bio4j/bio4j) repository acts as an entry point for the whole codebase.
