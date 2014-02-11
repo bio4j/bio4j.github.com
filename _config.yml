@@ -50,6 +50,7 @@ default_asides: [asides/recent_posts.html, asides/github.html]
 # blog_index_asides:
 # post_asides:
 # page_asides:
+page_asides: [asides/github.html]
 
 # ----------------------- #
 #   3rd Party Settings    #
