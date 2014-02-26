@@ -1,4 +1,4 @@
-_Bio4j accepted as a mentoring org for Google Summer of Code 2014!! check the [blog post](/blog/bio4j-accepted-for-google-summer-of-code-2014)_
+_Bio4j accepted as a mentoring org for Google Summer of Code 2014!! check the [blog post](/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014)_
 
 Bio4j is a high-**performance** **cloud**-enabled **graph**-based **open** source **bioinformatics data** platform, integrating the data available in the most representative open data sources around protein information. It integrates the data available in 
 
