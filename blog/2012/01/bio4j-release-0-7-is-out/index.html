@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Bio4j release 0.7 is out! - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="Hi!I’m happy to announce that the version 0.7 of Bio4j has been released. Check out the wide set of new features, tools and improvements:Expasy Enz...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/2012/01/bio4j-release-0-7-is-out/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Bio4j release 0.7 is out!</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-01-11T11:50:52-05:00" pubdate>Jan 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hi!</p>
+
+<p>I’m happy to announce that the version 0.7 of Bio4j has been released. Check out the wide set of new features, tools and improvements:</p>
+
+<h2 id="expasy-enzyme-database-integration">Expasy Enzyme database integration</h2>
+
+<p>From now on you have the whole <a href="http://enzyme.expasy.org"><strong>Enzyme DB</strong></a> included in Bio4j. For that, both a new node type and relationship type have been created: </p>
+
+<ul>
+  <li><a href="http://www.bio4j.com/docs/bio4jmodel/apidocs/com/era7/bioinfo/bio4jmodel/nodes/EnzymeNode.html">EnzymeNode</a>
+-<a href="http://www.bio4j.com/docs/bio4jmodel/apidocs/com/era7/bioinfo/bio4jmodel/relationships/protein/ProteinEnzymaticActivityRel.html">ProteinEnzymaticActivityRel</a> (this relationship connects a protein and the respective enzyme nodes associated to it)</li>
+</ul>
+
+<p>All properties found have been incorporated to the enzyme node including:</p>
+
+<ul>
+  <li>ID</li>
+  <li>Official name</li>
+  <li>Alternate names</li>
+  <li>Cofactors</li>
+  <li>Comments</li>
+  <li>Catalytic activity</li>
+  <li>Prosite cross-references</li>
+</ul>
+
+<h2 id="node-type-indexing">Node type indexing</h2>
+
+<p>From now on, every node present in the database has a property <em><strong>nodeType</strong></em> including its type which has been indexed. That way you can now access all nodes belonging to an specific type really easily. </p>
+
+<h2 id="availability-in-all-regions">Availability in all Regions</h2>
+
+<p><a href="http://aws.amazon.com"><img class="right" src="http://d36cz9buwru1tt.cloudfront.net/logo_aws.gif" /></a></p>
+
+<p>The AWS region you are based in won’t be a problem for using Bio4j anymore. EBS Snapshots have been created in all regions as well as CloudFormation templates have been updated so that they can now be used regardless the region where you want to create the stack. </p>
+
+<blockquote>
+  <p>Only Asia Pacific (Singapore) <code>ap-southeast-1</code> region is not ready due to ongoing issues from AWS side regarding extremely slow S3 object downloading. Hope we can find a work around for this soon!</p>
+</blockquote>
+
+<h2 id="new-cloudformation-templates">New CloudFormation templates</h2>
+
+<h3 id="basic-bio4j-instance-updated">Basic Bio4j instance (updated)</h3>
+
+<p>The basic Bio4j instance template has been updated so that now you can use it from all zones. Check out more info about this in the <a href="http://blog.bio4j.com/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute/"><strong>updated blog post</strong></a></p>
+
+<h3 id="basic-bio4j-rest-server">Basic Bio4j REST server</h3>
+
+<p>A new template has been developed so that you can easily deploy your Neo4j-Bio4j REST server in less than a minute.</p>
+
+<p>This template is available in the following address:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicRestServerTemplate.txt"><strong>https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicRestServerTemplate.txt</strong></a></li>
+</ul>
+
+<p>The steps you should follow to create the stack are really simple. Actually, you can follow as a guide <a href="http://blog.ohnosequences.com/2011/12/neo4j-server-and-aws-become-good-friends/"><strong>this blog post</strong></a> about the template I created for deploying a general Neo4j server, <em>only one or two parameters vary</em></p>
+
+<h2 id="bio4j-rest-server">Bio4j REST server</h2>
+
+<p>Once you get your server running thanks to the useful template I just mentioned before, using Neo4j WebAdmin with Bio4j as source you will be able to:</p>
+
+<h3 id="explore-you-database-with-the-data-browser">Explore you database with the Data browser</h3>
+
+<p>Using the data browser tab of the Web administration tool you can explore in real-time the contents of Bio4j!</p>
+
+<p><img src="/images/Bio4jDataBrowser-1024x699.png" /></p>
+
+<p>In order to get visualizations like the one shown above, you should make use of <strong>visualization profiles</strong>. There you can specify different styles associated to customizable rules which can be expressed in terms of the node properties. Here’s a screenshot showing how the visualization profile I used for the visualization above looks like:</p>
+
+<p><img src="/images/Bio4jDataBrowserVizProfile-1024x752.png" /></p>
+
+<blockquote>
+  <p>Just beware of one thing, the behavior of the tool is such that it does not distinguish between highly connected nodes and more isolated ones. Because of this, clicking nodes such as <strong>Trembl</strong> dataset node is not advisable unless you want to see it freeze forever -<em>this node has more than 15 million relationships linking it to proteins</em>.</p>
+</blockquote>
+
+<h2 id="run-queries-with-cypher">Run queries with Cypher</h2>
+
+<p>Cypher what?!</p>
+
+<blockquote>
+  <p><a href="http://docs.neo4j.org/chunked/milestone/cypher-query-lang.html"><img class="right" src="http://a1.twimg.com/profile_images/195275920/square-logo-no-text-2_normal.png" /></a>
+<strong>Cypher **is a **declarative language</strong> which allows for expressive and efficient querying of the graph store without having to write traversers in code. It <strong>focuses on the clarity of expressing what to retrieve</strong> from a graph, <strong>not how to do it</strong>, in contrast to imperative languages like Java, and scripting languages like Gremlin.</p>
+</blockquote>
+
+<p>A query to retrieve protein interaction circuits of length 3 with proteins belonging to Swiss-Prot dataset (limited to 5 results) would look like this in Cypher:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">START d=node:dataset_name_index(dataset_name_index = "Swiss-Prot")
+</span><span class="line"> MATCH d &lt;-[r:PROTEIN_DATASET]- p, 
+</span><span class="line"> circuit = (p) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p2) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p3) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p)
+</span><span class="line"> return p.accession, p2.accession, p3.accession, p.accession
+</span><span class="line"> limit 5</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>If you want to check out more examples of Bio4j + Cypher, check our <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet"><strong>Bio4j cypher cheat sheet</strong></a> that we will be updating from time to time.</p>
+
+<h2 id="querying-bio4j-with-gremlin">Querying Bio4j with Gremlin</h2>
+
+<p>Gremlins? What do they have to do with Bio4j!?</p>
+
+<blockquote>
+  <p><a href="https://github.com/tinkerpop/gremlin/wiki"><img class="right" src="https://raw.github.com/tinkerpop/gremlin/master/doc/images/gremlin-standing-small.png" /></a>
+<strong>Gremlin is a graph traversal language that can be natively used in various JVM languages</strong> - it currently provides native support for Java, Groovy, and Scala. However, it can express in a few lines of code what it would take many, many lines of code in Java to express.</p>
+</blockquote>
+
+<p>Querying proteins associated to the interpro motif with id <code>IPR023306</code> in Bio4j with Gremlin would look like this: (limited to 5 results)</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">gremlin&gt; g.idx('interpro_id_index')[['interpro_id_index':'IPR023306']].inE('PROTEIN_INTERPRO').outV.accession[0..4]
+</span><span class="line">==&gt; E2GK26
+</span><span class="line">==&gt; G3PMS4
+</span><span class="line">==&gt; G3Q865
+</span><span class="line">==&gt; G3PIL8
+</span><span class="line">==&gt; G3NNA4
+</span><span class="line">gremlin&gt; </span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>If you want to check out more examples of Bio4j + Gremlin, check our <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-gremlin-cheat-sheet"><strong>Bio4j gremlin cheat sheet</strong></a> that we will be updating from time to time.</p>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<ol>
+  <li><strong>Dataset nodes</strong> There was a bug in the importing process which resulted in the creation of a new dataset node everytime a new Uniprot entry was stored. Now everything’s fine!</li>
+</ol>
+
+<p>So that’s all for now! Hope you enjoy all this changes and new features I’ve been working on in the last couple of months. As always, feel free to give any feedback you may have, I’m looking forward to it ;)</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">oh no sequences!</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2012-01-11T11:50:52-05:00" pubdate>Jan 11<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/releases/'>Releases</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/" title="Previous Post: Using Bio4j + Neo4j Graph-algo component for finding protein-protein interaction paths">&laquo; Using Bio4j + Neo4j Graph-algo component for finding protein-protein interaction paths</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/" title="next Post: Mining Bio4j data: finding topological patterns in PPI networks">Mining Bio4j data: finding topological patterns in PPI networks &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

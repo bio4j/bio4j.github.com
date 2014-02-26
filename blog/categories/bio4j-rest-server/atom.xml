@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Bio4j REST Server | bio4j]]></title>
+  <link href="http://bio4j.github.com/blog/categories/bio4j-rest-server/atom.xml" rel="self"/>
+  <link href="http://bio4j.github.com/"/>
+  <updated>2014-02-26T13:02:30-05:00</updated>
+  <id>http://bio4j.github.com/</id>
+  <author>
+    <name><![CDATA[oh no sequences!]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bio4j REST Server configures itself now thanks to the updated CF template]]></title>
+    <link href="http://bio4j.github.com/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template/"/>
+    <updated>2012-02-24T08:21:39-05:00</updated>
+    <id>http://bio4j.github.com/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+
+<p>I just wanted to write a very short post informing about the changes in the <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicRestServerTemplate.txt"><strong>Bio4jBasicRestServerTemplate</strong></a>. </p>
+
+<blockquote>
+  <p>Template what!? </p>
+</blockquote>
+
+<p>If that’s what you’re thinking, please go <a href="http://blog.ohnosequences.com/2011/12/neo4j-server-and-aws-become-good-friends/">here</a> to get an idea of what’s this all about.</p>
+
+<p>From now on, this CloudFormation template adapts the server configuration files:</p>
+
+<ul>
+  <li><code>neo4j-wrapper.conf</code></li>
+  <li><code>neo4j.properties</code></li>
+</ul>
+
+<p>to the characteristics of the instance type the server is running in, so that it can make the best out of it.</p>
+
+<blockquote>
+  <p>These configurations assume that the server is running alone in the machine.</p>
+</blockquote>
+
+<p>For that I created these two new mappings in the template:</p>
+
+<ul>
+  <li><code>AWSInstanceType2WrapperConfFile</code></li>
+  <li><code>AWSInstanceType2Neo4jPropertiesFile</code></li>
+</ul>
+
+<p>Default configuration values are available in the <strong>bio4j-public S3 bucket</strong>. For example in order to have access to the server configuration files of a <code>m1.xlarge</code> instance, just go to this url:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/server/conf-files/m1.xlarge/neo4j-wrapper.conf">neo4j-wrapper.conf - m1.xlarge</a></li>
+</ul>
+
+<p>same thing for the other file:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/server/conf-files/m1.xlarge/neo4j.properties">neo4j.properties - m1.xlarge</a></li>
+</ul>
+
+<p>If you want to check the conf files for any other instance type, you just have to change the <strong>instance type name</strong> in the urls linked above.</p>
+
+<p>Have a good weekend!</p>
+
+<p><strong><a href="http://www.twitter.com/pablopareja">@pablopareja</a></strong></p>
+]]></content>
+  </entry>
+  
+</feed>

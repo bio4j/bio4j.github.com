@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>code - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="        code          Bio4j is developed in Java and Scala, licensed under  the AGPLv3 license. All development happens in GitHub, under the bio4j ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/code/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">code</h1>
+    
+  </header>
+  
+  <p>Bio4j is developed in <strong>Java</strong> and <strong>Scala</strong>, licensed under  the <strong><a href="www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a></strong> license. All development happens in GitHub, under the <a href="https://github.com/bio4j">bio4j</a> organization; in particular the <a href="https://github.com/bio4j/bio4j">bio4j/bio4j</a> repository acts as an entry point for the whole codebase.</p>
+
+<h3 id="developers-mailing-list">developers mailing list?</h3>
+
+<p>We use the <strong><a href="https://github.com/bio4j/bio4j/issues">issues from the bio4j/bio4j repository</a></strong> for general discussions, feedback, and communication between developers.</p>
+
+<p>We <strong>don’t</strong> use mailing lists for development. In our opinion they make it really hard to link to code, get some real output from conversations or more prosaic things such as code syntax highlighting.</p>
+
+<h3 id="contributing">contributing</h3>
+
+<p>With respect to contribution formalities we try to:</p>
+
+<ul>
+  <li>keep things as <strong>simple</strong> as possible for everyone</li>
+  <li>make sure that things stay <strong>open</strong> and <strong>available</strong> under any circumstances</li>
+</ul>
+
+<p>Guided by that, for contributors we just require that</p>
+
+<ol>
+  <li>you agree to the standard text in the <em><a href="http://elinux.org/Developer_Certificate_Of_Origin">Developer Certificate of Origin 1.1</a></em></li>
+  <li>you sign your commits using <code>git commit --signoff</code></li>
+</ol>
+
+<p>The sign-off is a simple line at the end of the commit message for the patch or pull request, which certifies that you wrote it or otherwise have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify what is said in the <a href="http://elinux.org/Developer_Certificate_Of_Origin">Developer Certificate of Origin 1.1</a> (see also below) then you just add a line saying</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">Signed-off-by: Random J Developer &lt;random@developer.example.org&gt;</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>When committing using the command line you can sign off using the <code>--signoff</code> or <code>-s</code> flag. This adds a <code>Signed-off-by</code> line by the committer at the end of the commit log message.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git commit -s -m <span class="s2">&quot;Commit message&quot;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h4 id="developer-certificate-of-origin-11">Developer Certificate of Origin 1.1</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+</pre></td><td class="code"><pre><code class="yaml"><span class="line"><span class="l-Scalar-Plain">Developer&#39;s Certificate of Origin 1.1</span>
+</span><span class="line">
+</span><span class="line"><span class="l-Scalar-Plain">By making a contribution to this project, I certify that</span><span class="p-Indicator">:</span>
+</span><span class="line">
+</span><span class="line"><span class="l-Scalar-Plain">(a) The contribution was created in whole or in part by me and I</span>
+</span><span class="line">    <span class="l-Scalar-Plain">have the right to submit it under the open source license</span>
+</span><span class="line">    <span class="l-Scalar-Plain">indicated in the file; or</span>
+</span><span class="line">
+</span><span class="line"><span class="l-Scalar-Plain">(b) The contribution is based upon previous work that, to the best</span>
+</span><span class="line">    <span class="l-Scalar-Plain">of my knowledge, is covered under an appropriate open source</span>
+</span><span class="line">    <span class="l-Scalar-Plain">license and I have the right under that license to submit that</span>
+</span><span class="line">    <span class="l-Scalar-Plain">work with modifications, whether created in whole or in part</span>
+</span><span class="line">    <span class="l-Scalar-Plain">by me, under the same open source license (unless I am</span>
+</span><span class="line">    <span class="l-Scalar-Plain">permitted to submit under a different license), as indicated</span>
+</span><span class="line">    <span class="l-Scalar-Plain">in the file; or</span>
+</span><span class="line">
+</span><span class="line"><span class="l-Scalar-Plain">(c) The contribution was provided directly to me by some other</span>
+</span><span class="line">    <span class="l-Scalar-Plain">person who certified (a), (b) or (c) and I have not modified</span>
+</span><span class="line">    <span class="l-Scalar-Plain">it.</span>
+</span><span class="line">
+</span><span class="line"><span class="l-Scalar-Plain">(d) I understand and agree that this project and the contribution</span>
+</span><span class="line">    <span class="l-Scalar-Plain">are public and that a record of the contribution (including all</span>
+</span><span class="line">    <span class="l-Scalar-Plain">personal information I submit with it, including my sign-off) is</span>
+</span><span class="line">    <span class="l-Scalar-Plain">maintained indefinitely and may be redistributed consistent with</span>
+</span><span class="line">    <span class="l-Scalar-Plain">this project or the open source license(s) involved.</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+  
+    <footer>
+      
+      
+        <div class="sharing">
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

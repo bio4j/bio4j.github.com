@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Bio4j includes RefSeq data now! - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="Hi all,After some weeks of hard work I finally finished the importer for RefSeq data.First of all, I should clarify some points about its licensing...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/2011/05/bio4j-includes-refseq-data-now/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Bio4j includes RefSeq data now!</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2011-05-30T08:49:41-04:00" pubdate>May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hi all,</p>
+
+<p>After some weeks of hard work I finally finished the importer for RefSeq data.
+First of all, I should clarify some points about its licensing:</p>
+
+<ul>
+  <li>Data has been retrieved from the public <a href="ftp://ftp.ncbi.nih.gov/refseq/release/complete/">ftp site</a> for RefSeq complete release. There is no extra/different data coming from other source.</li>
+  <li>Quoting NCBI site: <em>“NCBI places no restrictions on the use or distribution of the GenBank data. However, some submitters may claim patent, copyright, or other intellectual property rights in all or a portion of the data they have submitted.”</em></li>
+</ul>
+
+<p>Once this has been said I will go into more details of how it’s been done.</p>
+
+<h3 id="genome-elements-sequences">Genome elements’ sequences</h3>
+
+<p>Sequences are not stored on Bio4j DB but uploaded as separate files to <a href="http://aws.amazon.com/s3/">S3</a> (Amazon Simple Storage Service) instead. Why doing it this way? For several reasons:</p>
+
+<ul>
+  <li>Having all sequences stored in the DB would take more than a decent amount of space</li>
+  <li>Most queries to the DB wouldn’t be done in terms of the sequence content</li>
+  <li>Relevant data included in RefSeq in terms of performing queries would be information about genes, rnas, genome elements, positions of all these elements, etc (rather than the sequence itself).</li>
+  <li>Sequences are stored in txt files whose filename is the unique version string for the specific genome element, (e.g. NC_012932.txt) That way they can easily be retrieved whenever it’s needed. Plus, S3 service provides a way of extracting a range of bytes from a file without downloading the whole content, so there’s no need of downloading the complete sequence in the case where you already know the range of the sequence you are interested in.</li>
+</ul>
+
+<p>In some cases, no sequence can be uploaded for a genome element. These are the cases where instead of a final sequence, a list of terms as join(x…x)complement(x…x(contig(joing(…)) is provided (I never thought I’d find hundreds of lines with these terms where a sequence was supposed to be…).</p>
+
+<h3 id="genome-elements-data">Genome elements’ data</h3>
+
+<p>Regarding elements, the following are included (this are stored in Bio4j, not S3):</p>
+
+<ul>
+  <li>m RNA</li>
+  <li>Misc RNA</li>
+  <li>Nc RNA</li>
+  <li>r RNA	</li>
+  <li>t RNA</li>
+  <li>rm RNA</li>
+  <li>CDS</li>
+  <li>gene</li>
+</ul>
+
+<p>Data stored for all these elements includes their positions and note attribute (whenever it’s found). I have to say that we decided not to extract more information from the gbff files since it can easily be accessed navigating through Bio4j by means of the connection Uniprot entry &lt;–&gt; RefSeq genome element. Plus, information included in Uniprot releases is much more reliable than that found in RefSeq files.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pablo Pareja</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2011-05-30T08:49:41-04:00" pubdate>May 30<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project/" title="Previous Post: GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project">&laquo; GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization/" title="next Post: Improvements in Bio4j Go Tools (Graph visualization)">Improvements in Bio4j Go Tools (Graph visualization) &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

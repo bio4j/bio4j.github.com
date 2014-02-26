@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Bio4jExplorer, new features and design! - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="Hello everyone,I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both po...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/2012/03/bio4jexplorer-new-features-and-design/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Bio4jExplorer, new features and design!</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-03-09T15:57:56-05:00" pubdate>Mar 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hello everyone,</p>
+
+<p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
+
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="/images/bio4jExplorerScreenshot-1024x712.png" /></a></p>
+
+<h3 id="node--relationship-properties">Node &amp; Relationship properties</h3>
+
+<p>You can now check with Bio4jExplorer the properties that has either a node or relationship in the table situated on the lower part of the interface. Five columns are included:</p>
+
+<ul>
+  <li><strong>Name:</strong> property name</li>
+  <li><strong>Type:</strong> property type (<code>String</code>, <code>int</code>, <code>float</code>, <code>String[]</code>, …)</li>
+  <li><strong>Indexed:</strong> either the property is indexed or not (yes/no)</li>
+  <li><strong>Index name</strong>: name of the index associated to this property -if there’s any 
+<strong>Index name</strong>: type of the index associated to this property -if there’s any </li>
+</ul>
+
+<p><img src="/images/bio4jExplorerPropertiesTable.png" /></p>
+
+<h3 id="node--relationship-data-source">Node &amp; Relationship Data source</h3>
+
+<p>You can also see now from which source a Node or Relationship was imported, <em>some examples would be Uniprot, Uniref, GO, RefSeq…</em></p>
+
+<p><img src="/images/bio4jExplorerDataSourceLabel.png" /></p>
+
+<h3 id="relationships-name-property">Relationships Name property</h3>
+
+<p>With this new version you can directly check here the “internal” name of relationships without having to go to the respective javadoc documentation. </p>
+
+<p><img src="h/images/bio4jExplorerRelationshipsNameProperty.png" /></p>
+
+<p>This is quite useful when you are writing your Cypher or Gremlin queries, just check it, copy it, and paste it in your query.  An example using the relationship shown in the picture would be this query included in the <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet">Bio4j Cypher cheatsheet</a>:</p>
+
+<p><strong><em>Get proteins (accession and names) associated to an interpro motif (limited to 10 results)</em></strong></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">&gt; 
+</span><span class="line">START i=node:interpro_id_index(interpro_id_index = "IPR023306")
+</span><span class="line"> MATCH i &lt;-[:**PROTEIN_INTERPRO**]- p
+</span><span class="line"> return p.accession, p.fullname, p.name, p.short_name
+</span><span class="line"> limit 10</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The url for Bio4jExplorer is the same as before:</p>
+
+<ul>
+  <li><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html</strong></a></li>
+</ul>
+
+<p>In case you are interested on how the tool is implemented, please go to <a href="blog//2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships">the previous post about Bio4jExplorer</a> where you can find information about the different code repos and more info.</p>
+
+<p><strong>If you want to check the files including the hard-coded information regarding how nodes, relationships, and indexes are organized</strong>, and which is the input for the program which creates the AWS SimpleDB domain, I just uploaded them to the bio4j-public S3 bucket. Please click on their names to download them:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodesBio4j.txt"><strong>NodesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodeIndexesBio4j.txt"><strong>NodeIndexesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodePropertiesBio4j.txt"><strong>NodePropertiesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipsBio4j.txt"><strong>RelationshipsBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipPropertiesBio4j.txt"><strong>RelationshipPropertiesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipIndexesBio4j.txt"><strong>RelationshipIndexesBio4j.txt</strong></a></li>
+</ul>
+
+<p>I wish you all a great weekend!</p>
+
+<p>I’ll have mine at the beach enjoying our great springy weather with lots of sun down here in Andalucia ;)</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pablo Pareja</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2012-03-09T15:57:56-05:00" pubdate>Mar 9<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bio4jexplorer/'>Bio4jExplorer</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/bio4j-0-7-some-numbers/" title="Previous Post: Bio4j 0.7, some numbers">&laquo; Bio4j 0.7, some numbers</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/05/new-bio4j-general-domain-model-schema-available/" title="next Post: New Bio4j general domain model schema available">New Bio4j general domain model schema available &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Data mining | bio4j]]></title>
+  <link href="http://bio4j.github.com/blog/categories/data-mining/atom.xml" rel="self"/>
+  <link href="http://bio4j.github.com/"/>
+  <updated>2014-02-26T13:02:30-05:00</updated>
+  <id>http://bio4j.github.com/</id>
+  <author>
+    <name><![CDATA[oh no sequences!]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mining Bio4j data: finding topological patterns in PPI networks]]></title>
+    <link href="http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/"/>
+    <updated>2012-01-24T10:42:56-05:00</updated>
+    <id>http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks</id>
+    <content type="html"><![CDATA[<p>Hi everyone!</p>
+
+<p>After writing <a href="http://blog.bio4j.com/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/"><strong>this post</strong></a> on December, I’ve been thinking of doing something similar, yet different, using Neo4j Cypher query language.</p>
+
+<p>That’s where I came up with the idea of looking for <strong>topological patterns</strong> through a large <strong>sub-set of the Protein-Protein interactions network</strong> included in Bio4j; -rather than focusing in a few proteins selected a priori.</p>
+
+<p>I decided to mine the data in order to find <strong>circuits/simple cycles of length 3</strong> where <strong>at least one protein is from Swiss-Prot dataset</strong>:</p>
+
+<p><img src="/images/PPICircuit.png"></p>
+
+<p>I would like to point out that the <strong>direction</strong> here <strong>is important</strong> and these two cycles:</p>
+
+<ul>
+  <li><code>A --&gt; B --&gt; C --&gt; A</code></li>
+  <li><code>A --&gt; C --&gt; B --&gt; A</code></li>
+</ul>
+
+<p>are <strong>not</strong> the same. Ok, so once this has been said, let’s see how the Cypher query looks like:</p>
+
+<p><code>
+START d=node:dataset_name_index(dataset_name_index = "Swiss-Prot")
+MATCH d &lt;-[r:PROTEIN_DATASET]- p, 
+circuit = (p) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p2) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p3) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p)
+ return p.accession, p2.accession, p3.accession
+</code></p>
+
+<p>As you can see it’s really simple and straightforward. In the first two lines we match the proteins from Swiss-Prot dataset for later retrieving the ones which form a 3-length cycle as described before. Once the query has finished, you should be getting something like this:</p>
+
+<p><code>
+cypher&gt; 
+==&gt; +---------------------------------------------------------+
+p.accession | p2.accession | p3.accession | 
+==&gt; +---------------------------------------------------------+
+Q08465 P35189 P3421
+Q08465 P34218 P35189
+Q8GXA4 Q8L7E5 Q9LE82
+Q8GXA4 Q9FH18 Q8L7E5
+....
+==&gt; +---------------------------------------------------------+
+==&gt; 6632 rows, 1019211 ms
+</code></p>
+
+<p>As you can see the query took <strong>about 17 minutes</strong> to be completed <strong>in a 100% fresh DB</strong> -there was no information cached at all yet; with a <a href="http://aws.amazon.com/ec2/instance-types/"><strong>m1.large</strong> AWS machine</a> -this machine has <strong>7.5GB</strong> of <strong>RAM</strong>.</p>
+
+<p>Not bad, right!? </p>
+
+<p>We have to beware of something though, this query returns cycles such as:</p>
+
+<ul>
+  <li><code>A --&gt; B --&gt; C --&gt; A</code></li>
+  <li><code>B --&gt; C --&gt; A --&gt; B</code></li>
+</ul>
+
+<p>as different cycles when they are actually not. That’s why I developed a <a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/RemoveRepetitionsFromPPICircuits.java"><strong>simple program</strong></a> to remove these repetitions as well as for fetching some statistics information.
+After running the program you get two files:</p>
+
+<ol>
+  <li><strong>PPICircuitsLength3NoRepeats</strong> file: download it <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtNoRepeats.txt">here</a></li>
+  <li><strong>PPICircuitsProteinsFreq</strong> file: download it <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtProteinsFreq.txt">here</a>.</li>
+</ol>
+
+<p>The <strong>final circuits found</strong> were reduced after performing the filtering to <strong>2226 records</strong>.</p>
+
+<p>Finally, I also created a really simple chart including the absolute frequency of the first 20 proteins with more occurrences in the cycles that were found.</p>
+
+<p><img src="/images/proteinsFrequencyChart.png"></p>
+
+<p>Well, that’s all for now. Have a good day!</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+]]></content>
+  </entry>
+  
+</feed>

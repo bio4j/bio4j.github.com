@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mining Bio4j data: finding topological patterns in PPI networks - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="Hi everyone!After writing this post on December, I’ve been thinking of doing something similar, yet different, using Neo4j Cypher query language.Th...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Mining Bio4j data: finding topological patterns in PPI networks</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-01-24T10:42:56-05:00" pubdate>Jan 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hi everyone!</p>
+
+<p>After writing <a href="http://blog.bio4j.com/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/"><strong>this post</strong></a> on December, I’ve been thinking of doing something similar, yet different, using Neo4j Cypher query language.</p>
+
+<p>That’s where I came up with the idea of looking for <strong>topological patterns</strong> through a large <strong>sub-set of the Protein-Protein interactions network</strong> included in Bio4j; -rather than focusing in a few proteins selected a priori.</p>
+
+<p>I decided to mine the data in order to find <strong>circuits/simple cycles of length 3</strong> where <strong>at least one protein is from Swiss-Prot dataset</strong>:</p>
+
+<p><img src="/images/PPICircuit.png" /></p>
+
+<p>I would like to point out that the <strong>direction</strong> here <strong>is important</strong> and these two cycles:</p>
+
+<ul>
+  <li><code>A --&gt; B --&gt; C --&gt; A</code></li>
+  <li><code>A --&gt; C --&gt; B --&gt; A</code></li>
+</ul>
+
+<p>are <strong>not</strong> the same. Ok, so once this has been said, let’s see how the Cypher query looks like:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">START d=node:dataset_name_index(dataset_name_index = "Swiss-Prot")
+</span><span class="line">MATCH d &lt;-[r:PROTEIN_DATASET]- p, 
+</span><span class="line">circuit = (p) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p2) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p3) -[:PROTEIN_PROTEIN_INTERACTION]-&gt; (p)
+</span><span class="line"> return p.accession, p2.accession, p3.accession</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>As you can see it’s really simple and straightforward. In the first two lines we match the proteins from Swiss-Prot dataset for later retrieving the ones which form a 3-length cycle as described before. Once the query has finished, you should be getting something like this:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">cypher&gt; 
+</span><span class="line">==&gt; +---------------------------------------------------------+
+</span><span class="line">p.accession | p2.accession | p3.accession | 
+</span><span class="line">==&gt; +---------------------------------------------------------+
+</span><span class="line">Q08465 P35189 P3421
+</span><span class="line">Q08465 P34218 P35189
+</span><span class="line">Q8GXA4 Q8L7E5 Q9LE82
+</span><span class="line">Q8GXA4 Q9FH18 Q8L7E5
+</span><span class="line">....
+</span><span class="line">==&gt; +---------------------------------------------------------+
+</span><span class="line">==&gt; 6632 rows, 1019211 ms</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>As you can see the query took <strong>about 17 minutes</strong> to be completed <strong>in a 100% fresh DB</strong> -there was no information cached at all yet; with a <a href="http://aws.amazon.com/ec2/instance-types/"><strong>m1.large</strong> AWS machine</a> -this machine has <strong>7.5GB</strong> of <strong>RAM</strong>.</p>
+
+<p>Not bad, right!? </p>
+
+<p>We have to beware of something though, this query returns cycles such as:</p>
+
+<ul>
+  <li><code>A --&gt; B --&gt; C --&gt; A</code></li>
+  <li><code>B --&gt; C --&gt; A --&gt; B</code></li>
+</ul>
+
+<p>as different cycles when they are actually not. That’s why I developed a <a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/RemoveRepetitionsFromPPICircuits.java"><strong>simple program</strong></a> to remove these repetitions as well as for fetching some statistics information.
+After running the program you get two files:</p>
+
+<ol>
+  <li><strong>PPICircuitsLength3NoRepeats</strong> file: download it <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtNoRepeats.txt">here</a></li>
+  <li><strong>PPICircuitsProteinsFreq</strong> file: download it <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/PPICircuitsBlogPost/PPICircuitsL3SwissProtProteinsFreq.txt">here</a>.</li>
+</ol>
+
+<p>The <strong>final circuits found</strong> were reduced after performing the filtering to <strong>2226 records</strong>.</p>
+
+<p>Finally, I also created a really simple chart including the absolute frequency of the first 20 proteins with more occurrences in the cycles that were found.</p>
+
+<p><img src="/images/proteinsFrequencyChart.png" /></p>
+
+<p>Well, that’s all for now. Have a good day!</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pablo Pareja</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2012-01-24T10:42:56-05:00" pubdate>Jan 24<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/data-mining/'>Data mining</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/01/bio4j-release-0-7-is-out/" title="Previous Post: Bio4j release 0.7 is out!">&laquo; Bio4j release 0.7 is out!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/02/finding-the-lowest-common-ancestor-of-a-set-of-ncbi-taxonomy-nodes-with-bio4j/" title="next Post: Finding the lowest common ancestor of a set of NCBI taxonomy nodes with Bio4j">Finding the lowest common ancestor of a set of NCBI taxonomy nodes with Bio4j &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

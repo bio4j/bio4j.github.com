@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Project development | bio4j]]></title>
+  <link href="http://bio4j.github.com/blog/categories/project-development/atom.xml" rel="self"/>
+  <link href="http://bio4j.github.com/"/>
+  <updated>2014-02-26T13:02:30-05:00</updated>
+  <id>http://bio4j.github.com/</id>
+  <author>
+    <name><![CDATA[oh no sequences!]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Bio4j general domain model schema available]]></title>
+    <link href="http://bio4j.github.com/blog/2012/05/new-bio4j-general-domain-model-schema-available/"/>
+    <updated>2012-05-17T17:11:50-04:00</updated>
+    <id>http://bio4j.github.com/blog/2012/05/new-bio4j-general-domain-model-schema-available</id>
+    <content type="html"><![CDATA[<p>Hi everyone!</p>
+
+<p>It’s been a few months already since I published the last post but that doesn’t mean that the development process of Bio4j was stopped, but rather, on the contrary, I have been working in the integration of Bio4j with other DB-related projects as well as pipelines and tools. Actually, I’m right now staying in the US for a couple of months working on the implementation and integration of a new database around Bio4j including grasses genomic data as part of a collaboration with the Ohio State University, (I promise to give more details about this and more in next posts).</p>
+
+<p>Ok, but let’s get to the point of this post. Even though there already is available a web tool to explore Bio4j data structure (<a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>Bio4jExplorer</strong></a>), I was feeling that something else was missing in order to get the big picture of all the data included and how it’s interrelated. So I got to work and created this general domain model including all node types and relationships (also specifying their cardinality).</p>
+
+<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="/images/Bio4jDomainModelWithCardinality.png"></a></p>
+
+<p>I didn’t include “auxiliary” relationships linked to the reference node in order to not pollute the schema with relationships that don’t have any semantic meaning but rather indexing purposes. Also, the text included in both boxes represents different relationships all linking the same nodes -specifically Protein with CommentType and FeatureType. I could have drawn them as the rest but then I would have ended up with a hairball instead of a meaningful schema.</p>
+
+<p>As always, any feedback is welcome!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bio4j incorporates git-flow model]]></title>
+    <link href="http://bio4j.github.com/blog/2011/09/bio4j-incorporates-git-flow-model/"/>
+    <updated>2011-09-19T07:16:15-04:00</updated>
+    <id>http://bio4j.github.com/blog/2011/09/bio4j-incorporates-git-flow-model</id>
+    <content type="html"><![CDATA[<p>Hi all!
+So summer has almost come to an end and I have now time again to continue with the development of Bio4j project. 
+This autumn comes with plenty of new features that will be released in the next few months; the first of them: git-flow model.
+Bio4j is moving forward fast and it was already time to organize its development, supporting it with an adequate model. Here is where git-flow comes in, providing a simple but yet powerful development model where releases, features, hot-fixes… can be managed without having to go crazy putting them all together. 
+Here you have a general schema of the model:</p>
+
+<p><img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png"></p>
+
+<p>Since <a href="http://twitter.com/nvie">@nvie</a> wrote a really good post explaining the details of his model, I’ll just provide <a href="http://nvie.com/posts/a-successful-git-branching-model/">this link</a> to it  instead of giving a much poorer explanation than the one in the article.</p>
+]]></content>
+  </entry>
+  
+</feed>

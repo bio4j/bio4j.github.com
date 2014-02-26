@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Features | bio4j]]></title>
+  <link href="http://bio4j.github.com/blog/categories/features/atom.xml" rel="self"/>
+  <link href="http://bio4j.github.com/"/>
+  <updated>2014-02-26T13:02:30-05:00</updated>
+  <id>http://bio4j.github.com/</id>
+  <author>
+    <name><![CDATA[oh no sequences!]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bio4j modules, adapt the database to your own needs]]></title>
+    <link href="http://bio4j.github.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/"/>
+    <updated>2012-10-30T00:33:27-04:00</updated>
+    <id>http://bio4j.github.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs</id>
+    <content type="html"><![CDATA[<p>Hi!</p>
+
+<p><strong>Bio4j 0.8 includes</strong> a few <strong>different data sources</strong> and you may not always be interested in having all of them. For example you might be interested in playing around with the Gene Ontology DAG alone and let’s face it, having to import a ~105 GB database to do that wouldn’t make much sense…</p>
+
+<p>That’s why <strong>the importing process is modular and customizable, allowing you to import just the data you are interested in</strong>. 
+Here’s the big picture of where do entities and relationships come from in the general domain model:</p>
+
+<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="/images/DomainModelWithDataSourceView.png"></a></p>
+
+<p>There’s however one thing that you have to <strong>keep in mind, you must be coherent when choosing the data sources</strong> you want to have included in your database; that’s to say, you cannot have for example the Uniref clusters without previously importing Uniprot KB, otherwise there wouldn’t be proteins to connect to when importing the clusters!</p>
+
+<p>Here you have a basic schema showing the dependencies among the different modules:</p>
+
+<p><a href="/images/ModuleDependencies.png"><img src="/images/ModuleDependencies.png"></a></p>
+
+<p><em>(Let me remind you that having here two data sources which are not connected by an arrow does NOT mean that they are not related/connected, but rather if it’s possible to import them alone or instead they need other data sources to be already present in the database )</em></p>
+
+<p>I’m going to create a wiki page where I will be going into more detail regarding database size and importing process time depending on your modules choice, but meanwhile you can find some more information about how to do this in the <a href="https://github.com/bio4j/Bio4j/wiki/Importing-bio4j">Importing Bio4j wiki page</a>.</p>
+
+<p>Have a good day!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+]]></content>
+  </entry>
+  
+</feed>

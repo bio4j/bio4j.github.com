@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Using Bio4j + Neo4j Graph-algo component for finding protein-protein interaction paths - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="Hi all!Today I managed to find some time to check out the Graph-algo component from Neo4j and after playing with it plus Bio4j a bit, I have to say...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Using Bio4j + Neo4j Graph-algo component for finding protein-protein interaction paths</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2011-12-19T16:35:41-05:00" pubdate>Dec 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hi all!</p>
+
+<p>Today I managed to find some time to check out the <a href="http://wiki.neo4j.org/content/Graph-algo"><strong>Graph-algo component</strong></a> from Neo4j and after playing with it plus Bio4j a bit, I have to say it seems pretty cool.
+For those who don’t know what I’m talking about, here you have the description you can find in Neo4j wiki:</p>
+
+<blockquote>
+  <p>This is a component that offers implementations of common graph algorithms on top of Neo4j. It is mostly focused around finding paths, like finding the shortest path between two nodes, but it also contains a few different centrality measures, like betweenness centrality for nodes.</p>
+</blockquote>
+
+<p>The algorithm for finding the <strong>shortest path between two nodes</strong> caught my attention and I started to wonder how could I give it a try applying it to the data included in Bio4j. I realized then that <strong>protein-protein interactions</strong> could be a good candidate so I got down to work and created the utility method:</p>
+
+<ul>
+  <li><code>findShortestInteractionPath(ProteinNode proteinSource, ProteinNode proteinTarget, int maxDepth, int maxResultsNumber)</code></li>
+</ul>
+
+<p>for getting at most <code>maxResultsNumber</code> paths between <code>proteinSource</code> and <code>proteinTarget</code> with a maximum path depth of <code>maxDepth</code>.
+You can check the <a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/InteractionsPathFinder.java"><strong>source code here</strong> </a></p>
+
+<p>I also did a <strong><a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/FindInteractionPaths.java">small test program</a></strong> which prints out the paths found between two proteins.</p>
+
+<p>Even though I’ve missed having a wider choice of algorithms, it’s really cool having at least this small set of algorithms already implemented, abstracting you from the low level coding. 
+Apart from that, I’ve been thinking how <strong>Bio4j could open a lot of doors for topology/network analysis around all the data it includes</strong>. Such analysis could otherwise be quite hard to perform due to several reasons like the lack of data-integration between different datasources and the inner storage paradigm limiting topology/network analysis among others… </p>
+
+<p><strong>With Bio4j however, you just have to move around the nodes and get the information you’re looking for!</strong> ;)</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+<h2 id="comments">comments</h2>
+
+<ul>
+  <li>
+    <p><strong>alper yilmaz</strong>
+it’s getting more interesting.. :)
+that’s what I meant by “data-mining” during our skype conference.. cool..</p>
+  </li>
+  <li>
+    <p><strong>Roji</strong>
+I follow neo4j which much itrneest. It is a novel approach, however i think property searches are very important and neo4j is not very good at this.So for example, implementing a complete social website with millions of users would not be feasible with neo4j i think. I am not sure off course.What is also itrneesting is the upcoming of native XML database. They also solve the imdependace mismatch to a certain expend. However their model are trees not graphs, graphs are more general in this sense, but i think more optimizations are possible if you choose trees.</p>
+
+    <ul>
+      <li><strong>ppareja</strong>
+  Hi Roji,
+  Could you provide some reasons why you think property searches are not good with Neo4j?
+  Regarding XML databases and other tree-oriented options, they definitely are great for many use cases, however when you have to deal with highly connected data they may not be enough. The case depicted in this blog post is a good example, even just modelling protein-protein interactions would not be possible with a tree – you get plenty of cycles which cannot be expressed with that paradigm…</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pablo Pareja</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2011-12-19T16:35:41-05:00" pubdate>Dec 19<span>th</span>, 2011</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute/" title="Previous Post: Bio4j + AWS CloudFormation = your own fresh baked DB in less than a minute!">&laquo; Bio4j + AWS CloudFormation = your own fresh baked DB in less than a minute!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/01/bio4j-release-0-7-is-out/" title="next Post: Bio4j release 0.7 is out!">Bio4j release 0.7 is out! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

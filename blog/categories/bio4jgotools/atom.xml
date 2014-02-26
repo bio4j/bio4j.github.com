@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Bio4jGoTools | bio4j]]></title>
+  <link href="http://bio4j.github.com/blog/categories/bio4jgotools/atom.xml" rel="self"/>
+  <link href="http://bio4j.github.com/"/>
+  <updated>2014-02-26T13:02:30-05:00</updated>
+  <id>http://bio4j.github.com/</id>
+  <author>
+    <name><![CDATA[oh no sequences!]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cool GO annotation visualizations with Gephi + Bio4j]]></title>
+    <link href="http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j/"/>
+    <updated>2011-11-29T11:46:56-05:00</updated>
+    <id>http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j</id>
+    <content type="html"><![CDATA[<p>Hi everyone!</p>
+
+<p>After a few months without finding the opportunity to play with <a href="http://gephi.org">Gephi</a>, it was already time to dedicate a lab day to this.
+I thought that a good feature would be having the equivalent <strong>.gexf file</strong> for the current graph representation available at the tab “GoAnnotation Graph Viz”; so that you could play around with it in Gephi adapting it to your specific needs.
+Then I got down to work and this is what happened:</p>
+
+<p>First of all I was really happy to see how there was a new version of Gephi (0.8) as well as a good bunch of new (at least for me… :D) layout algorithms plugins available like Parallel Force Atlas, Circular Layout or Layered Layout. So once I have downloaded and installed everything I started to have some fun with it and get to know how filters work, <em>(I haven’t used these ones before).</em> 
+Even though I got stuck a couple of times trying to figure out how to use some of them, I easily solved these small setbacks thanks to the great support found in the <a href="https://forum.gephi.org/">Gephi forums</a>, where they quickly answered my newbie questions, thanks Gephi team!</p>
+
+<p>As a source for the graph I used the <a href="https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml">public EHEC GO annotations</a> we did for the <strong><a href="https://github.com/ehec-outbreak-crowdsourced/BGI-data-analysis/wiki">E. coli O104:H4 Genome Analysis Crowdsourcing</a></strong> we coordinated last summer and chose the <strong>Molecular Function sub-ontology</strong> for the visualization.</p>
+
+<p>When I first loaded the gexf file in Gephi without applying any kind of filters this is what I got:</p>
+
+<p><img src="/images/EHECMolFuncDraft.png"></p>
+
+<p>As you (maybe) can see, the size of GO term nodes is proportional to the number of proteins they annotate; still it pretty much looks just like a big hair-ball…</p>
+
+<p>Then I applied the following set of filters:</p>
+
+<p><img src="/images/EHECMolFuncFilters.jpg"></p>
+
+<p>in order to get the GO terms with at least 6 protein annotations plus the proteins which are annotating these terms <em>(their neighborhoods)</em>; and this is what it looked like (after applying a <em>Parallel Force Atlas</em> layout algorithm):</p>
+
+<p><img src="/images/EHECMolFuncPreliminary.png"></p>
+
+<p>I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: “Hide nodes/edges labels if not in filtered graph”.
+After doing this and applying the black background preview setting, the visualization finally looked pretty decent:</p>
+
+<p><img src="/images/EHECMolFuncFinal.png"></p>
+
+<p>Please go <a href="http://bio4j.com/imgs/EHEC_MolecularFunction_SeaDragon/">here</a> to check the version exported with <a href="https://gephi.org/plugins/seadragon/">Sea Dragon plugin</a> where you can zoom and move around!</p>
+
+<p>Well, if you like the result <em>(or you don’t but you want to play with this and get a better viz!)</em>, I just uploaded a new version of <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">Bio4j GO Tools</a> viewer where you can download the corresponding .gexf file for your GO annotations XML file. 
+Just press the button highlighted in the screenshot and enter the URL for your GO annotations XML file:</p>
+
+<p><img src="/images/gexfButtonBio4jGOToolsScreenshot.jpg"></p>
+
+<p>You can use the public EHEC GO annotation results URL I used as a sample for this post: </p>
+
+<ul>
+  <li><code>https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml</code></li>
+</ul>
+
+<p>So, that’s all for now, please let me know if you play around with this and get some cool visualizations!</p>
+
+<p><a href="https://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+<h2 id="comments">comments</h2>
+
+<ul>
+  <li>
+    <p><strong>Amrit</strong> 
+Good to know it. Does it take expression data also. I have expression data with gene name and probe I’d only. Would you mind to suggest whether it work or not for this kind of data. Thank u so much for your help.</p>
+
+    <ul>
+      <li><strong>Pablo Pareja</strong> 
+Hi Amrit,
+There is no restriction for the input data, the only thing is that the tool expects Uniprot accessions as parameters. You would just need to map your gene names to Uniprot accessions using a ID mapping tool such as that available at uniprot website:
+http://www.uniprot.org/
+(ID mapping tab)
+Cheers,
+Pablo</li>
+    </ul>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Improvements in Bio4j Go Tools (Graph visualization)]]></title>
+    <link href="http://bio4j.github.com/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization/"/>
+    <updated>2011-06-10T11:36:37-04:00</updated>
+    <id>http://bio4j.github.com/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization</id>
+    <content type="html"><![CDATA[<p>Hi everyone!</p>
+
+<p>A new version of <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">Bio4j Go Tools viewer</a> is available, it includes improvements in the graph visualization of GO annotation results.
+These are the new features:</p>
+
+<ul>
+  <li><strong>Load GO annotation results from URL</strong>: There’s no need anymore to upload the XML file with the results everytime you want to see the graph visualization. Just enter the publicly accessible URL of the file and the server will directly get the file for you.</li>
+  <li>**Restrict **the visualization to only **one GO sub-ontology **at a time: Terms belonging to different sub-ontologies (<em>cellular component, biological process, molecular function</em>) are not mixed up anymore.</li>
+  <li><strong>Choice of layout algorithms</strong>: You can choose between two different layout algorithms for the visualization, (<em>Yifan Hu</em> and <em>Fruchterman Reingold</em>).</li>
+  <li><strong>Customizable layout algorithm time:</strong> Range of 1-10 minutes.</li>
+</ul>
+
+<p>I also made a short <strong><a href="http://www.bio4j.com/videos/Bio4jGoToolsGraphUseTutorial.htm">tutorial</a></strong> showing most of the features available in the following real-world use case: GO annotation results for <a href="https://github.com/ehec-outbreak-crowdsourced/BGI-data-analysis/wiki/Era7-annotation-of-bgi-v2-assembly-of-e.-coli-ty-2482">Era7 E. coli TY-2482 annotation with BG7 system of BGI V2 assembly</a></p>
+
+<p>The corresponding GO Annotation results XML file is publicly available <strong><a href="https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml">here</a></strong>. Just click the button ‘load file from url’ and paste the address of the file. </p>
+
+<p>For those new to Bio4j Go Tools, two external open-source projects are used apart from Bio4j itself:</p>
+
+<ul>
+  <li><a href="http://gephi.org/toolkit/">Gephi Toolkit</a></li>
+  <li><a href="https://github.com/jacomyal/SiGMa">SiGMa</a></li>
+</ul>
+
+<p>that’s all for now, keep an eye on the blog/twitter for updates ;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project]]></title>
+    <link href="http://bio4j.github.com/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project/"/>
+    <updated>2011-04-25T12:30:01-04:00</updated>
+    <id>http://bio4j.github.com/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project</id>
+    <content type="html"><![CDATA[<p>Hello everyone ;)</p>
+
+<p>We’re back from Easter holidays bringing some cool graph visualization stuff. </p>
+
+<p>Bio4j Go Tools includes now a new feature providing you with an interactive graph visualization for protein GO annotations.
+The url of the app is still the <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">same old one</a>.</p>
+
+<p>On the server side, we’re using <a href="http://gephi.org/toolkit/">Gephi Toolkit</a> for applying layout algorithms while the corresponding Gexf file is generated with the class <a href="https://github.com/pablopareja/BioinfoUtil/blob/master/src/main/java/com/era7/lib/bioinfo/bioinfoutil/gephi/GephiExporter.java">GephiExporter</a> from <a href="https://github.com/pablopareja/BioinfoUtil">BioinfoUtil</a> project. The service is included in the project <a href="https://github.com/bio4j/Bio4jTestServer">Bio4jTestServer</a>, specifically the servlet <a href="https://github.com/bio4j/Bio4jTestServer/blob/master/src/java/com/era7/bioinfo/bio4j/server/servlet/GetGoAnnotationGexfServlet.java">GetGoAnnotationGexfServlet</a>.</p>
+
+<p>Regarding to the client side, we’re using the open-source project <a href="https://github.com/jacomyal/SiGMa">SiGMa</a> for graph-visualization.</p>
+
+<p>Here you have a screenshot of a small sample of GO Annotation results:</p>
+
+<p><a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html"><img src="/images/goAnnotationGraphScreenShot-1024x725.jpg"></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bio4j Go Tools goes web]]></title>
+    <link href="http://bio4j.github.com/blog/2011/04/bio4j-go-tools-goes-web/"/>
+    <updated>2011-04-11T12:43:50-04:00</updated>
+    <id>http://bio4j.github.com/blog/2011/04/bio4j-go-tools-goes-web</id>
+    <content type="html"><![CDATA[<p>Hi!</p>
+
+<p>From now on Bio4j Go Tools is available at the following <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">address</a>.</p>
+
+<p>This new version includes a chart for GO annotation terms frequency visualization. Some of the new chart features are:</p>
+
+<ul>
+  <li>GO terms search by name</li>
+  <li>Independent ontology chart visualization</li>
+  <li>Links to terms gene-ontology sites</li>
+</ul>
+
+<p><a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html"><img src="/images/screenShotBlogGoTools-1024x762.jpg"></a></p>
+
+<p>In order to visualize your results just click on the “load file” button and select a XML file you previously generated using the GO Annotation service available in the first tab of the app.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bio4j Go Tools (first version available)]]></title>
+    <link href="http://bio4j.github.com/blog/2011/03/bio4j-go-tools-first-version-available/"/>
+    <updated>2011-03-22T14:57:33-04:00</updated>
+    <id>http://bio4j.github.com/blog/2011/03/bio4j-go-tools-first-version-available</id>
+    <content type="html"><![CDATA[<p>Hi everyone!</p>
+
+<p>As you may have seen Bio4j has already started making his way through the bioinformatics world; however there’s not as much information as there should be about the project yet.
+That’s where Bio4j Go Tools comes in as the first real-world example using Bio4j as back-end.</p>
+
+<p>Bio4j Go Tools is a group of <a href="http://www.geneontology.org/">Gene Ontology</a> related services and apps. <em>(You can find more information about this in the <a href="http://wiki.bio4j.com/bio4jgotools">wiki</a>)</em></p>
+
+<p>The services provided so far are:</p>
+
+<ul>
+  <li><a href="http://www.uniprot.org">Uniprot</a> protein GO annotations retrieving</li>
+  <li>GoSlim requests with custom Slim term sets.</li>
+</ul>
+
+<p>Both services results and client-server communication are XML based following a really simple and intuitive structure.</p>
+
+<p>A user-friendly <a href="https://github.com/pablopareja/Bio4jGoTools">AIR application</a> has been developed allowing the user to directly use these services abstracting the logic of the different requests.</p>
+
+<p><a href="https://github.com/pablopareja/Bio4jGoTools"><img src="/images/Bio4jGoToolsScreenShot.jpg" width="739" title="Bio4j Go Tools AIR app screenshot" ></a></p>
+
+<p>Enjoy it  ;)</p>
+
+<h2 id="comments">comments</h2>
+
+<ul>
+  <li>
+    <p><a href="http://alperyilmaz.org/blog"><strong>alper yilmaz</strong></a> 
+When I put a protein id, the tools is asking for location of GoSlim.xml file, where can I retrieve this file? I checked the download page of Gene Ontology (http://www.geneontology.org/GO.downloads.ontology.shtml) but couldn’t find it.</p>
+
+    <p>thanks.</p>
+
+    <ul>
+      <li><strong>Pablo Pareja</strong> Hi Alper,
+You’re right it can be a bit confusing the way the app asks for a file location to save the results.
+I just made some small changes to the app so that things are more straightforward. This version (v 1.01) is already available at Bio4jGoTools github repository</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://alperyilmaz.org/blog"><strong>alper yilmaz</strong></a> 
+Nevermind, it was asking location and filename to save the results. So, there’s no problem..
+Thanks..</p>
+  </li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Cool GO annotation visualizations with Gephi + Bio4j - bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="Hi everyone!After a few months without finding the opportunity to play with Gephi, it was already time to dedicate a lab day to this.I thought that...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Cool GO annotation visualizations with Gephi + Bio4j</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2011-11-29T11:46:56-05:00" pubdate>Nov 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hi everyone!</p>
+
+<p>After a few months without finding the opportunity to play with <a href="http://gephi.org">Gephi</a>, it was already time to dedicate a lab day to this.
+I thought that a good feature would be having the equivalent <strong>.gexf file</strong> for the current graph representation available at the tab “GoAnnotation Graph Viz”; so that you could play around with it in Gephi adapting it to your specific needs.
+Then I got down to work and this is what happened:</p>
+
+<p>First of all I was really happy to see how there was a new version of Gephi (0.8) as well as a good bunch of new (at least for me… :D) layout algorithms plugins available like Parallel Force Atlas, Circular Layout or Layered Layout. So once I have downloaded and installed everything I started to have some fun with it and get to know how filters work, <em>(I haven’t used these ones before).</em> 
+Even though I got stuck a couple of times trying to figure out how to use some of them, I easily solved these small setbacks thanks to the great support found in the <a href="https://forum.gephi.org/">Gephi forums</a>, where they quickly answered my newbie questions, thanks Gephi team!</p>
+
+<p>As a source for the graph I used the <a href="https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml">public EHEC GO annotations</a> we did for the <strong><a href="https://github.com/ehec-outbreak-crowdsourced/BGI-data-analysis/wiki">E. coli O104:H4 Genome Analysis Crowdsourcing</a></strong> we coordinated last summer and chose the <strong>Molecular Function sub-ontology</strong> for the visualization.</p>
+
+<p>When I first loaded the gexf file in Gephi without applying any kind of filters this is what I got:</p>
+
+<p><img src="/images/EHECMolFuncDraft.png" /></p>
+
+<p>As you (maybe) can see, the size of GO term nodes is proportional to the number of proteins they annotate; still it pretty much looks just like a big hair-ball…</p>
+
+<p>Then I applied the following set of filters:</p>
+
+<p><img src="/images/EHECMolFuncFilters.jpg" /></p>
+
+<p>in order to get the GO terms with at least 6 protein annotations plus the proteins which are annotating these terms <em>(their neighborhoods)</em>; and this is what it looked like (after applying a <em>Parallel Force Atlas</em> layout algorithm):</p>
+
+<p><img src="/images/EHECMolFuncPreliminary.png" /></p>
+
+<p>I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: “Hide nodes/edges labels if not in filtered graph”.
+After doing this and applying the black background preview setting, the visualization finally looked pretty decent:</p>
+
+<p><img src="/images/EHECMolFuncFinal.png" /></p>
+
+<p>Please go <a href="http://bio4j.com/imgs/EHEC_MolecularFunction_SeaDragon/">here</a> to check the version exported with <a href="https://gephi.org/plugins/seadragon/">Sea Dragon plugin</a> where you can zoom and move around!</p>
+
+<p>Well, if you like the result <em>(or you don’t but you want to play with this and get a better viz!)</em>, I just uploaded a new version of <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">Bio4j GO Tools</a> viewer where you can download the corresponding .gexf file for your GO annotations XML file. 
+Just press the button highlighted in the screenshot and enter the URL for your GO annotations XML file:</p>
+
+<p><img src="/images/gexfButtonBio4jGOToolsScreenshot.jpg" /></p>
+
+<p>You can use the public EHEC GO annotation results URL I used as a sample for this post: </p>
+
+<ul>
+  <li><code>https://s3-eu-west-1.amazonaws.com/pablo-tests/EHECAnnotationVersion2.xml</code></li>
+</ul>
+
+<p>So, that’s all for now, please let me know if you play around with this and get some cool visualizations!</p>
+
+<p><a href="https://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+<h2 id="comments">comments</h2>
+
+<ul>
+  <li>
+    <p><strong>Amrit</strong> 
+Good to know it. Does it take expression data also. I have expression data with gene name and probe I’d only. Would you mind to suggest whether it work or not for this kind of data. Thank u so much for your help.</p>
+
+    <ul>
+      <li><strong>Pablo Pareja</strong> 
+Hi Amrit,
+There is no restriction for the input data, the only thing is that the tool expects Uniprot accessions as parameters. You would just need to map your gene names to Uniprot accessions using a ID mapping tool such as that available at uniprot website:
+http://www.uniprot.org/
+(ID mapping tab)
+Cheers,
+Pablo</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Pablo Pareja</span></span>
+
+      
+
+
+
+
+  
+
+<time datetime="2011-11-29T11:46:56-05:00" pubdate>Nov 29<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bio4jgotools/'>Bio4jGoTools</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/11/bio4j-thanksgiving-treats/" title="Previous Post: Bio4j Thanksgiving treats!">&laquo; Bio4j Thanksgiving treats!</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute/" title="next Post: Bio4j + AWS CloudFormation = your own fresh baked DB in less than a minute!">Bio4j + AWS CloudFormation = your own fresh baked DB in less than a minute! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>bio4j</title>
+  <meta name="author" content="oh no sequences!">
+
+  
+  <meta name="description" content="We are really excited to announce that Bio4j has been accepted as a mentoring organization for Google Summer of Code 2014. This was the first year ...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bio4j.github.com/blog/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="bio4j" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300italic,400,400italic,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,400italic' rel='stylesheet' type='text/css'>
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  showMathMenu: false,
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }, 
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", webFont: "TeX", availableFonts: [] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12161444-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><!-- <hgroup>
+  <h1><a href="/">bio4j</a></h1>
+  
+    <h2>bio data graph db</h2>
+  
+</hgroup>
+ -->
+
+ <hgroup>
+  
+    <a href="/">
+      <img src="/images/logo.png">
+    </a>
+  <!-- <h2>bio data graph db</h2> -->
+
+</hgroup>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bio4j.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/blog">blog</a></li>
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/code">code</a></li>
+  <li><a href="/docs">docs</a></li>
+  <li><a href="/community">community</a></li>
+  <li><a href="/about">about</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2014-02-25T17:18:00-05:00" pubdate>Feb 25<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="right" src="/images/GoogleSummer_2014logo.jpg" width="300" height="270" /></p>
+
+<p>We are really excited to announce that <strong>Bio4j</strong> has been <strong>accepted</strong> as a <a href="https://www.google-melange.com/gsoc/org2/google/gsoc2014/bio4j">mentoring organization</a> for <strong><a href="https://www.google-melange.com/gsoc/homepage/google/gsoc2014">Google Summer of Code 2014</a></strong>. This was the first year we applied for it, and it feels just great being part of this inititative!</p>
+
+<p>We think this is a great opportunity for students, giving them the opportunity to hack on pretty cool stuff around graph databases, bio big data and cloud computing.</p>
+
+<h2 id="how-to-participate">how to participate</h2>
+
+<p>If this sounds amazing and you are a student (PhD, masters, undergraduate, <a href="https://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2014/help_page#2._Whos_eligible_to_participate_as_a">whatever</a>) or know someone who is,</p>
+
+<ol>
+  <li><strong><a href="https://github.com/bio4j/gsoc14/wiki/ideas">check our ideas list</a></strong> and then</li>
+  <li><strong>contact a potential mentor</strong> or if you don&#8217;t know who just <a href="https://github.com/eparejatobes">@eparejatobes</a> or <a href="https://github.com/pablopareja">@pablopareja</a></li>
+</ol>
+
+<p>You can read more about it in the <a href="https://github.com/bio4j/gsoc14/wiki">bio4j/gsoc14 wiki</a>.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2013-11-12T06:00:00-05:00" pubdate>Nov 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://phylogenomics.berkeley.edu/">Sjölander Lab</a> at the <a href="http://www.berkeley.edu/index.html">University of California, Berkeley</a>, has recently been awarded a <strong>250K</strong> US dollars <em>EAGER</em> grant from the National Science Foundation to build a graph database for Big Data challenges in genomics.  Naturally, <strong>they’re building on Bio4j</strong>.</p>
+
+<p>The project “<strong>EAGER: Towards a self-organizing map and hyper-dimensional information network for the human genome</strong>” aims to create a graph database of genome and proteome data for the human genome and related species to allow biologists and computational biologists to mine the information in gene family trees, biological networks and other graph data that cannot be represented effectively in relational databases. For these goals, they will develop on top of the pioneering graph-based bioinformatics platform <strong>Bio4j</strong>. </p>
+
+<p>”<em>We are excited to see how Bio4j is used by top research groups to build cutting-edge bioinformatics solutions</em>” said <strong>Eduardo Pareja</strong>, <strong><a href="http://www.era7bioinformatics.com">Era7 Bioinformatics</a> CEO</strong>. “<em>To reach an even broader user base, we are pleased to announce that we now provide versions for both Neo4j and Titan graph databases, for which we have developed another layer of abstraction for the domain model using Blueprints</em>.”</p>
+
+<p>”<em>EAGER stands for Early-concept Grants for Exploratory Research</em>”, explained <strong>Professor Kimmen Sjölander</strong>, <strong>head of the <a href="http://phylogenomics.berkeley.edu/">Berkeley Phylogenomics Group</a></strong>: “<em>NSF awards these grants to support exploratory work in its early stages on untested, but potentially transformative, research ideas or approaches</em>”. “<em>My lab’s focus is on machine learning methods for Big Data challenges in biology, particularly for graphical data such as gene trees, networks, pathways and protein structures. The limitations of relational database technologies for graph data, particularly BIG graph data, restrict scientists’ ability to get any real information from that data. When we decided to switch to a graph database, we did a lot of research into the options. When we found out about Bio4j, we knew we’d found our solution. The Bio4j team has made our development tasks so much easier, and we look forward to a long and fruitful collaboration in this open-source project</em>”.</p>
+
+<p>You can find more information here:</p>
+
+<ul>
+  <li><a href="http://era7bioinformatics.com/en/download_file.cfm?file=1695&amp;news=17"><strong>PHYLOGENOMICS_BERKELEY_BIO4J_ERA7_BIOINFORMATICS.pdf</strong></a></li>
+</ul>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2013-10-15T00:33:27-04:00" pubdate>Oct 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi everyone!</p>
+
+<p>So <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-0.9"><strong>Bio4j 0.9</strong></a> finally made its way out and it’s here bringing you more than 1 billion relationships. These are approximately its main numbers:</p>
+
+<ul>
+  <li><strong>1.216.993.547</strong> relationships</li>
+  <li><strong>190.625.351</strong> nodes</li>
+  <li><strong>584.436.429</strong> properties</li>
+</ul>
+
+<p>A lot of new features and improvements have been incorporated including the following, <em>(I will go into more detail in later posts specifically dedicated to each of them)</em></p>
+
+<h2 id="refurbishing-the-domain-model">Refurbishing the domain model</h2>
+
+<p><img src="/images/domainModelThumbnail.png" style="float:right" />We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
+All this can be found under the package <em>com.era7.bioinfo.bio4j.model</em></p>
+
+<h2 id="new-blueprints-layer">New Blueprints layer</h2>
+
+<p><img src="/images/blueprints.png" style="float:left" /> Apart from the set of interfaces we’ve developed another layer for the domain model using <a href="http://blueprints.tinkerpop.com/"><strong>Blueprints</strong></a>. This way we’re going one step further for making the domain model independent from the choice of database technology.</p>
+
+<h2 id="new-titan-implementation">New Titan implementation</h2>
+
+<p><img src="/images/titan.png" style="float:right" /> After the problems we had with the so called <a href="http://thinkaurelius.com/2012/10/25/a-solution-to-the-supernode-problem/"><em><strong>supernodes</strong></em></a> - which are quite common indeed, we decided to give a try to <a href="http://thinkaurelius.github.io/titan/"><strong>Titan Graph Database</strong></a> technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you’ll be hearing more about this pretty soon! ;)</p>
+
+<h2 id="bye-bye-reference-node">Bye bye reference node</h2>
+
+<p>We decided to finally stop using the reference node for indexing purposes <em>(actually there’s no use for it anymore in Bio4j)</em>. 
+I have to admit it, I never was a fan of it and it was about time to do it. So now auxiliary relationships such as, for instance, <em>MainTaxonRel</em> or <em>MainDatasetRel</em> have been replaced by a standard node index.</p>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<p>This new release comes with many fixes including:</p>
+
+<ol>
+  <li><strong>EnzymeNode</strong>: The node type property was not stored in previous releases.</li>
+  <li><strong>DatasetNode</strong>: Name property was not properly indexed. </li>
+  <li><strong>OrganismNode</strong>: NCBI tax-id property was not stored in some scenarios.</li>
+  <li>Redundant sequence conflict feature relationships have been fixed.</li>
+  <li>Duplicated submissions fixed</li>
+  <li>ProteinUnpublishedObservationCitation relationship was missing</li>
+  <li>The following node types were not properly indexed by their type till now: <em>BookNode, ArticleNode, OnlineArticleNode, SubmissionNode, PatentNode, PublisherNode, OnlineJournalNode, JournalNode</em></li>
+</ol>
+
+<h2 id="java-7">Java 7</h2>
+
+<p>Bio4j uses Java 7 now ;)</p>
+
+<p>OK, so that’s all for now, I’ll be posting much more information about this new release soon.</p>
+
+<p>Cheers!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-10-30T00:33:27-04:00" pubdate>Oct 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi!</p>
+
+<p><strong>Bio4j 0.8 includes</strong> a few <strong>different data sources</strong> and you may not always be interested in having all of them. For example you might be interested in playing around with the Gene Ontology DAG alone and let’s face it, having to import a ~105 GB database to do that wouldn’t make much sense…</p>
+
+<p>That’s why <strong>the importing process is modular and customizable, allowing you to import just the data you are interested in</strong>. 
+Here’s the big picture of where do entities and relationships come from in the general domain model:</p>
+
+<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="/images/DomainModelWithDataSourceView.png" /></a></p>
+
+<p>There’s however one thing that you have to <strong>keep in mind, you must be coherent when choosing the data sources</strong> you want to have included in your database; that’s to say, you cannot have for example the Uniref clusters without previously importing Uniprot KB, otherwise there wouldn’t be proteins to connect to when importing the clusters!</p>
+
+<p>Here you have a basic schema showing the dependencies among the different modules:</p>
+
+<p><a href="/images/ModuleDependencies.png"><img src="/images/ModuleDependencies.png" /></a></p>
+
+<p><em>(Let me remind you that having here two data sources which are not connected by an arrow does NOT mean that they are not related/connected, but rather if it’s possible to import them alone or instead they need other data sources to be already present in the database )</em></p>
+
+<p>I’m going to create a wiki page where I will be going into more detail regarding database size and importing process time depending on your modules choice, but meanwhile you can find some more information about how to do this in the <a href="https://github.com/bio4j/Bio4j/wiki/Importing-bio4j">Importing Bio4j wiki page</a>.</p>
+
+<p>Have a good day!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-10-18T00:33:27-04:00" pubdate>Oct 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi everyone!</p>
+
+<p>Bio4j 0.8 was recently released and now it’s time to have a deeper look at its numbers <em>(as you can see we are quickly approaching the 1 billion relationships and 100M nodes)</em>:</p>
+
+<ul>
+  <li>Number of Relationships: <strong>717.484.649</strong></li>
+  <li>Number of Nodes: <strong>92.667.745</strong></li>
+  <li>Relationship types: <strong>144</strong></li>
+  <li>Node types: <strong>42</strong></li>
+</ul>
+
+<p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong>:</p>
+
+<p><a href="/images/bio4j08first20RelTypes.png"><img src="/images/bio4j08first20RelTypes.png" /></a></p>
+
+<p>Here, the same thing but for the <strong>first 20 Node types</strong>:</p>
+
+<p><a href="/images/bio4j08first20NodeTypes.png"><img src="/images/bio4j08first20NodeTypes.png" /></a></p>
+
+<p>You can also check these two files including the numbers for all the existing types:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.8/statistics/Bio4j08NodeStatistics.txt">Node statistics</a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.8/statistics/Bio4j08RelStatistics.txt">Relationship statiscis</a></li>
+</ul>
+
+<p>All this data was obtained with the program <a href="https://github.com/bio4j/Bio4jTools/blob/master/src/com/era7/bioinfo/bio4j/tools/GetNodeAndRelsStatistics.java"><strong>GetNodeAndRelsStatistics</strong></a>.</p>
+
+<p>Have a good weekend!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/bio4j-0-8-is-here/">Bio4j 0.8 is here!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-09-22T12:50:52-04:00" pubdate>Sep 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi everyone!</p>
+
+<p>I’m glad to announce the release of <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-0.8"><strong>Bio4j 0.8</strong></a> including more than <strong>5.488.000 new proteins</strong> and <strong>3.233.000 genes</strong> among others,  plus the following improvements and features:</p>
+
+<h2 id="pfam-families">Pfam families</h2>
+
+<p>Bio4j includes now all Pfam families included in Uniprot KB (both Swiss-Prot and TrEMBL). For that, both a new node type and relationship type have been created: </p>
+
+<ul>
+  <li>
+    <p><a href="http://www.bio4j.com/docs/bio4j/apidocs/com/era7/bioinfo/bio4j/model/nodes/PfamNode.html">PfamNode</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.bio4j.com/docs/bio4j/apidocs/com/era7/bioinfo/bio4j/model/relationships/protein/ProteinPfamRel.html">ProteinPfamRel</a> (this relationship connects a protein and the respective Pfam families associated to it)</p>
+  </li>
+</ul>
+
+<p>The following properties have been added to the Pfam node including:</p>
+
+<ul>
+  <li>ID</li>
+  <li>Name</li>
+</ul>
+
+<p>Besides, an exact index for the Pfam family ID property has also been created <em>( pfam_id_index ).</em></p>
+
+<h2 id="ncbi-taxonomy-tree-gi-index-improved">NCBI taxonomy tree GI index improved</h2>
+
+<p>Old merged node IDs have been incorporated to the Gene Identifier &lt;–&gt; Taxonomy units index. That means that now all the pairs GI-TaxID which included old merged Tax-ID are also part of the index, resulting on a higher rate of hits when using the index.
+For that we used the file <strong>meged.dmp</strong> provided in the <a href="ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz">official tax dump file</a> provided by the NCBI.</p>
+
+<h2 id="bio4j-and-bio4jmodel-projects-unification">Bio4j and Bio4jModel projects unification</h2>
+
+<p><a href="https://github.com/bio4j/Bio4j">Bio4j</a> project has absorbed <a href="https://github.com/bio4j/Bio4jModel">Bio4jModel</a> project from this release on.</p>
+
+<p>Until now, Bio4jModel library included the core classes for the manipulation and traversal of the graph while Bio4j project only included the importing programs. I’ve been thinking for a while that this could be confusing and, since there was no real need to keep them as independent projects, I decided to put it all under Bio4j <em>(you just need one jar file now ;) ).</em> </p>
+
+<h2 id="new-script-for-the-importing-process">New script for the importing process</h2>
+
+<p>You don’t have to worry anymore about manually downloading/decompressing/etc… the sources for the DB in case you want to import Bio4j in your own cluster/machine. Just run the script <strong><a href="https://github.com/bio4j/Bio4j/blob/master/DownloadAndPrepareBio4jSources.sh">DownloadAndPrepareBio4jSources.sh</a></strong> and it will do it all for you.</p>
+
+<h2 id="bug-fixes">Bug fixes</h2>
+
+<ol>
+  <li><strong>MetalIonBindingSiteFeature</strong> This feature relationship had an erroneous name assigned and it’s been fixed.</li>
+</ol>
+
+<p>Well, that’s all for now, I’ll be posting more information about this new release soon ;)</p>
+
+<p>Cheers,</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/new-bio4j-general-domain-model-schema-available/">New Bio4j general domain model schema available</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-05-17T17:11:50-04:00" pubdate>May 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi everyone!</p>
+
+<p>It’s been a few months already since I published the last post but that doesn’t mean that the development process of Bio4j was stopped, but rather, on the contrary, I have been working in the integration of Bio4j with other DB-related projects as well as pipelines and tools. Actually, I’m right now staying in the US for a couple of months working on the implementation and integration of a new database around Bio4j including grasses genomic data as part of a collaboration with the Ohio State University, (I promise to give more details about this and more in next posts).</p>
+
+<p>Ok, but let’s get to the point of this post. Even though there already is available a web tool to explore Bio4j data structure (<a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>Bio4jExplorer</strong></a>), I was feeling that something else was missing in order to get the big picture of all the data included and how it’s interrelated. So I got to work and created this general domain model including all node types and relationships (also specifying their cardinality).</p>
+
+<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="/images/Bio4jDomainModelWithCardinality.png" /></a></p>
+
+<p>I didn’t include “auxiliary” relationships linked to the reference node in order to not pollute the schema with relationships that don’t have any semantic meaning but rather indexing purposes. Also, the text included in both boxes represents different relationships all linking the same nodes -specifically Protein with CommentType and FeatureType. I could have drawn them as the rest but then I would have ended up with a hairball instead of a meaningful schema.</p>
+
+<p>As always, any feedback is welcome!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/bio4jexplorer-new-features-and-design/">Bio4jExplorer, new features and design!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-03-09T15:57:56-05:00" pubdate>Mar 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hello everyone,</p>
+
+<p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
+
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="/images/bio4jExplorerScreenshot-1024x712.png" /></a></p>
+
+<h3 id="node--relationship-properties">Node &amp; Relationship properties</h3>
+
+<p>You can now check with Bio4jExplorer the properties that has either a node or relationship in the table situated on the lower part of the interface. Five columns are included:</p>
+
+<ul>
+  <li><strong>Name:</strong> property name</li>
+  <li><strong>Type:</strong> property type (<code>String</code>, <code>int</code>, <code>float</code>, <code>String[]</code>, …)</li>
+  <li><strong>Indexed:</strong> either the property is indexed or not (yes/no)</li>
+  <li><strong>Index name</strong>: name of the index associated to this property -if there’s any 
+<strong>Index name</strong>: type of the index associated to this property -if there’s any </li>
+</ul>
+
+<p><img src="/images/bio4jExplorerPropertiesTable.png" /></p>
+
+<h3 id="node--relationship-data-source">Node &amp; Relationship Data source</h3>
+
+<p>You can also see now from which source a Node or Relationship was imported, <em>some examples would be Uniprot, Uniref, GO, RefSeq…</em></p>
+
+<p><img src="/images/bio4jExplorerDataSourceLabel.png" /></p>
+
+<h3 id="relationships-name-property">Relationships Name property</h3>
+
+<p>With this new version you can directly check here the “internal” name of relationships without having to go to the respective javadoc documentation. </p>
+
+<p><img src="h/images/bio4jExplorerRelationshipsNameProperty.png" /></p>
+
+<p>This is quite useful when you are writing your Cypher or Gremlin queries, just check it, copy it, and paste it in your query.  An example using the relationship shown in the picture would be this query included in the <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet">Bio4j Cypher cheatsheet</a>:</p>
+
+<p><strong><em>Get proteins (accession and names) associated to an interpro motif (limited to 10 results)</em></strong></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">&gt; 
+</span><span class="line">START i=node:interpro_id_index(interpro_id_index = "IPR023306")
+</span><span class="line"> MATCH i &lt;-[:**PROTEIN_INTERPRO**]- p
+</span><span class="line"> return p.accession, p.fullname, p.name, p.short_name
+</span><span class="line"> limit 10</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The url for Bio4jExplorer is the same as before:</p>
+
+<ul>
+  <li><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html</strong></a></li>
+</ul>
+
+<p>In case you are interested on how the tool is implemented, please go to <a href="blog//2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships">the previous post about Bio4jExplorer</a> where you can find information about the different code repos and more info.</p>
+
+<p><strong>If you want to check the files including the hard-coded information regarding how nodes, relationships, and indexes are organized</strong>, and which is the input for the program which creates the AWS SimpleDB domain, I just uploaded them to the bio4j-public S3 bucket. Please click on their names to download them:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodesBio4j.txt"><strong>NodesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodeIndexesBio4j.txt"><strong>NodeIndexesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodePropertiesBio4j.txt"><strong>NodePropertiesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipsBio4j.txt"><strong>RelationshipsBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipPropertiesBio4j.txt"><strong>RelationshipPropertiesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipIndexesBio4j.txt"><strong>RelationshipIndexesBio4j.txt</strong></a></li>
+</ul>
+
+<p>I wish you all a great weekend!</p>
+
+<p>I’ll have mine at the beach enjoying our great springy weather with lots of sun down here in Andalucia ;)</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/bio4j-0-7-some-numbers/">Bio4j 0.7, some numbers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-03-05T07:28:27-05:00" pubdate>Mar 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi everyone!</p>
+
+<p>There have already been a good few posts showing different uses and applications of Bio4j, but what about Bio4j data itself?
+Today I’m going to show you some <strong>basic statistics</strong> about the different types of nodes and relationships Bio4j is made up of.
+Just as a heads up, here are the <strong>general numbers of Bio4j 0.7</strong> :</p>
+
+<ul>
+  <li>Number of Relationships: <strong>530.642.683</strong></li>
+  <li>Number of Nodes: <strong>76.071.411</strong></li>
+  <li>Relationship types: <strong>139</strong></li>
+  <li>Node types: <strong>38</strong></li>
+</ul>
+
+<p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong> (click on the image below to check the interactive chart):</p>
+
+<p><a href="http://bio4j.com/imgs/release07/relsBarChart.html"><img src="/images/first20RelTypesChart-1024x797.png" /></a></p>
+
+<p>Here, the same thing but for the <strong>first 20 Node types</strong> (click on the image below to check the interactive chart):</p>
+
+<p><a href="http://bio4j.com/imgs/release07/nodesBarChart.html"><img src="/images/first20NodeTypesChart-1024x794.png" /></a></p>
+
+<p>You can also check these two files including the numbers from all existing types:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.7/statistics/Bio4j07NodeStatistics.txt">Node statistics</a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.7/statistics/Bio4j07RelStatistics.txt">Relationship statiscis</a></li>
+</ul>
+
+<p>All this data was obtained with the program <a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/GetNodeAndRelsStatistics.java"><strong>GetNodeAndRelsStatistics</strong></a>.</p>
+
+<p>Have a good day!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+<h2 id="comments">comments</h2>
+
+<ul>
+  <li>
+    <p><strong>Patrick Durusau</strong>
+Excellent!
+Question: When I checked at PubMed, I did not find Neo4j cited in any of the medical literature. I am not a medical professional but am interested in what might promote Bio4j in the medical research community?
+It is too good of a resource to be unnoticed.
+Patrick</p>
+
+    <ul>
+      <li><strong>ppareja</strong>
+Hi Patrick,
+I’m glad you liked the post.
+It’s true that Bio4j may not have caught the attention of many people yet who could definitely make a good use out of it. What are the reasons for that? Well, I think it could be a mixture of factors.
+Some people don’t like too much learning new technologies/strategies/workflows… and tend to stick to things they already know as long as possible – which is totally respectable and undestandable. Other people though, may simply not have found about it yet… It’s also possible that due to the lack of a well structured project documentation, potential users get lost in their way when trying to figure out what’s Bio4j about and/or miss the parts they could be interested in.
+I could keep on going with more possible reasons that are coming to my mind but still, couldn’t be really objective – it’s me who created this project  :D
+The point you bring up is actually one of the reasons why we value so much any sort of feedback for the project, (specially constructive ‘bad’ feedback that help us realize its weaknesses)
+Let me know if you come up with an idea to let more people know about Bio4j !
+Pablo</li>
+    </ul>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template/">Bio4j REST Server configures itself now thanks to the updated CF template</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-02-24T08:21:39-05:00" pubdate>Feb 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi all,</p>
+
+<p>I just wanted to write a very short post informing about the changes in the <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicRestServerTemplate.txt"><strong>Bio4jBasicRestServerTemplate</strong></a>. </p>
+
+<blockquote>
+  <p>Template what!? </p>
+</blockquote>
+
+<p>If that’s what you’re thinking, please go <a href="http://blog.ohnosequences.com/2011/12/neo4j-server-and-aws-become-good-friends/">here</a> to get an idea of what’s this all about.</p>
+
+<p>From now on, this CloudFormation template adapts the server configuration files:</p>
+
+<ul>
+  <li><code>neo4j-wrapper.conf</code></li>
+  <li><code>neo4j.properties</code></li>
+</ul>
+
+<p>to the characteristics of the instance type the server is running in, so that it can make the best out of it.</p>
+
+<blockquote>
+  <p>These configurations assume that the server is running alone in the machine.</p>
+</blockquote>
+
+<p>For that I created these two new mappings in the template:</p>
+
+<ul>
+  <li><code>AWSInstanceType2WrapperConfFile</code></li>
+  <li><code>AWSInstanceType2Neo4jPropertiesFile</code></li>
+</ul>
+
+<p>Default configuration values are available in the <strong>bio4j-public S3 bucket</strong>. For example in order to have access to the server configuration files of a <code>m1.xlarge</code> instance, just go to this url:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/server/conf-files/m1.xlarge/neo4j-wrapper.conf">neo4j-wrapper.conf - m1.xlarge</a></li>
+</ul>
+
+<p>same thing for the other file:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/server/conf-files/m1.xlarge/neo4j.properties">neo4j.properties - m1.xlarge</a></li>
+</ul>
+
+<p>If you want to check the conf files for any other instance type, you just have to change the <strong>instance type name</strong> in the urls linked above.</p>
+
+<p>Have a good weekend!</p>
+
+<p><strong><a href="http://www.twitter.com/pablopareja">@pablopareja</a></strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/">Bio4j accepted for Google Summer of Code 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/bio4j-0-8-some-numbers/">Bio4j 0.8, some numbers</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/bio4j">@bio4j</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bio4j',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - oh no sequences! -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
