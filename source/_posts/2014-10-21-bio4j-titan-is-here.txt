@@ -25,3 +25,7 @@ Here's a short sum up:
 - Distribution independent data model 
 
 - Distribution independent importing code!
+
+- Some data model changes
+
+- Adding schema restrictions to the DB
