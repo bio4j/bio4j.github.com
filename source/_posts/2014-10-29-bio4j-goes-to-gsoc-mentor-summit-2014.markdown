@@ -42,7 +42,7 @@ I also found a good idea the fact of having both the sticker exchange table:
 
 and the tea-room filled with chocolates from all over the world!
 
-{% img /images/chocolates.jpg %}
+{% img /images/chocolates.png %}
 
 The day ended with a quiz show that I unfortunately couldn't join but, I read on twitter that it was quite funny.
 
