@@ -34,7 +34,7 @@ We were supposed to dress smart for a change, which was interesting, seeing all 
 {% img /images/fotoTechMuseum.jpg %} 
 > I must say that I had to watch around 20 minutes of youtube videos before I managed to get the knot tie right... xD
 
-Sessions started early the next day with more than eight simultaneous rooms without taking into account the impromptu sessions that were organized at the ballroom from time to time.
+Sessions started early the next day with more than eight simultaneous rooms _(without taking into account the impromptu sessions that were organized at the ballroom from time to time)_ and went on till the evening.
 It was the first time that I went to an **[unconference](http://en.wikipedia.org/wiki/Unconference)** and I just loved it. It is actually great to have the opportunity to explore the different sessions and meet up with people on the way spontaneously, without all the rigidity that so many times comes with _"standard"_ conferences. 
 Meeting in person people from the [Reactome database](http://www.reactome.org/) project was cool since we plan to include this data source into Bio4j in the near future. It was also nice to see in person some of the guys that I've been following in twitter for a while like [@braincode](https://twitter.com/braincode) among others.
 I also found a good idea the fact of having both the sticker exchange table: 
