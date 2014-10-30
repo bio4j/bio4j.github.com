@@ -32,7 +32,7 @@ The events started on Friday with a complimentary visit to the theme park _Great
 We were supposed to dress smart for a change, which was interesting, seeing all these people wearing nice clothes :)
 
 {% img /images/fotoTechMuseum.jpg %} 
-> I must say that I had to wath around 20 minutes of youtube videos before I managed to get the knot tie right... xD
+> I must say that I had to watch around 20 minutes of youtube videos before I managed to get the knot tie right... xD
 
 Sessions started early the next day with more than eight simultaneous rooms without taking into account the impromptu sessions that were organized at the ballroom from time to time.
 It was the first time that I went to an **[unconference](http://en.wikipedia.org/wiki/Unconference)** and I just loved it. It is actually great to have the opportunity to explore the different sessions and meet up with people on the way spontaneously, without all the rigidity that so many times comes with _"standard"_ conferences. 
