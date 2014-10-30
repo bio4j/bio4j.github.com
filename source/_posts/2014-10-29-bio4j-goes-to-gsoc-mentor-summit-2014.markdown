@@ -16,7 +16,8 @@ tag:
 {% img /images/bio4jGsoc.png %}
 
 I just got home yesterday from San Francisco after attending to the 10th edition of the Google Summer of Code mentor summit. It's been a great experience that I would like to share with you all in this blog post ;)
-For those of you who still don't know what [GSoC](https://developers.google.com/open-source/soc/?csw=1) is, here's a debrief: 
+For those of you who still don't know what [GSoC](https://developers.google.com/open-source/soc/?csw=1) is, here's a debrief:
+
 > Google Summer of Code is a program that offers student developers stipends to write code for various open source projects. We work with many open source, free software, and technology-related groups to identify and fund projects over a three month period. 
 
 This was Bio4j's first year as a GSoC organization and we got three students who worked in the following projects:
@@ -31,7 +32,8 @@ The events started on Friday with a complimentary visit to the theme park _Great
 
 We were supposed to dress smart for a change, which was interesting, seeing all these people wearing nice clothes :)
 
-{% img /images/fotoTechMuseum.jpg %} 
+{% img /images/fotoTechMuseum.jpg %}
+
 > I must say that I had to watch around 20 minutes of youtube videos before I managed to get the knot tie right... xD
 
 Sessions started early the next day with more than eight simultaneous rooms _(without taking into account the impromptu sessions that were organized at the ballroom from time to time)_ and went on till the evening.
