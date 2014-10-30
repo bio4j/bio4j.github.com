@@ -41,20 +41,14 @@ Sessions started early the next day with more than eight simultaneous rooms _(wi
 It was the first time that I went to an **[unconference](http://en.wikipedia.org/wiki/Unconference)** and I just loved it. 
 It is actually great to have the opportunity to explore the different sessions and meet up with people on the way spontaneously, without all the rigidity that so many times comes with _"standard"_ conferences. 
 
+{% img left /images/stickers.jpg 260 %}
+
 Meeting in person people from the [Reactome database](http://www.reactome.org/) project was cool since we plan to include this data source into Bio4j in the near future. It was also nice to see in person some of the guys that I've been following on twitter for a while like [@braincode](https://twitter.com/braincode) among others.
-I also found a good idea the fact of having both the sticker exchange table: 
-
-{% img /images/stickers.jpg %}
-
-and the tea-room filled with chocolates from all over the world!
-
-{% img /images/chocolates.png %}
-
-The day ended with a quiz show that I unfortunately couldn't join but, I read on twitter that it was quite funny.
+I also found a good idea the fact of having both the sticker exchange table and the tea-room filled with chocolates from all over the world! The day ended with a quiz show that I unfortunately couldn't join but, I read on twitter that it was quite funny.
 
 On Sunday we opened the day with a trip to [Googleplex](http://en.wikipedia.org/wiki/Googleplex) where we could see the actual place where the Google folks work on.
 
-{% img /images/fotoGoogleAndroid.png %}
+{% img right /images/chocolates.png 240 %}
 
 There was some time left for a couple more sessions and then we unfortunately had to say bye to all the new acquaintances we made after attending the closing session at the hotel. 
 
@@ -62,5 +56,7 @@ I would like to end this post by thanking all the people that helped out on the 
 Also a special thanks to [@fossygirl](https://twitter.com/fossygrl), great job!
 
 Stay tuned for the next post, we will be releasing a shiny new version of Bio4j based on Titan very soon ;)
+
+{% img /images/fotoGoogleAndroid.png %}
 
 [@pablopareja](https://twitter.com/pablopareja)
