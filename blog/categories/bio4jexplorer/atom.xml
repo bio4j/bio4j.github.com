@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Bio4jExplorer | bio4j]]></title>
-  <link href="http://bio4j.github.com/blog/categories/bio4jexplorer/atom.xml" rel="self"/>
-  <link href="http://bio4j.github.com/"/>
-  <updated>2014-02-26T13:02:30-05:00</updated>
-  <id>http://bio4j.github.com/</id>
+  <link href="http://bio4j.com/blog/categories/bio4jexplorer/atom.xml" rel="self"/>
+  <link href="http://bio4j.com/"/>
+  <updated>2014-10-30T23:44:38+01:00</updated>
+  <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Bio4jExplorer, new features and design!]]></title>
-    <link href="http://bio4j.github.com/blog/2012/03/bio4jexplorer-new-features-and-design/"/>
-    <updated>2012-03-09T15:57:56-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/03/bio4jexplorer-new-features-and-design</id>
+    <link href="http://bio4j.com/blog/2012/03/bio4jexplorer-new-features-and-design/"/>
+    <updated>2012-03-09T21:57:56+01:00</updated>
+    <id>http://bio4j.com/blog/2012/03/bio4jexplorer-new-features-and-design</id>
     <content type="html"><![CDATA[<p>Hello everyone,</p>
 
 <p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
@@ -91,9 +91,9 @@ START i=node:interpro_id_index(interpro_id_index = "IPR023306")
   
   <entry>
     <title type="html"><![CDATA[Bio4jExplorer: familiarize yourself with Bio4j nodes and relationships ]]></title>
-    <link href="http://bio4j.github.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships/"/>
-    <updated>2011-10-10T13:19:03-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships</id>
+    <link href="http://bio4j.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships/"/>
+    <updated>2011-10-10T19:19:03+02:00</updated>
+    <id>http://bio4j.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships</id>
     <content type="html"><![CDATA[<p>Hi!</p>
 
 <p>I just uploaded a new tool aimed to be used both as a reference manual and initial contact for Bio4j domain model: <strong><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html">Bio4jExplorer</a></strong>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Project development | bio4j]]></title>
-  <link href="http://bio4j.github.com/blog/categories/project-development/atom.xml" rel="self"/>
-  <link href="http://bio4j.github.com/"/>
-  <updated>2014-02-26T13:02:30-05:00</updated>
-  <id>http://bio4j.github.com/</id>
+  <link href="http://bio4j.com/blog/categories/project-development/atom.xml" rel="self"/>
+  <link href="http://bio4j.com/"/>
+  <updated>2014-10-30T23:44:38+01:00</updated>
+  <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Bio4j general domain model schema available]]></title>
-    <link href="http://bio4j.github.com/blog/2012/05/new-bio4j-general-domain-model-schema-available/"/>
-    <updated>2012-05-17T17:11:50-04:00</updated>
-    <id>http://bio4j.github.com/blog/2012/05/new-bio4j-general-domain-model-schema-available</id>
+    <link href="http://bio4j.com/blog/2012/05/new-bio4j-general-domain-model-schema-available/"/>
+    <updated>2012-05-17T23:11:50+02:00</updated>
+    <id>http://bio4j.com/blog/2012/05/new-bio4j-general-domain-model-schema-available</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>It’s been a few months already since I published the last post but that doesn’t mean that the development process of Bio4j was stopped, but rather, on the contrary, I have been working in the integration of Bio4j with other DB-related projects as well as pipelines and tools. Actually, I’m right now staying in the US for a couple of months working on the implementation and integration of a new database around Bio4j including grasses genomic data as part of a collaboration with the Ohio State University, (I promise to give more details about this and more in next posts).</p>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[Bio4j incorporates git-flow model]]></title>
-    <link href="http://bio4j.github.com/blog/2011/09/bio4j-incorporates-git-flow-model/"/>
-    <updated>2011-09-19T07:16:15-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/09/bio4j-incorporates-git-flow-model</id>
+    <link href="http://bio4j.com/blog/2011/09/bio4j-incorporates-git-flow-model/"/>
+    <updated>2011-09-19T13:16:15+02:00</updated>
+    <id>http://bio4j.com/blog/2011/09/bio4j-incorporates-git-flow-model</id>
     <content type="html"><![CDATA[<p>Hi all!
 So summer has almost come to an end and I have now time again to continue with the development of Bio4j project. 
 This autumn comes with plenty of new features that will be released in the next few months; the first of them: git-flow model.

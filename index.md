@@ -5,7 +5,6 @@ Bio4j is a high-**performance** **cloud**-enabled **graph**-based **open** sourc
 - [UniProtKB](http://www.uniprot.org/help/uniprotkb) ([SwissProt](http://web.expasy.org/docs/swiss-prot_guideline.html) + [Trembl](https://www.ebi.ac.uk/uniprot/TrEMBLstats))
 - [Gene Ontology](http://www.geneontology.org/) (GO)
 - [UniRef](http://www.uniprot.org/help/uniref) (50, 90, 100)
-- [RefSeq](http://www.ncbi.nlm.nih.gov/refseq/)
 - [NCBI taxonomy](http://www.ncbi.nlm.nih.gov/taxonomy)
 - [Expasy Enzyme](http://enzyme.expasy.org/)
 

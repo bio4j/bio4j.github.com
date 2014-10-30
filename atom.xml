@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[bio4j]]></title>
-  <link href="http://bio4j.github.com/atom.xml" rel="self"/>
-  <link href="http://bio4j.github.com/"/>
-  <updated>2014-02-26T13:02:30-05:00</updated>
-  <id>http://bio4j.github.com/</id>
+  <link href="http://bio4j.com/atom.xml" rel="self"/>
+  <link href="http://bio4j.com/"/>
+  <updated>2014-10-30T23:44:38+01:00</updated>
+  <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
     
@@ -14,11 +14,72 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Bio4j goes to GSoC mentor summit 2014]]></title>
+    <link href="http://bio4j.com/blog/2014/10/bio4j-goes-to-gsoc-mentor-summit-2014/"/>
+    <updated>2014-10-29T17:18:00+01:00</updated>
+    <id>http://bio4j.com/blog/2014/10/bio4j-goes-to-gsoc-mentor-summit-2014</id>
+    <content type="html"><![CDATA[<p><img src="http://bio4j.com/images/bio4jGsoc.png" /></p>
+
+<p>I just got home yesterday from San Francisco after attending together with <a href="https://twitter.com/eparejatobes">@eparejatobes</a> to the 10th edition of the Google Summer of Code mentor summit. It&#8217;s been a great experience that I would like to share with you all in this blog post ;)
+For those of you who still don&#8217;t know what <a href="https://developers.google.com/open-source/soc/?csw=1">GSoC</a> is, here&#8217;s a debrief:</p>
+
+<blockquote>
+  <p>Google Summer of Code is a program that offers student developers stipends to write code for various open source projects. We work with many open source, free software, and technology-related groups to identify and fund projects over a three month period. </p>
+</blockquote>
+
+<p>This was Bio4j&#8217;s first year as a GSoC organization and we got three students who worked in the following projects:</p>
+
+<ul>
+  <li><a href="https://github.com/bio4j/dynamograph">dynamograph</a></li>
+  <li><a href="https://github.com/bio4j/exporter">exporter</a></li>
+  <li><a href="https://github.com/bio4j/el-grafo">el-grafo</a></li>
+</ul>
+
+<p>It also was my first experience as a mentor and I must say that I both learned and enjoyed it a lot during the process.</p>
+
+<p>The events started on Friday with a complimentary visit to the theme park <em>Great America</em>, nice! followed by a really cool dinner reception at the <a href="http://www.thetech.org/">San Jose Tech Museum of Innovation</a> where we had surprise speakers such as Linus Torvals plus the opportunity of exploring the geeky exhibits from the museum while having some drinks.</p>
+
+<p>We were supposed to dress smart for a change, which was interesting, seeing all these people wearing nice clothes :)</p>
+
+<p><img class="right" src="http://bio4j.com/images/fotoTechMuseum.jpg" width="280" /></p>
+
+<blockquote>
+  <p>I must say that I had to watch around 20 minutes of youtube videos before I managed to get the knot tie right&#8230; xD</p>
+</blockquote>
+
+<p>Sessions started early the next day with more than eight simultaneous rooms <em>(without taking into account the impromptu sessions that were organized at the ballroom from time to time)</em> and went on till the evening.</p>
+
+<p>It was the first time that I went to an <strong><a href="http://en.wikipedia.org/wiki/Unconference">unconference</a></strong> and I just loved it. 
+It is actually great to have the opportunity to explore the different sessions and meet up with people on the way spontaneously, without all the rigidity that so many times comes with <em>&#8220;standard&#8221;</em> conferences. </p>
+
+<p><img class="left" src="http://bio4j.com/images/stickers.jpg" width="260" /></p>
+
+<p>Meeting in person people from the <a href="http://www.reactome.org/">Reactome database</a> project was cool since we plan to include this data source into Bio4j in the near future. It was also nice to see in person some of the guys that I&#8217;ve been following on twitter for a while like <a href="https://twitter.com/braincode">@braincode</a> among others.
+I also found a good idea the fact of having both the sticker exchange table and the tea-room filled with chocolates from all over the world! The day ended with a quiz show that I unfortunately couldn&#8217;t join but, I read on twitter that it was quite funny.</p>
+
+<p>On Sunday we opened the day with a trip to <a href="http://en.wikipedia.org/wiki/Googleplex">Googleplex</a> where we could see the actual place where the Google folks work on.</p>
+
+<p><img class="right" src="http://bio4j.com/images/chocolates.png" width="240" /></p>
+
+<p>There was some time left for a couple more sessions and then we unfortunately had to say bye to all the new acquaintances we made after attending the closing session at the hotel. </p>
+
+<p>I would like to end this post by thanking all the people that helped out on the organization of this awesome summit.
+Also a special thanks to <a href="https://twitter.com/fossygrl">@fossygirl</a>, great job!</p>
+
+<p>Stay tuned for the next post, we will be releasing a shiny new version of Bio4j based on Titan very soon ;)</p>
+
+<p><img src="http://bio4j.com/images/fotoGoogleAndroid.png" /></p>
+
+<p><a href="https://twitter.com/pablopareja">@pablopareja</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Bio4j accepted for Google Summer of Code 2014]]></title>
-    <link href="http://bio4j.github.com/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/"/>
-    <updated>2014-02-25T17:18:00-05:00</updated>
-    <id>http://bio4j.github.com/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014</id>
-    <content type="html"><![CDATA[<p><img class="right" src="http://bio4j.github.com/images/GoogleSummer_2014logo.jpg" width="300" height="270" /></p>
+    <link href="http://bio4j.com/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/"/>
+    <updated>2014-02-25T17:18:00+01:00</updated>
+    <id>http://bio4j.com/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014</id>
+    <content type="html"><![CDATA[<p><img class="right" src="http://bio4j.com/images/GoogleSummer_2014logo.jpg" width="300" height="270" /></p>
 
 <p>We are really excited to announce that <strong>Bio4j</strong> has been <strong>accepted</strong> as a <a href="https://www.google-melange.com/gsoc/org2/google/gsoc2014/bio4j">mentoring organization</a> for <strong><a href="https://www.google-melange.com/gsoc/homepage/google/gsoc2014">Google Summer of Code 2014</a></strong>. This was the first year we applied for it, and it feels just great being part of this inititative!</p>
 
@@ -40,9 +101,9 @@
   
   <entry>
     <title type="html"><![CDATA[Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j]]></title>
-    <link href="http://bio4j.github.com/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/"/>
-    <updated>2013-11-12T06:00:00-05:00</updated>
-    <id>http://bio4j.github.com/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant</id>
+    <link href="http://bio4j.com/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/"/>
+    <updated>2013-11-12T12:00:00+01:00</updated>
+    <id>http://bio4j.com/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant</id>
     <content type="html"><![CDATA[<p>The <a href="http://phylogenomics.berkeley.edu/">Sjölander Lab</a> at the <a href="http://www.berkeley.edu/index.html">University of California, Berkeley</a>, has recently been awarded a <strong>250K</strong> US dollars <em>EAGER</em> grant from the National Science Foundation to build a graph database for Big Data challenges in genomics.  Naturally, <strong>they’re building on Bio4j</strong>.</p>
 
 <p>The project “<strong>EAGER: Towards a self-organizing map and hyper-dimensional information network for the human genome</strong>” aims to create a graph database of genome and proteome data for the human genome and related species to allow biologists and computational biologists to mine the information in gene family trees, biological networks and other graph data that cannot be represented effectively in relational databases. For these goals, they will develop on top of the pioneering graph-based bioinformatics platform <strong>Bio4j</strong>. </p>
@@ -63,9 +124,9 @@
   
   <entry>
     <title type="html"><![CDATA[Bio4j 0.9 the billion relationships are here!]]></title>
-    <link href="http://bio4j.github.com/blog/2013/10/bio4j-09-the-billion-relationships-is-here/"/>
-    <updated>2013-10-15T00:33:27-04:00</updated>
-    <id>http://bio4j.github.com/blog/2013/10/bio4j-09-the-billion-relationships-is-here</id>
+    <link href="http://bio4j.com/blog/2013/10/bio4j-09-the-billion-relationships-is-here/"/>
+    <updated>2013-10-15T06:33:27+02:00</updated>
+    <id>http://bio4j.com/blog/2013/10/bio4j-09-the-billion-relationships-is-here</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>So <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-0.9"><strong>Bio4j 0.9</strong></a> finally made its way out and it’s here bringing you more than 1 billion relationships. These are approximately its main numbers:</p>
@@ -80,16 +141,16 @@
 
 <h2 id="refurbishing-the-domain-model">Refurbishing the domain model</h2>
 
-<p><img src="http://bio4j.github.com/images/domainModelThumbnail.png" style="float:right" />We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
+<p><img src="http://bio4j.com/images/domainModelThumbnail.png" style="float:right" />We have introduced a new level of abstraction for the domain model by decoupling the inner database implementation from the relationships among entities themselves. An interface has been developed for each node and relationship present in the database, including methods to access both the properties of the entity it represents and utility methods that allow to easily navigate to the entities that will be linked to it. 
 All this can be found under the package <em>com.era7.bioinfo.bio4j.model</em></p>
 
 <h2 id="new-blueprints-layer">New Blueprints layer</h2>
 
-<p><img src="http://bio4j.github.com/images/blueprints.png" style="float:left" /> Apart from the set of interfaces we’ve developed another layer for the domain model using <a href="http://blueprints.tinkerpop.com/"><strong>Blueprints</strong></a>. This way we’re going one step further for making the domain model independent from the choice of database technology.</p>
+<p><img src="http://bio4j.com/images/blueprints.png" style="float:left" /> Apart from the set of interfaces we’ve developed another layer for the domain model using <a href="http://blueprints.tinkerpop.com/"><strong>Blueprints</strong></a>. This way we’re going one step further for making the domain model independent from the choice of database technology.</p>
 
 <h2 id="new-titan-implementation">New Titan implementation</h2>
 
-<p><img src="http://bio4j.github.com/images/titan.png" style="float:right" /> After the problems we had with the so called <a href="http://thinkaurelius.com/2012/10/25/a-solution-to-the-supernode-problem/"><em><strong>supernodes</strong></em></a> - which are quite common indeed, we decided to give a try to <a href="http://thinkaurelius.github.io/titan/"><strong>Titan Graph Database</strong></a> technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you’ll be hearing more about this pretty soon! ;)</p>
+<p><img src="http://bio4j.com/images/titan.png" style="float:right" /> After the problems we had with the so called <a href="http://thinkaurelius.com/2012/10/25/a-solution-to-the-supernode-problem/"><em><strong>supernodes</strong></em></a> - which are quite common indeed, we decided to give a try to <a href="http://thinkaurelius.github.io/titan/"><strong>Titan Graph Database</strong></a> technology and see how it behaves in such situation. Both wrapper classes for each entity and importing programs have already been implemented. This new prototype needs however some testing but be sure you’ll be hearing more about this pretty soon! ;)</p>
 
 <h2 id="bye-bye-reference-node">Bye bye reference node</h2>
 
@@ -125,9 +186,9 @@ I have to admit it, I never was a fan of it and it was about time to do it. So n
   
   <entry>
     <title type="html"><![CDATA[Bio4j modules, adapt the database to your own needs]]></title>
-    <link href="http://bio4j.github.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/"/>
-    <updated>2012-10-30T00:33:27-04:00</updated>
-    <id>http://bio4j.github.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs</id>
+    <link href="http://bio4j.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/"/>
+    <updated>2012-10-30T05:33:27+01:00</updated>
+    <id>http://bio4j.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs</id>
     <content type="html"><![CDATA[<p>Hi!</p>
 
 <p><strong>Bio4j 0.8 includes</strong> a few <strong>different data sources</strong> and you may not always be interested in having all of them. For example you might be interested in playing around with the Gene Ontology DAG alone and let’s face it, having to import a ~105 GB database to do that wouldn’t make much sense…</p>
@@ -135,13 +196,13 @@ I have to admit it, I never was a fan of it and it was about time to do it. So n
 <p>That’s why <strong>the importing process is modular and customizable, allowing you to import just the data you are interested in</strong>. 
 Here’s the big picture of where do entities and relationships come from in the general domain model:</p>
 
-<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="http://bio4j.github.com/images/DomainModelWithDataSourceView.png" /></a></p>
+<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="http://bio4j.com/images/DomainModelWithDataSourceView.png" /></a></p>
 
 <p>There’s however one thing that you have to <strong>keep in mind, you must be coherent when choosing the data sources</strong> you want to have included in your database; that’s to say, you cannot have for example the Uniref clusters without previously importing Uniprot KB, otherwise there wouldn’t be proteins to connect to when importing the clusters!</p>
 
 <p>Here you have a basic schema showing the dependencies among the different modules:</p>
 
-<p><a href="http://bio4j.github.com/images/ModuleDependencies.png"><img src="http://bio4j.github.com/images/ModuleDependencies.png" /></a></p>
+<p><a href="http://bio4j.com/images/ModuleDependencies.png"><img src="http://bio4j.com/images/ModuleDependencies.png" /></a></p>
 
 <p><em>(Let me remind you that having here two data sources which are not connected by an arrow does NOT mean that they are not related/connected, but rather if it’s possible to import them alone or instead they need other data sources to be already present in the database )</em></p>
 
@@ -156,9 +217,9 @@ Here’s the big picture of where do entities and relationships come from in the
   
   <entry>
     <title type="html"><![CDATA[Bio4j 0.8, some numbers]]></title>
-    <link href="http://bio4j.github.com/blog/2012/10/bio4j-0-8-some-numbers/"/>
-    <updated>2012-10-18T00:33:27-04:00</updated>
-    <id>http://bio4j.github.com/blog/2012/10/bio4j-0-8-some-numbers</id>
+    <link href="http://bio4j.com/blog/2012/10/bio4j-0-8-some-numbers/"/>
+    <updated>2012-10-18T06:33:27+02:00</updated>
+    <id>http://bio4j.com/blog/2012/10/bio4j-0-8-some-numbers</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>Bio4j 0.8 was recently released and now it’s time to have a deeper look at its numbers <em>(as you can see we are quickly approaching the 1 billion relationships and 100M nodes)</em>:</p>
@@ -172,11 +233,11 @@ Here’s the big picture of where do entities and relationships come from in the
 
 <p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong>:</p>
 
-<p><a href="http://bio4j.github.com/images/bio4j08first20RelTypes.png"><img src="http://bio4j.github.com/images/bio4j08first20RelTypes.png" /></a></p>
+<p><a href="http://bio4j.com/images/bio4j08first20RelTypes.png"><img src="http://bio4j.com/images/bio4j08first20RelTypes.png" /></a></p>
 
 <p>Here, the same thing but for the <strong>first 20 Node types</strong>:</p>
 
-<p><a href="http://bio4j.github.com/images/bio4j08first20NodeTypes.png"><img src="http://bio4j.github.com/images/bio4j08first20NodeTypes.png" /></a></p>
+<p><a href="http://bio4j.com/images/bio4j08first20NodeTypes.png"><img src="http://bio4j.com/images/bio4j08first20NodeTypes.png" /></a></p>
 
 <p>You can also check these two files including the numbers for all the existing types:</p>
 
@@ -196,9 +257,9 @@ Here’s the big picture of where do entities and relationships come from in the
   
   <entry>
     <title type="html"><![CDATA[Bio4j 0.8 is here!]]></title>
-    <link href="http://bio4j.github.com/blog/2012/09/bio4j-0-8-is-here/"/>
-    <updated>2012-09-22T12:50:52-04:00</updated>
-    <id>http://bio4j.github.com/blog/2012/09/bio4j-0-8-is-here</id>
+    <link href="http://bio4j.com/blog/2012/09/bio4j-0-8-is-here/"/>
+    <updated>2012-09-22T18:50:52+02:00</updated>
+    <id>http://bio4j.com/blog/2012/09/bio4j-0-8-is-here</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>I’m glad to announce the release of <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-0.8"><strong>Bio4j 0.8</strong></a> including more than <strong>5.488.000 new proteins</strong> and <strong>3.233.000 genes</strong> among others,  plus the following improvements and features:</p>
@@ -256,16 +317,16 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
   
   <entry>
     <title type="html"><![CDATA[New Bio4j general domain model schema available]]></title>
-    <link href="http://bio4j.github.com/blog/2012/05/new-bio4j-general-domain-model-schema-available/"/>
-    <updated>2012-05-17T17:11:50-04:00</updated>
-    <id>http://bio4j.github.com/blog/2012/05/new-bio4j-general-domain-model-schema-available</id>
+    <link href="http://bio4j.com/blog/2012/05/new-bio4j-general-domain-model-schema-available/"/>
+    <updated>2012-05-17T23:11:50+02:00</updated>
+    <id>http://bio4j.com/blog/2012/05/new-bio4j-general-domain-model-schema-available</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>It’s been a few months already since I published the last post but that doesn’t mean that the development process of Bio4j was stopped, but rather, on the contrary, I have been working in the integration of Bio4j with other DB-related projects as well as pipelines and tools. Actually, I’m right now staying in the US for a couple of months working on the implementation and integration of a new database around Bio4j including grasses genomic data as part of a collaboration with the Ohio State University, (I promise to give more details about this and more in next posts).</p>
 
 <p>Ok, but let’s get to the point of this post. Even though there already is available a web tool to explore Bio4j data structure (<a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>Bio4jExplorer</strong></a>), I was feeling that something else was missing in order to get the big picture of all the data included and how it’s interrelated. So I got to work and created this general domain model including all node types and relationships (also specifying their cardinality).</p>
 
-<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="http://bio4j.github.com/images/Bio4jDomainModelWithCardinality.png" /></a></p>
+<p><a href="https://raw.github.com/bio4j/Bio4j/master/Bio4jDomainModelWithCardinality.jpg"><img src="http://bio4j.com/images/Bio4jDomainModelWithCardinality.png" /></a></p>
 
 <p>I didn’t include “auxiliary” relationships linked to the reference node in order to not pollute the schema with relationships that don’t have any semantic meaning but rather indexing purposes. Also, the text included in both boxes represents different relationships all linking the same nodes -specifically Protein with CommentType and FeatureType. I could have drawn them as the rest but then I would have ended up with a hairball instead of a meaningful schema.</p>
 
@@ -277,14 +338,14 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
   
   <entry>
     <title type="html"><![CDATA[Bio4jExplorer, new features and design!]]></title>
-    <link href="http://bio4j.github.com/blog/2012/03/bio4jexplorer-new-features-and-design/"/>
-    <updated>2012-03-09T15:57:56-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/03/bio4jexplorer-new-features-and-design</id>
+    <link href="http://bio4j.com/blog/2012/03/bio4jexplorer-new-features-and-design/"/>
+    <updated>2012-03-09T21:57:56+01:00</updated>
+    <id>http://bio4j.com/blog/2012/03/bio4jexplorer-new-features-and-design</id>
     <content type="html"><![CDATA[<p>Hello everyone,</p>
 
 <p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
 
-<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="http://bio4j.github.com/images/bio4jExplorerScreenshot-1024x712.png" /></a></p>
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="http://bio4j.com/images/bio4jExplorerScreenshot-1024x712.png" /></a></p>
 
 <h3 id="node--relationship-properties">Node &amp; Relationship properties</h3>
 
@@ -298,13 +359,13 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
 <strong>Index name</strong>: type of the index associated to this property -if there’s any </li>
 </ul>
 
-<p><img src="http://bio4j.github.com/images/bio4jExplorerPropertiesTable.png" /></p>
+<p><img src="http://bio4j.com/images/bio4jExplorerPropertiesTable.png" /></p>
 
 <h3 id="node--relationship-data-source">Node &amp; Relationship Data source</h3>
 
 <p>You can also see now from which source a Node or Relationship was imported, <em>some examples would be Uniprot, Uniref, GO, RefSeq…</em></p>
 
-<p><img src="http://bio4j.github.com/images/bio4jExplorerDataSourceLabel.png" /></p>
+<p><img src="http://bio4j.com/images/bio4jExplorerDataSourceLabel.png" /></p>
 
 <h3 id="relationships-name-property">Relationships Name property</h3>
 
@@ -356,9 +417,9 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
   
   <entry>
     <title type="html"><![CDATA[Bio4j 0.7, some numbers]]></title>
-    <link href="http://bio4j.github.com/blog/2012/03/bio4j-0-7-some-numbers/"/>
-    <updated>2012-03-05T07:28:27-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/03/bio4j-0-7-some-numbers</id>
+    <link href="http://bio4j.com/blog/2012/03/bio4j-0-7-some-numbers/"/>
+    <updated>2012-03-05T13:28:27+01:00</updated>
+    <id>http://bio4j.com/blog/2012/03/bio4j-0-7-some-numbers</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>There have already been a good few posts showing different uses and applications of Bio4j, but what about Bio4j data itself?
@@ -374,11 +435,11 @@ Just as a heads up, here are the <strong>general numbers of Bio4j 0.7</strong> :
 
 <p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong> (click on the image below to check the interactive chart):</p>
 
-<p><a href="http://bio4j.com/imgs/release07/relsBarChart.html"><img src="http://bio4j.github.com/images/first20RelTypesChart-1024x797.png" /></a></p>
+<p><a href="http://bio4j.com/imgs/release07/relsBarChart.html"><img src="http://bio4j.com/images/first20RelTypesChart-1024x797.png" /></a></p>
 
 <p>Here, the same thing but for the <strong>first 20 Node types</strong> (click on the image below to check the interactive chart):</p>
 
-<p><a href="http://bio4j.com/imgs/release07/nodesBarChart.html"><img src="http://bio4j.github.com/images/first20NodeTypesChart-1024x794.png" /></a></p>
+<p><a href="http://bio4j.com/imgs/release07/nodesBarChart.html"><img src="http://bio4j.com/images/first20NodeTypesChart-1024x794.png" /></a></p>
 
 <p>You can also check these two files including the numbers from all existing types:</p>
 
@@ -421,9 +482,9 @@ Pablo</li>
   
   <entry>
     <title type="html"><![CDATA[Bio4j REST Server configures itself now thanks to the updated CF template]]></title>
-    <link href="http://bio4j.github.com/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template/"/>
-    <updated>2012-02-24T08:21:39-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template</id>
+    <link href="http://bio4j.com/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template/"/>
+    <updated>2012-02-24T14:21:39+01:00</updated>
+    <id>http://bio4j.com/blog/2012/02/bio4j-rest-server-configures-itself-now-thanks-to-the-updated-cf-template</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
 <p>I just wanted to write a very short post informing about the changes in the <a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/Bio4jBasicRestServerTemplate.txt"><strong>Bio4jBasicRestServerTemplate</strong></a>. </p>
@@ -476,9 +537,9 @@ Pablo</li>
   
   <entry>
     <title type="html"><![CDATA[Finding the lowest common ancestor of a set of NCBI taxonomy nodes with Bio4j]]></title>
-    <link href="http://bio4j.github.com/blog/2012/02/finding-the-lowest-common-ancestor-of-a-set-of-ncbi-taxonomy-nodes-with-bio4j/"/>
-    <updated>2012-02-08T15:20:53-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/02/finding-the-lowest-common-ancestor-of-a-set-of-ncbi-taxonomy-nodes-with-bio4j</id>
+    <link href="http://bio4j.com/blog/2012/02/finding-the-lowest-common-ancestor-of-a-set-of-ncbi-taxonomy-nodes-with-bio4j/"/>
+    <updated>2012-02-08T21:20:53+01:00</updated>
+    <id>http://bio4j.com/blog/2012/02/finding-the-lowest-common-ancestor-of-a-set-of-ncbi-taxonomy-nodes-with-bio4j</id>
     <content type="html"><![CDATA[<p>I don’t know if you have ever heard of the <a href="http://en.wikipedia.org/wiki/Lowest_common_ancestor"><strong>lowest common ancestor problem</strong></a> in graph theory and computer science but it’s actually pretty simple. As its name says, it consists of finding the common ancestor for two different nodes which has the lowest level possible in the tree/graph.</p>
 
 <p>Even though it is normally defined for only two nodes given <strong>it can easily be extended for a set of nodes with an arbitrary size</strong>. This is a quite common scenario that can be found across multiple fields and **taxonomy **is one of them.</p>
@@ -489,27 +550,27 @@ Pablo</li>
 
 <p>We start from a set of nodes with an arbitrary length -<em>4 in this sample</em>, which are spread through the taxonomy tree:</p>
 
-<p><img src="http://bio4j.github.com/images/LCAfirstStep.png" /></p>
+<p><img src="http://bio4j.com/images/LCAfirstStep.png" /></p>
 
 <p>We fetch then the first node from the set and calculate its whole ancestor list to the main root of the taxonomy.</p>
 
-<p><img src="http://bio4j.github.com/images/LCAsecondStep.png" /></p>
+<p><img src="http://bio4j.com/images/LCAsecondStep.png" /></p>
 
 <p>Now that we have the list, we take the second node of the set and check if it’s contained in it, if not, we keep going up through its ancestors until we find a hit. Once the hit has been found, we get rid of the previous elements in the list (if any) so that they are not taken into account for the next iterations in the algorithm.</p>
 
-<p><img src="http://bio4j.github.com/images/LCAthirdStep.png" /></p>
+<p><img src="http://bio4j.com/images/LCAthirdStep.png" /></p>
 
 <p>We keep going trough our node set, and C also removes some elements of the list…</p>
 
-<p><img src="http://bio4j.github.com/images/LCAfourthStep.png" /></p>
+<p><img src="http://bio4j.com/images/LCAfourthStep.png" /></p>
 
 <p>Finally we reach the last node of our set, but no element is removed from our list as a result.</p>
 
-<p><img src="http://bio4j.github.com/images/LCAfifthStep.png" /></p>
+<p><img src="http://bio4j.com/images/LCAfifthStep.png" /></p>
 
 <p>The last thing we have to do is simply get the first element of the resulting list and there we have our lowest common ancestor!</p>
 
-<p><img src="http://bio4j.github.com/images/LCAsixthStep.png" /></p>
+<p><img src="http://bio4j.com/images/LCAsixthStep.png" /></p>
 
 <p>This algorithm is encapsulated in the class <a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/algo/TaxonomyAlgo.java"><strong>TaxonomyAlgo</strong></a>, specifically in the static method <code>lowestCommonAncestor()</code> that expects a list of <strong>NCBITaxonNode</strong> as parameter and returns their LCA node.</p>
 
@@ -582,9 +643,9 @@ I know that the problem can be decomposed so that you end up with a set of 2-nod
   
   <entry>
     <title type="html"><![CDATA[Mining Bio4j data: finding topological patterns in PPI networks]]></title>
-    <link href="http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/"/>
-    <updated>2012-01-24T10:42:56-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks</id>
+    <link href="http://bio4j.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/"/>
+    <updated>2012-01-24T16:42:56+01:00</updated>
+    <id>http://bio4j.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>After writing <a href="http://blog.bio4j.com/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/"><strong>this post</strong></a> on December, I’ve been thinking of doing something similar, yet different, using Neo4j Cypher query language.</p>
@@ -593,7 +654,7 @@ I know that the problem can be decomposed so that you end up with a set of 2-nod
 
 <p>I decided to mine the data in order to find <strong>circuits/simple cycles of length 3</strong> where <strong>at least one protein is from Swiss-Prot dataset</strong>:</p>
 
-<p><img src="http://bio4j.github.com/images/PPICircuit.png" /></p>
+<p><img src="http://bio4j.com/images/PPICircuit.png" /></p>
 
 <p>I would like to point out that the <strong>direction</strong> here <strong>is important</strong> and these two cycles:</p>
 
@@ -661,7 +722,7 @@ After running the program you get two files:</p>
 
 <p>Finally, I also created a really simple chart including the absolute frequency of the first 20 proteins with more occurrences in the cycles that were found.</p>
 
-<p><img src="http://bio4j.github.com/images/proteinsFrequencyChart.png" /></p>
+<p><img src="http://bio4j.com/images/proteinsFrequencyChart.png" /></p>
 
 <p>Well, that’s all for now. Have a good day!</p>
 
@@ -671,9 +732,9 @@ After running the program you get two files:</p>
   
   <entry>
     <title type="html"><![CDATA[Bio4j release 0.7 is out!]]></title>
-    <link href="http://bio4j.github.com/blog/2012/01/bio4j-release-0-7-is-out/"/>
-    <updated>2012-01-11T11:50:52-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/01/bio4j-release-0-7-is-out</id>
+    <link href="http://bio4j.com/blog/2012/01/bio4j-release-0-7-is-out/"/>
+    <updated>2012-01-11T17:50:52+01:00</updated>
+    <id>http://bio4j.com/blog/2012/01/bio4j-release-0-7-is-out</id>
     <content type="html"><![CDATA[<p>Hi!</p>
 
 <p>I’m happy to announce that the version 0.7 of Bio4j has been released. Check out the wide set of new features, tools and improvements:</p>
@@ -739,11 +800,11 @@ After running the program you get two files:</p>
 
 <p>Using the data browser tab of the Web administration tool you can explore in real-time the contents of Bio4j!</p>
 
-<p><img src="http://bio4j.github.com/images/Bio4jDataBrowser-1024x699.png" /></p>
+<p><img src="http://bio4j.com/images/Bio4jDataBrowser-1024x699.png" /></p>
 
 <p>In order to get visualizations like the one shown above, you should make use of <strong>visualization profiles</strong>. There you can specify different styles associated to customizable rules which can be expressed in terms of the node properties. Here’s a screenshot showing how the visualization profile I used for the visualization above looks like:</p>
 
-<p><img src="http://bio4j.github.com/images/Bio4jDataBrowserVizProfile-1024x752.png" /></p>
+<p><img src="http://bio4j.com/images/Bio4jDataBrowserVizProfile-1024x752.png" /></p>
 
 <blockquote>
   <p>Just beware of one thing, the behavior of the tool is such that it does not distinguish between highly connected nodes and more isolated ones. Because of this, clicking nodes such as <strong>Trembl</strong> dataset node is not advisable unless you want to see it freeze forever -<em>this node has more than 15 million relationships linking it to proteins</em>.</p>
@@ -815,9 +876,9 @@ After running the program you get two files:</p>
   
   <entry>
     <title type="html"><![CDATA[Using Bio4j + Neo4j Graph-algo component for finding protein-protein interaction paths]]></title>
-    <link href="http://bio4j.github.com/blog/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/"/>
-    <updated>2011-12-19T16:35:41-05:00</updated>
-    <id>http://bio4j.github.com/blog/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths</id>
+    <link href="http://bio4j.com/blog/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/"/>
+    <updated>2011-12-19T22:35:41+01:00</updated>
+    <id>http://bio4j.com/blog/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths</id>
     <content type="html"><![CDATA[<p>Hi all!</p>
 
 <p>Today I managed to find some time to check out the <a href="http://wiki.neo4j.org/content/Graph-algo"><strong>Graph-algo component</strong></a> from Neo4j and after playing with it plus Bio4j a bit, I have to say it seems pretty cool.
@@ -870,9 +931,9 @@ I follow neo4j which much itrneest. It is a novel approach, however i think prop
   
   <entry>
     <title type="html"><![CDATA[Bio4j + AWS CloudFormation = your own fresh baked DB in less than a minute!]]></title>
-    <link href="http://bio4j.github.com/blog/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute/"/>
-    <updated>2011-12-08T11:37:17-05:00</updated>
-    <id>http://bio4j.github.com/blog/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute</id>
+    <link href="http://bio4j.com/blog/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute/"/>
+    <updated>2011-12-08T17:37:17+01:00</updated>
+    <id>http://bio4j.com/blog/2011/12/bio4j-aws-cloudformation-your-own-fresh-baked-db-in-less-than-a-minute</id>
     <content type="html"><![CDATA[<p><strong>UPDATE:</strong> You can now use this template from **all zones but <code>ap-southeast-1</code>! **</p>
 
 <p>Hi!</p>
@@ -898,29 +959,29 @@ I follow neo4j which much itrneest. It is a novel approach, however i think prop
 
 <p>So, let’s see how easy it actually is to create your stack. First you should go to the <code>CloudFormation</code> tab in the amazon console and click the button: <code>Create New Stack</code>:</p>
 
-<p><img src="http://bio4j.github.com/images/CloudFormationCreateStackScreenShot.jpg" /></p>
+<p><img src="http://bio4j.com/images/CloudFormationCreateStackScreenShot.jpg" /></p>
 
 <p>You will see this new window now where you should choose the option <strong>Provide a template URL’</strong> and paste there the URL I just provided before. You should also give your stack a name filling the field <code>Stack name</code>. Then click <code>Continue</code>.</p>
 
-<p><img src="http://bio4j.github.com/images/CreateStackSecondStepScreenShot.jpg" /></p>
+<p><img src="http://bio4j.com/images/CreateStackSecondStepScreenShot.jpg" /></p>
 
 <p>Ok, now you should be seeing this:</p>
 
-<p><img src="http://bio4j.github.com/images/CreateStackThirdStepScreenShot1.jpg" /></p>
+<p><img src="http://bio4j.com/images/CreateStackThirdStepScreenShot1.jpg" /></p>
 
 <p>Provide then your key-pair name, availability zone, and finally enter the type of instance you want to launch.
 Once you clicked continue you’ll see a review of all the parameters you entered so far like:</p>
 
-<p><img src="http://bio4j.github.com/images/CreateStackFourthStepScreenShot1.jpg" /></p>
+<p><img src="http://bio4j.com/images/CreateStackFourthStepScreenShot1.jpg" /></p>
 
 <p>Check everything is as you wish and click continue.
 You should be seeing then something like this:</p>
 
-<p><img src="http://bio4j.github.com/images/CreateStackFifthStepScreenShot.jpg" /></p>
+<p><img src="http://bio4j.com/images/CreateStackFifthStepScreenShot.jpg" /></p>
 
 <p>Now you just have to wait for about 30 seconds until after refreshing the stack state changes to green color and says “CREATE_COMPLETE”. Click on the output tab and you will see the IP address you need to connect with SSH to your new instance.</p>
 
-<p><img src="http://bio4j.github.com/images/CreateStackSixthStepScreenShot.jpg" /></p>
+<p><img src="http://bio4j.com/images/CreateStackSixthStepScreenShot.jpg" /></p>
 
 <p>So now you just have to connect to your instance and you should have your fresh backed Bio4j DB under the folder <code>/mnt/bio4j_volume/bio4jdb</code> ;)</p>
 
@@ -936,9 +997,9 @@ You should be seeing then something like this:</p>
   
   <entry>
     <title type="html"><![CDATA[Cool GO annotation visualizations with Gephi + Bio4j]]></title>
-    <link href="http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j/"/>
-    <updated>2011-11-29T11:46:56-05:00</updated>
-    <id>http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j</id>
+    <link href="http://bio4j.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j/"/>
+    <updated>2011-11-29T17:46:56+01:00</updated>
+    <id>http://bio4j.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>After a few months without finding the opportunity to play with <a href="http://gephi.org">Gephi</a>, it was already time to dedicate a lab day to this.
@@ -952,29 +1013,29 @@ Even though I got stuck a couple of times trying to figure out how to use some o
 
 <p>When I first loaded the gexf file in Gephi without applying any kind of filters this is what I got:</p>
 
-<p><img src="http://bio4j.github.com/images/EHECMolFuncDraft.png" /></p>
+<p><img src="http://bio4j.com/images/EHECMolFuncDraft.png" /></p>
 
 <p>As you (maybe) can see, the size of GO term nodes is proportional to the number of proteins they annotate; still it pretty much looks just like a big hair-ball…</p>
 
 <p>Then I applied the following set of filters:</p>
 
-<p><img src="http://bio4j.github.com/images/EHECMolFuncFilters.jpg" /></p>
+<p><img src="http://bio4j.com/images/EHECMolFuncFilters.jpg" /></p>
 
 <p>in order to get the GO terms with at least 6 protein annotations plus the proteins which are annotating these terms <em>(their neighborhoods)</em>; and this is what it looked like (after applying a <em>Parallel Force Atlas</em> layout algorithm):</p>
 
-<p><img src="http://bio4j.github.com/images/EHECMolFuncPreliminary.png" /></p>
+<p><img src="http://bio4j.com/images/EHECMolFuncPreliminary.png" /></p>
 
 <p>I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: “Hide nodes/edges labels if not in filtered graph”.
 After doing this and applying the black background preview setting, the visualization finally looked pretty decent:</p>
 
-<p><img src="http://bio4j.github.com/images/EHECMolFuncFinal.png" /></p>
+<p><img src="http://bio4j.com/images/EHECMolFuncFinal.png" /></p>
 
 <p>Please go <a href="http://bio4j.com/imgs/EHEC_MolecularFunction_SeaDragon/">here</a> to check the version exported with <a href="https://gephi.org/plugins/seadragon/">Sea Dragon plugin</a> where you can zoom and move around!</p>
 
 <p>Well, if you like the result <em>(or you don’t but you want to play with this and get a better viz!)</em>, I just uploaded a new version of <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">Bio4j GO Tools</a> viewer where you can download the corresponding .gexf file for your GO annotations XML file. 
 Just press the button highlighted in the screenshot and enter the URL for your GO annotations XML file:</p>
 
-<p><img src="http://bio4j.github.com/images/gexfButtonBio4jGOToolsScreenshot.jpg" /></p>
+<p><img src="http://bio4j.com/images/gexfButtonBio4jGOToolsScreenshot.jpg" /></p>
 
 <p>You can use the public EHEC GO annotation results URL I used as a sample for this post: </p>
 
@@ -1009,9 +1070,9 @@ Pablo</li>
   
   <entry>
     <title type="html"><![CDATA[Bio4j Thanksgiving treats!]]></title>
-    <link href="http://bio4j.github.com/blog/2011/11/bio4j-thanksgiving-treats/"/>
-    <updated>2011-11-23T11:53:43-05:00</updated>
-    <id>http://bio4j.github.com/blog/2011/11/bio4j-thanksgiving-treats</id>
+    <link href="http://bio4j.com/blog/2011/11/bio4j-thanksgiving-treats/"/>
+    <updated>2011-11-23T17:53:43+01:00</updated>
+    <id>http://bio4j.com/blog/2011/11/bio4j-thanksgiving-treats</id>
     <content type="html"><![CDATA[<p>Hi all!</p>
 
 <p>Thanksgiving is almost here and we got just in time a lot of special treats for you:</p>
@@ -1064,9 +1125,9 @@ In order to use it, just create a <a href="http://www.bio4j.com/docs/bio4jmodel/
   
   <entry>
     <title type="html"><![CDATA[Bio4jExplorer: familiarize yourself with Bio4j nodes and relationships ]]></title>
-    <link href="http://bio4j.github.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships/"/>
-    <updated>2011-10-10T13:19:03-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships</id>
+    <link href="http://bio4j.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships/"/>
+    <updated>2011-10-10T19:19:03+02:00</updated>
+    <id>http://bio4j.com/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships</id>
     <content type="html"><![CDATA[<p>Hi!</p>
 
 <p>I just uploaded a new tool aimed to be used both as a reference manual and initial contact for Bio4j domain model: <strong><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html">Bio4jExplorer</a></strong>
@@ -1101,9 +1162,9 @@ As always with everything we do at <a href="http://www.ohnosequences.com">Oh no 
   
   <entry>
     <title type="html"><![CDATA[Bio4j incorporates git-flow model]]></title>
-    <link href="http://bio4j.github.com/blog/2011/09/bio4j-incorporates-git-flow-model/"/>
-    <updated>2011-09-19T07:16:15-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/09/bio4j-incorporates-git-flow-model</id>
+    <link href="http://bio4j.com/blog/2011/09/bio4j-incorporates-git-flow-model/"/>
+    <updated>2011-09-19T13:16:15+02:00</updated>
+    <id>http://bio4j.com/blog/2011/09/bio4j-incorporates-git-flow-model</id>
     <content type="html"><![CDATA[<p>Hi all!
 So summer has almost come to an end and I have now time again to continue with the development of Bio4j project. 
 This autumn comes with plenty of new features that will be released in the next few months; the first of them: git-flow model.
@@ -1113,28 +1174,6 @@ Here you have a general schema of the model:</p>
 <p><img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" /></p>
 
 <p>Since <a href="http://twitter.com/nvie">@nvie</a> wrote a really good post explaining the details of his model, I’ll just provide <a href="http://nvie.com/posts/a-successful-git-branching-model/">this link</a> to it  instead of giving a much poorer explanation than the one in the article.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Bio4j current release now available as an AWS snapshot ]]></title>
-    <link href="http://bio4j.github.com/blog/2011/06/bio4j-current-release-now-available-as-an-aws-snapshot/"/>
-    <updated>2011-06-22T07:33:01-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/06/bio4j-current-release-now-available-as-an-aws-snapshot</id>
-    <content type="html"><![CDATA[<p>For those using <a href="http://aws.amazon.com">AWS</a> (or willing to…) I just created a public snapshot containing the last version of Bio4j DB.
-The snapshot details are the following:</p>
-
-<ul>
-  <li>Snapshot id: <code>snap-25192d4c</code></li>
-  <li>Snapshot region: EU West (Ireland)</li>
-  <li>Snapshot size: 90 GB</li>
-</ul>
-
-<p>The whole DB is under the folder <code>bio4jdb</code>.
-In order to use it, just create a <a href="http://www.bio4j.com/docs/bio4jmodel/apidocs/com/era7/bioinfo/bio4jmodel/util/Bio4jManager.html">Bio4jManager</a> instance and start navigating the graph!</p>
-
-<p>As always, any feedback/comment/question is more than welcome, 
-(post a comment here or a question in the <a href="http://groups.google.com/group/bio4j-user">user group</a>).</p>
 ]]></content>
   </entry>
   

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Data mining | bio4j]]></title>
-  <link href="http://bio4j.github.com/blog/categories/data-mining/atom.xml" rel="self"/>
-  <link href="http://bio4j.github.com/"/>
-  <updated>2014-02-26T13:02:30-05:00</updated>
-  <id>http://bio4j.github.com/</id>
+  <link href="http://bio4j.com/blog/categories/data-mining/atom.xml" rel="self"/>
+  <link href="http://bio4j.com/"/>
+  <updated>2014-10-30T23:44:38+01:00</updated>
+  <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mining Bio4j data: finding topological patterns in PPI networks]]></title>
-    <link href="http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/"/>
-    <updated>2012-01-24T10:42:56-05:00</updated>
-    <id>http://bio4j.github.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks</id>
+    <link href="http://bio4j.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks/"/>
+    <updated>2012-01-24T16:42:56+01:00</updated>
+    <id>http://bio4j.com/blog/2012/01/mining-bio4j-data-finding-topological-patterns-in-ppi-networks</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>After writing <a href="http://blog.bio4j.com/2011/12/using-bio4j-neo4j-graph-algo-component-for-finding-protein-protein-interaction-paths/"><strong>this post</strong></a> on December, I’ve been thinking of doing something similar, yet different, using Neo4j Cypher query language.</p>

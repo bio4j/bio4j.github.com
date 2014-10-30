@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Bio4jGoTools | bio4j]]></title>
-  <link href="http://bio4j.github.com/blog/categories/bio4jgotools/atom.xml" rel="self"/>
-  <link href="http://bio4j.github.com/"/>
-  <updated>2014-02-26T13:02:30-05:00</updated>
-  <id>http://bio4j.github.com/</id>
+  <link href="http://bio4j.com/blog/categories/bio4jgotools/atom.xml" rel="self"/>
+  <link href="http://bio4j.com/"/>
+  <updated>2014-10-30T23:44:38+01:00</updated>
+  <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Cool GO annotation visualizations with Gephi + Bio4j]]></title>
-    <link href="http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j/"/>
-    <updated>2011-11-29T11:46:56-05:00</updated>
-    <id>http://bio4j.github.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j</id>
+    <link href="http://bio4j.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j/"/>
+    <updated>2011-11-29T17:46:56+01:00</updated>
+    <id>http://bio4j.com/blog/2011/11/cool-go-annotation-visualizations-with-gephi-bio4j</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>After a few months without finding the opportunity to play with <a href="http://gephi.org">Gephi</a>, it was already time to dedicate a lab day to this.
@@ -88,9 +88,9 @@ Pablo</li>
   
   <entry>
     <title type="html"><![CDATA[Improvements in Bio4j Go Tools (Graph visualization)]]></title>
-    <link href="http://bio4j.github.com/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization/"/>
-    <updated>2011-06-10T11:36:37-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization</id>
+    <link href="http://bio4j.com/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization/"/>
+    <updated>2011-06-10T17:36:37+02:00</updated>
+    <id>http://bio4j.com/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>A new version of <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">Bio4j Go Tools viewer</a> is available, it includes improvements in the graph visualization of GO annotation results.
@@ -120,9 +120,9 @@ These are the new features:</p>
   
   <entry>
     <title type="html"><![CDATA[GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project]]></title>
-    <link href="http://bio4j.github.com/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project/"/>
-    <updated>2011-04-25T12:30:01-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project</id>
+    <link href="http://bio4j.com/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project/"/>
+    <updated>2011-04-25T18:30:01+02:00</updated>
+    <id>http://bio4j.com/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project</id>
     <content type="html"><![CDATA[<p>Hello everyone ;)</p>
 
 <p>We’re back from Easter holidays bringing some cool graph visualization stuff. </p>
@@ -142,9 +142,9 @@ The url of the app is still the <a href="http://gotools.bio4j.com:8080/Bio4jTest
   
   <entry>
     <title type="html"><![CDATA[Bio4j Go Tools goes web]]></title>
-    <link href="http://bio4j.github.com/blog/2011/04/bio4j-go-tools-goes-web/"/>
-    <updated>2011-04-11T12:43:50-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/04/bio4j-go-tools-goes-web</id>
+    <link href="http://bio4j.com/blog/2011/04/bio4j-go-tools-goes-web/"/>
+    <updated>2011-04-11T18:43:50+02:00</updated>
+    <id>http://bio4j.com/blog/2011/04/bio4j-go-tools-goes-web</id>
     <content type="html"><![CDATA[<p>Hi!</p>
 
 <p>From now on Bio4j Go Tools is available at the following <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">address</a>.</p>
@@ -165,9 +165,9 @@ The url of the app is still the <a href="http://gotools.bio4j.com:8080/Bio4jTest
   
   <entry>
     <title type="html"><![CDATA[Bio4j Go Tools (first version available)]]></title>
-    <link href="http://bio4j.github.com/blog/2011/03/bio4j-go-tools-first-version-available/"/>
-    <updated>2011-03-22T14:57:33-04:00</updated>
-    <id>http://bio4j.github.com/blog/2011/03/bio4j-go-tools-first-version-available</id>
+    <link href="http://bio4j.com/blog/2011/03/bio4j-go-tools-first-version-available/"/>
+    <updated>2011-03-22T19:57:33+01:00</updated>
+    <id>http://bio4j.com/blog/2011/03/bio4j-go-tools-first-version-available</id>
     <content type="html"><![CDATA[<p>Hi everyone!</p>
 
 <p>As you may have seen Bio4j has already started making his way through the bioinformatics world; however there’s not as much information as there should be about the project yet.

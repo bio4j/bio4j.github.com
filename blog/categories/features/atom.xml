@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Features | bio4j]]></title>
-  <link href="http://bio4j.github.com/blog/categories/features/atom.xml" rel="self"/>
-  <link href="http://bio4j.github.com/"/>
-  <updated>2014-02-26T13:02:30-05:00</updated>
-  <id>http://bio4j.github.com/</id>
+  <link href="http://bio4j.com/blog/categories/features/atom.xml" rel="self"/>
+  <link href="http://bio4j.com/"/>
+  <updated>2014-10-30T23:44:38+01:00</updated>
+  <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Bio4j modules, adapt the database to your own needs]]></title>
-    <link href="http://bio4j.github.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/"/>
-    <updated>2012-10-30T00:33:27-04:00</updated>
-    <id>http://bio4j.github.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs</id>
+    <link href="http://bio4j.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/"/>
+    <updated>2012-10-30T05:33:27+01:00</updated>
+    <id>http://bio4j.com/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs</id>
     <content type="html"><![CDATA[<p>Hi!</p>
 
 <p><strong>Bio4j 0.8 includes</strong> a few <strong>different data sources</strong> and you may not always be interested in having all of them. For example you might be interested in playing around with the Gene Ontology DAG alone and let’s face it, having to import a ~105 GB database to do that wouldn’t make much sense…</p>
