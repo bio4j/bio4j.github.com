@@ -15,7 +15,7 @@ tag:
 
 {% img /images/bio4jGsoc.png %}
 
-I just got home yesterday from San Francisco after attending to the 10th edition of the Google Summer of Code mentor summit. It's been a great experience that I would like to share with you all in this blog post ;)
+I just got home yesterday from San Francisco after attending together with [@eparejatobes](https://twitter.com/eparejatobes) to the 10th edition of the Google Summer of Code mentor summit. It's been a great experience that I would like to share with you all in this blog post ;)
 For those of you who still don't know what [GSoC](https://developers.google.com/open-source/soc/?csw=1) is, here's a debrief:
 
 > Google Summer of Code is a program that offers student developers stipends to write code for various open source projects. We work with many open source, free software, and technology-related groups to identify and fund projects over a three month period. 
