@@ -32,7 +32,7 @@ The events started on Friday with a complimentary visit to the theme park _Great
 
 We were supposed to dress smart for a change, which was interesting, seeing all these people wearing nice clothes :)
 
-{% img /images/fotoTechMuseum.jpg %}
+{% img right /images/fotoTechMuseum.jpg 280 %}
 
 > I must say that I had to watch around 20 minutes of youtube videos before I managed to get the knot tie right... xD
 
