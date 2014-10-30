@@ -27,7 +27,8 @@ This was Bio4j's first year as a GSoC organization and we got three students who
 
 It also was my first experience as a mentor and I must say that I both learned and enjoyed it a lot during the process.
 
-The events started on Friday with a complimentary visit to the theme park _Great America_, nice! followed by a really cool dinner reception at the [San Jose Tech Museum of Innovation](http://www.thetech.org/) where we had surprise speakers such as the renowed Linus Torvals plus the opportunity of exploring the geeky exhibits from the museum while having some drinks.
+The events started on Friday with a complimentary visit to the theme park _Great America_, nice! followed by a really cool dinner reception at the [San Jose Tech Museum of Innovation](http://www.thetech.org/) where we had surprise speakers such as Linus Torvals plus the opportunity of exploring the geeky exhibits from the museum while having some drinks.
+
 We were supposed to dress smart for a change, which was interesting, seeing all these people wearing nice clothes :)
 
 {% img /images/fotoTechMuseum.jpg %} 
