@@ -11,7 +11,7 @@ Bio4j is developed in **Java** and **Scala**, licensed under  the **[AGPLv3](www
 
 There's bio4j/bio4j gitter room
 
-- [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bio4j/bio4j?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bio4j/bio4j?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 We also use the **[issues from the bio4j/bio4j repository](https://github.com/bio4j/bio4j/issues)** for general discussions, feedback, and communication between developers.
 
