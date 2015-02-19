@@ -9,7 +9,7 @@
   <meta name="author" content="oh no sequences!">
 
   
-  <meta name="description" content="                  Bio4j accepted as a mentoring org for Google Summer of Code 2014!! check the blog postBio4j is a high-performance cloud-enabled g...">
+  <meta name="description" content="                  Bio4j is a bioinformatics graph data platform, integrating most data available in Uniprot KB (SwissProt + Trembl), Gene Ontology ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -114,46 +114,19 @@ MathJax.Hub.Config({
     
   </header>
   
-  <p><em>Bio4j accepted as a mentoring org for Google Summer of Code 2014!! check the <a href="/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014">blog post</a></em></p>
-
-<p>Bio4j is a high-<strong>performance</strong> <strong>cloud</strong>-enabled <strong>graph</strong>-based <strong>open</strong> source <strong>bioinformatics data</strong> platform, integrating the data available in the most representative open data sources around protein information. It integrates the data available in </p>
-<ul>
-<li><a href="http://www.uniprot.org/help/uniprotkb">UniProtKB</a> (<a href="http://web.expasy.org/docs/swiss-prot_guideline.html">SwissProt</a> + <a href="https://www.ebi.ac.uk/uniprot/TrEMBLstats">Trembl</a>)</li>
-<li><a href="http://www.geneontology.org/">Gene Ontology</a> (GO)</li>
-<li><a href="http://www.uniprot.org/help/uniref">UniRef</a> (50, 90, 100)</li>
-<li><a href="http://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/taxonomy">NCBI taxonomy</a></li>
-<li><a href="http://enzyme.expasy.org/">Expasy Enzyme</a></li>
-</ul>
+  <p>Bio4j is a bioinformatics graph data platform, integrating most data available in <a href="http://www.uniprot.org/"><strong>Uniprot KB</strong></a> (SwissProt + Trembl), <a href="http://www.geneontology.org/"><strong>Gene Ontology</strong></a> (GO), <a href="http://www.ebi.ac.uk/uniref/"><strong>UniRef</strong></a> (50,90,100), <a href="http://www.ncbi.nlm.nih.gov/Taxonomy/"><strong>NCBI Taxonomy</strong></a>, and <a href="http://enzyme.expasy.org/"><strong>Expasy Enzyme DB</strong></a>. </p>
 <p>Bio4j provides a completely new and powerful <strong>framework for protein related information querying and management</strong>. 
-Since it relies on a high-performance graph engine, data is stored in a way that semantically represents its own structure. 
-On the contrary, traditional relational databases must flatten the data they represent into tables, creating <em>artificial</em> ids in order to connect the different tuples; which can in some cases eventually lead to domain models that have almost nothing to do with the actual structure of data.</p>
-<p>This set of slides from <a href="https://fosdem.org/2014/schedule/event/graphdevroom_bio4j_2/">FOSDEM 2014</a> should give an up-to-date overview of the project:</p>
+The use of a graph-based data model makes possible to store and query data in a way that semantically represents its own structure. On the contrary, traditional relational models and databases must flatten the data they represent into tables, creating <em>artificial</em> ids in order to connect the different tuples; which can in some cases eventually lead to domain models that have almost nothing to do with the actual structure of data.</p>
+<p>For more, go to <a href="https://github.com/bio4j/bio4j">bio4j/bio4j</a> at GitHub.</p>
+<h2>Community and contact</h2>
 <ul>
-<li><strong><a href="http://ohnosequences.com/slides/fosdem-2014/bio4j-bigger-faster-leaner">Bio4j: bigger, faster, leaner - FOSDEM GraphDevRoom 2014</a></strong></li>
+<li><strong><a href="https://gitter.im/bio4j/bio4j">Gitter chat</a></strong> <em>The easiest and fastest way to contact developers and ask for help</em></li>
+<li><strong><a href="http://groups.google.com/group/bio4j-user">bio4j-user</a></strong> <em>Google group / mailing list</em></li>
+<li><strong><a href="http://twitter.com/bio4j">@bio4j</a></strong> <em>Twitter</em></li>
+<li><strong><a href="http://www.linkedin.com/groups/Bio4j-3890937">Bio4j</a></strong> <em>LinkedIn</em></li>
 </ul>
-<h3>scalability</h3>
-<ul>
-<li>
-<p>First of all, Bio4j has an <a href="https://github.com/bio4j/bio4j"><strong>Abstract Domain Model</strong></a>, which allows you to use it without binding to a particular backend implementation.</p>
-</li>
-<li>
-<p>Next, it has an intermediate <a href="https://github.com/bio4j/blueprints"><strong>Blueprints layer</strong></a>, which allows us to make a default implementation of the abstract interface using <a href="https://github.com/tinkerpop/blueprints/wiki">Tinkerpop Blueprints API</a> and at the same time stay independent from the choice of database technology.</p>
-</li>
-<li>
-<p>And finally, there are technology specific versions:</p>
-</li>
-<li><a href="https://github.com/bio4j/titandb"><strong>Titan DB implementation</strong></a></li>
-<li><a href="https://github.com/bio4j/neo4jdb"><strong>Neo4j DB implementation</strong></a></li>
-</ul>
-<h3>modularity</h3>
-<p>Bio4j includes a few different data sources and you may not always be interested in having all of them together. That’s why the importing process is modular and customizable, allowing you to import just the data you are interested in.</p>
-<p>Also, Bio4j has <a href="https://github.com/bio4j/modules">Statika-based module system</a>, which dramatically simplifies the process of building and deploying custom releases of Bio4j.</p>
-<h3>performance</h3>
-<p>In Bio4j data is organized in a way semantically equivalent to what it represents thanks to the graph structure. That means that queries which would even be impossible to perform with a standard Relational DB, can be feasible with Bio4j obtaining good performance results.</p>
-<h3>licensing</h3>
-<p>Bio4j is an <strong>open source</strong> platform released under <a href="http://www.gnu.org/licenses/agpl.html"><strong>AGPLv3</strong></a>.</p>
-
+<h2>Licensing</h2>
+<p>Bio4j is an <strong>open source</strong> platform released under the <a href="http://www.gnu.org/licenses/agpl.html"><strong>AGPLv3</strong></a> license.</p>
   
     <footer>
       
