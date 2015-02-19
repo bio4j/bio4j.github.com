@@ -7,13 +7,17 @@ footer: true
 
 Bio4j is developed in **Java** and **Scala**, licensed under  the **[AGPLv3](www.gnu.org/licenses/agpl-3.0.html)** license. All development happens in GitHub, under the [bio4j](https://github.com/bio4j) organization; in particular the [bio4j/bio4j](https://github.com/bio4j/bio4j) repository acts as an entry point for the whole codebase.
 
-### developers mailing list?
+### Developers mailing list?
 
-We use the **[issues from the bio4j/bio4j repository](https://github.com/bio4j/bio4j/issues)** for general discussions, feedback, and communication between developers.
+There's bio4j/bio4j gitter room
 
-We **don't** use mailing lists for development. In our opinion they make it really hard to link to code, get some real output from conversations or more prosaic things such as code syntax highlighting.
+- [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bio4j/bio4j?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-### contributing
+We also use the **[issues from the bio4j/bio4j repository](https://github.com/bio4j/bio4j/issues)** for general discussions, feedback, and communication between developers.
+
+We **don't** use mailing lists for development. In our opinion they make it really hard to link to code, get some real output from conversations or more prosaic things such as code syntax highlighting (that gitter supports beautifully).
+
+### Contributing
 
 With respect to contribution formalities we try to:
 
