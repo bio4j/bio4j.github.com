@@ -15,6 +15,8 @@ tag:
 
 We've spent the past few months working on Bio4j **TODO more solid, future-proof, generic**; and let me say that things look great. As we gain more users (and contributors), we're also trying to make our plans and development roadmap more open. This post should give you an idea to where Bio4j is today, where it is going, and when it is expected to be there.
 
+_Here goes summary of how things are organized right now_
+
 ----
 **Now**
 
@@ -28,6 +30,7 @@ We've spent the past few months working on Bio4j **TODO more solid, future-proof
 
 - explain the typedness
 - mention Java 8 Streams
+- easy to implement for a particular graph store
 
 ### A default Titan-based data distribution
 
@@ -37,7 +40,7 @@ We've spent the past few months working on Bio4j **TODO more solid, future-proof
 ### Documentation, preprint and examples
 
 - a Bio4j preprint, submitted to bioRxiv in the next few days
-- all the general documentation in one place [bio4j/bio4j](https://github.com/)
+- all the general documentation in one place [bio4j/bio4j](https://github.com/bio4j/bio4j)
 - docs integrated with the code, in-sync
 
 ----
