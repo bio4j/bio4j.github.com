@@ -4,7 +4,7 @@
   <title><![CDATA[Category: News | bio4j]]></title>
   <link href="http://bio4j.com/blog/categories/news/atom.xml" rel="self"/>
   <link href="http://bio4j.com/"/>
-  <updated>2015-02-19T15:44:32+01:00</updated>
+  <updated>2015-03-11T20:48:41+01:00</updated>
   <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
@@ -14,11 +14,56 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Bio4j: updates]]></title>
+    <link href="http://bio4j.com/blog/2015/03/bio4j-updates/"/>
+    <updated>2015-03-11T17:18:00+01:00</updated>
+    <id>http://bio4j.com/blog/2015/03/bio4j-updates</id>
+    <content type="html"><![CDATA[<p>We’ve spent the past few months working <em>really</em> hard on Bio4j. There has not been a lot of updates here basically because there were too many new things happening :) </p>
+
+<p>But now things are stabilizing and it’s about time we start to introduce all the new features and improvements we have in store. In this first post I just want to give an overview of Bio4j’s current state, going into more detail in subsequent posts.</p>
+
+<h2 id="bio4j-now">Bio4j now</h2>
+
+<h3 id="a-new-graph-schema-and-api">A new graph schema and API</h3>
+
+<p>We have now a strongly typed graph schema and traversal API in <strong><a href="https://github.com/bio4j/bio4j">bio4j/bio4j</a></strong>, based on <strong><a href="https://github.com/bio4j/angulillos">angulillos</a></strong> (more about angulillos later). With it, you can write traversals over Bio4j data abstractly, and then execute them over any implementation. These queries are checked to be correct both structurally (no source of a vertex) and with respect to the Bio4j schema. Vertices and edges are now part of graphs, which can declare dependencies; writing your own extensions to the model is now much easier than before. As part of these changes we did a thorough graph-per-graph review of the Bio4j model, which resulted in some significant improvements.</p>
+
+<p>Of course a schema is not that useful without actual data conforming to it; we also wrote generic importers for all graphs. These importers can be executed using any implementation of the angulillos API.</p>
+
+<h3 id="a-titan-based-implementation-and-data-distribution">A Titan-based implementation and data distribution</h3>
+
+<p>With much of the work already done at the level of bio4j/bio4j, providing a data distribution of Bio4j becomes pretty simple; you just need to</p>
+
+<ol>
+  <li>implement angulillos for your database technology of choice; this is what you have for <a href="http://thinkaurelius.github.io/titan/">Titan</a> in <strong><a href="https://github.com/bio4j/angulillos-titan">angulillos-titan</a></strong>.</li>
+  <li>if your database has support for type definitions and schemas, create those corresponding to the Bio4j schema; what we do for each graph in <strong><a href="https://github.com/bio4j/bio4j-titan">bio4j-titan</a></strong></li>
+</ol>
+
+<p>We finished running the importing process for all graphs just a few hours ago. A pretty sizable <code>.tar</code> containing all the Titan files is available from an S3 bucket. With that you just need to spin an EC2 instance, download and extract that and start using Bio4j. Or, if you don’t want to use AWS, you can of course run the import process on your own infrastructure.</p>
+
+<h3 id="angulillos-generic-typed-property-graphs-in-java">Angulillos: generic typed property graphs in Java</h3>
+
+<p>Writing <em>correct</em> queries for Bio4j was becoming harder and harder as we integrated more databases and resources, and we had no way of expressing the graph schemas, even for documentation purposes. That is what <strong><a href="https://github.com/bio4j/angulillos">angulillos</a></strong> strives to solve. You can think of angulillos as a strongly typed version of the property graph model: first you describe a graph schema in terms of types, and then you can write generic traversals over it, which are guaranteed to be well-typed. This means that for example</p>
+
+<ul>
+  <li>you cannot retrieve the outgoing edges of and edge</li>
+  <li>and you can get the tweets that a user tweeted, but not the users that a tweet follows!</li>
+</ul>
+
+<p>The API is really straightforward to implement, and its only dependency is Java 8 (for Streams and lambdas). <strong><a href="https://github.com/bio4j/angulillos-titan">angulillos-titan</a></strong> can serve as an example of how this can be done.</p>
+
+<h3 id="the-future">The future</h3>
+
+<p>The next post will be dedicated to a tentative roadmap, explaining what we are working on now; A (really nice) Scala API, data distribution and AWS deployment improvements, and new integrations of genomic data sources are coming in the following months!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Bio4j goes to GSoC mentor summit 2014]]></title>
     <link href="http://bio4j.com/blog/2014/10/bio4j-goes-to-gsoc-mentor-summit-2014/"/>
     <updated>2014-10-29T17:18:00+01:00</updated>
     <id>http://bio4j.com/blog/2014/10/bio4j-goes-to-gsoc-mentor-summit-2014</id>
-    <content type="html"><![CDATA[<p><img src="/images/bio4jGsoc.png"></p>
+    <content type="html"><![CDATA[<p>{% img /images/bio4jGsoc.png %}</p>
 
 <p>I just got home yesterday from San Francisco after attending together with <a href="https://twitter.com/eparejatobes">@eparejatobes</a> to the 10th edition of the Google Summer of Code mentor summit. It’s been a great experience that I would like to share with you all in this blog post ;)
 For those of you who still don’t know what <a href="https://developers.google.com/open-source/soc/?csw=1">GSoC</a> is, here’s a debrief:</p>
@@ -41,7 +86,7 @@ For those of you who still don’t know what <a href="https://developers.google.
 
 <p>We were supposed to dress smart for a change, which was interesting, seeing all these people wearing nice clothes :)</p>
 
-<p><img class="right" src="/images/fotoTechMuseum.jpg" width="280"></p>
+<p>{% img right /images/fotoTechMuseum.jpg 280 %}</p>
 
 <blockquote>
   <p>I must say that I had to watch around 20 minutes of youtube videos before I managed to get the knot tie right… xD</p>
@@ -52,14 +97,14 @@ For those of you who still don’t know what <a href="https://developers.google.
 <p>It was the first time that I went to an <strong><a href="http://en.wikipedia.org/wiki/Unconference">unconference</a></strong> and I just loved it. 
 It is actually great to have the opportunity to explore the different sessions and meet up with people on the way spontaneously, without all the rigidity that so many times comes with <em>“standard”</em> conferences. </p>
 
-<p><img class="left" src="/images/stickers.jpg" width="260"></p>
+<p>{% img left /images/stickers.jpg 260 %}</p>
 
 <p>Meeting in person people from the <a href="http://www.reactome.org/">Reactome database</a> project was cool since we plan to include this data source into Bio4j in the near future. It was also nice to see in person some of the guys that I’ve been following on twitter for a while like <a href="https://twitter.com/braincode">@braincode</a> among others.
 I also found a good idea the fact of having both the sticker exchange table and the tea-room filled with chocolates from all over the world! The day ended with a quiz show that I unfortunately couldn’t join but, I read on twitter that it was quite funny.</p>
 
 <p>On Sunday we opened the day with a trip to <a href="http://en.wikipedia.org/wiki/Googleplex">Googleplex</a> where we could see the actual place where the Google folks work on.</p>
 
-<p><img class="right" src="/images/chocolates.png" width="240"></p>
+<p>{% img right /images/chocolates.png 240 %}</p>
 
 <p>There was some time left for a couple more sessions and then we unfortunately had to say bye to all the new acquaintances we made after attending the closing session at the hotel. </p>
 
@@ -68,7 +113,7 @@ Also a special thanks to <a href="https://twitter.com/fossygrl">@fossygirl</a>, 
 
 <p>Stay tuned for the next post, we will be releasing a shiny new version of Bio4j based on Titan very soon ;)</p>
 
-<p><img src="/images/fotoGoogleAndroid.png"></p>
+<p>{% img /images/fotoGoogleAndroid.png %}</p>
 
 <p><a href="https://twitter.com/pablopareja">@pablopareja</a></p>
 ]]></content>
@@ -79,7 +124,7 @@ Also a special thanks to <a href="https://twitter.com/fossygrl">@fossygirl</a>, 
     <link href="http://bio4j.com/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014/"/>
     <updated>2014-02-25T17:18:00+01:00</updated>
     <id>http://bio4j.com/blog/2014/02/bio4j-accepted-for-google-summer-of-code-2014</id>
-    <content type="html"><![CDATA[<p><img class="right" src="/images/GoogleSummer_2014logo.jpg" width="300" height="270"></p>
+    <content type="html"><![CDATA[<p>{% img right /images/GoogleSummer_2014logo.jpg 300 270 %}</p>
 
 <p>We are really excited to announce that <strong>Bio4j</strong> has been <strong>accepted</strong> as a <a href="https://www.google-melange.com/gsoc/org2/google/gsoc2014/bio4j">mentoring organization</a> for <strong><a href="https://www.google-melange.com/gsoc/homepage/google/gsoc2014">Google Summer of Code 2014</a></strong>. This was the first year we applied for it, and it feels just great being part of this inititative!</p>
 

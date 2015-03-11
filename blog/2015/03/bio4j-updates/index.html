@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Bio4j includes RefSeq data now! - bio4j</title>
+  <title>Bio4j: updates - bio4j</title>
   <meta name="author" content="oh no sequences!">
 
   
-  <meta name="description" content="Hi all,After some weeks of hard work I finally finished the importer for RefSeq data.First of all, I should clarify some points about its licensing...">
+  <meta name="description" content="We’ve spent the past few months working really hard on Bio4j. There has not been a lot of updates here basically because there were too many new th...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bio4j.com/blog/2011/05/bio4j-includes-refseq-data-now/">
+  <link rel="canonical" href="http://bio4j.com/blog/2015/03/bio4j-updates/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -111,7 +111,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Bio4j includes RefSeq data now!</h1>
+      <h1 class="entry-title">Bio4j: updates</h1>
     
     
       <p class="meta">
@@ -122,55 +122,50 @@ MathJax.Hub.Config({
 
   
 
-<time datetime="2011-05-30T14:49:41+02:00" pubdate>May 30<span>th</span>, 2011</time>
+<time datetime="2015-03-11T17:18:00+01:00" pubdate>Mar 11<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Hi all,</p>
+<div class="entry-content"><p>We’ve spent the past few months working <em>really</em> hard on Bio4j. There has not been a lot of updates here basically because there were too many new things happening :) </p>
 
-<p>After some weeks of hard work I finally finished the importer for RefSeq data.
-First of all, I should clarify some points about its licensing:</p>
+<p>But now things are stabilizing and it’s about time we start to introduce all the new features and improvements we have in store. In this first post I just want to give an overview of Bio4j’s current state, going into more detail in subsequent posts.</p>
 
-<ul>
-  <li>Data has been retrieved from the public <a href="ftp://ftp.ncbi.nih.gov/refseq/release/complete/">ftp site</a> for RefSeq complete release. There is no extra/different data coming from other source.</li>
-  <li>Quoting NCBI site: <em>“NCBI places no restrictions on the use or distribution of the GenBank data. However, some submitters may claim patent, copyright, or other intellectual property rights in all or a portion of the data they have submitted.”</em></li>
-</ul>
+<h2 id="bio4j-now">Bio4j now</h2>
 
-<p>Once this has been said I will go into more details of how it’s been done.</p>
+<h3 id="a-new-graph-schema-and-api">A new graph schema and API</h3>
 
-<h3 id="genome-elements-sequences">Genome elements’ sequences</h3>
+<p>We have now a strongly typed graph schema and traversal API in <strong><a href="https://github.com/bio4j/bio4j">bio4j/bio4j</a></strong>, based on <strong><a href="https://github.com/bio4j/angulillos">angulillos</a></strong> (more about angulillos later). With it, you can write traversals over Bio4j data abstractly, and then execute them over any implementation. These queries are checked to be correct both structurally (no source of a vertex) and with respect to the Bio4j schema. Vertices and edges are now part of graphs, which can declare dependencies; writing your own extensions to the model is now much easier than before. As part of these changes we did a thorough graph-per-graph review of the Bio4j model, which resulted in some significant improvements.</p>
 
-<p>Sequences are not stored on Bio4j DB but uploaded as separate files to <a href="http://aws.amazon.com/s3/">S3</a> (Amazon Simple Storage Service) instead. Why doing it this way? For several reasons:</p>
+<p>Of course a schema is not that useful without actual data conforming to it; we also wrote generic importers for all graphs. These importers can be executed using any implementation of the angulillos API.</p>
 
-<ul>
-  <li>Having all sequences stored in the DB would take more than a decent amount of space</li>
-  <li>Most queries to the DB wouldn’t be done in terms of the sequence content</li>
-  <li>Relevant data included in RefSeq in terms of performing queries would be information about genes, rnas, genome elements, positions of all these elements, etc (rather than the sequence itself).</li>
-  <li>Sequences are stored in txt files whose filename is the unique version string for the specific genome element, (e.g. NC_012932.txt) That way they can easily be retrieved whenever it’s needed. Plus, S3 service provides a way of extracting a range of bytes from a file without downloading the whole content, so there’s no need of downloading the complete sequence in the case where you already know the range of the sequence you are interested in.</li>
-</ul>
+<h3 id="a-titan-based-implementation-and-data-distribution">A Titan-based implementation and data distribution</h3>
 
-<p>In some cases, no sequence can be uploaded for a genome element. These are the cases where instead of a final sequence, a list of terms as join(x…x)complement(x…x(contig(joing(…)) is provided (I never thought I’d find hundreds of lines with these terms where a sequence was supposed to be…).</p>
+<p>With much of the work already done at the level of bio4j/bio4j, providing a data distribution of Bio4j becomes pretty simple; you just need to</p>
 
-<h3 id="genome-elements-data">Genome elements’ data</h3>
+<ol>
+  <li>implement angulillos for your database technology of choice; this is what you have for <a href="http://thinkaurelius.github.io/titan/">Titan</a> in <strong><a href="https://github.com/bio4j/angulillos-titan">angulillos-titan</a></strong>.</li>
+  <li>if your database has support for type definitions and schemas, create those corresponding to the Bio4j schema; what we do for each graph in <strong><a href="https://github.com/bio4j/bio4j-titan">bio4j-titan</a></strong></li>
+</ol>
 
-<p>Regarding elements, the following are included (this are stored in Bio4j, not S3):</p>
+<p>We finished running the importing process for all graphs just a few hours ago. A pretty sizable <code>.tar</code> containing all the Titan files is available from an S3 bucket. With that you just need to spin an EC2 instance, download and extract that and start using Bio4j. Or, if you don’t want to use AWS, you can of course run the import process on your own infrastructure.</p>
+
+<h3 id="angulillos-generic-typed-property-graphs-in-java">Angulillos: generic typed property graphs in Java</h3>
+
+<p>Writing <em>correct</em> queries for Bio4j was becoming harder and harder as we integrated more databases and resources, and we had no way of expressing the graph schemas, even for documentation purposes. That is what <strong><a href="https://github.com/bio4j/angulillos">angulillos</a></strong> strives to solve. You can think of angulillos as a strongly typed version of the property graph model: first you describe a graph schema in terms of types, and then you can write generic traversals over it, which are guaranteed to be well-typed. This means that for example</p>
 
 <ul>
-  <li>m RNA</li>
-  <li>Misc RNA</li>
-  <li>Nc RNA</li>
-  <li>r RNA	</li>
-  <li>t RNA</li>
-  <li>rm RNA</li>
-  <li>CDS</li>
-  <li>gene</li>
+  <li>you cannot retrieve the outgoing edges of and edge</li>
+  <li>and you can get the tweets that a user tweeted, but not the users that a tweet follows!</li>
 </ul>
 
-<p>Data stored for all these elements includes their positions and note attribute (whenever it’s found). I have to say that we decided not to extract more information from the gbff files since it can easily be accessed navigating through Bio4j by means of the connection Uniprot entry &lt;–&gt; RefSeq genome element. Plus, information included in Uniprot releases is much more reliable than that found in RefSeq files.</p>
+<p>The API is really straightforward to implement, and its only dependency is Java 8 (for Streams and lambdas). <strong><a href="https://github.com/bio4j/angulillos-titan">angulillos-titan</a></strong> can serve as an example of how this can be done.</p>
 
+<h3 id="the-future">The future</h3>
+
+<p>The next post will be dedicated to a tentative roadmap, explaining what we are working on now; A (really nice) Scala API, data distribution and AWS deployment improvements, and new integrations of genomic data sources are coming in the following months!</p>
 </div>
 
 
@@ -179,7 +174,7 @@ First of all, I should clarify some points about its licensing:</p>
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Pablo Pareja</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Eduardo Pareja-Tobes</span></span>
 
       
 
@@ -188,8 +183,14 @@ First of all, I should clarify some points about its licensing:</p>
 
   
 
-<time datetime="2011-05-30T14:49:41+02:00" pubdate>May 30<span>th</span>, 2011</time>
+<time datetime="2015-03-11T17:18:00+01:00" pubdate>Mar 11<span>th</span>, 2015</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/news/'>News</a>
+  
+</span>
 
 
     </p>
@@ -203,10 +204,8 @@ First of all, I should clarify some points about its licensing:</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/04/go-annotation-graph-visualizations-with-bio4j-go-tools-gephi-toolkit-sigma-project/" title="Previous Post: GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project">&laquo; GO Annotation graph visualizations with Bio4j Go Tools + Gephi Toolkit + SiGMa project</a>
+        <a class="basic-alignment left" href="/blog/2014/10/bio4j-goes-to-gsoc-mentor-summit-2014/" title="Previous Post: Bio4j goes to GSoC mentor summit 2014">&laquo; Bio4j goes to GSoC mentor summit 2014</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2011/06/improvements-in-bio4j-go-tools-graph-visualization/" title="next Post: Improvements in Bio4j Go Tools (Graph visualization)">Improvements in Bio4j Go Tools (Graph visualization) &raquo;</a>
       
     </p>
   </footer>

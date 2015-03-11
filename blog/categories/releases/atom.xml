@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Releases | bio4j]]></title>
   <link href="http://bio4j.com/blog/categories/releases/atom.xml" rel="self"/>
   <link href="http://bio4j.com/"/>
-  <updated>2015-02-19T15:44:32+01:00</updated>
+  <updated>2015-03-11T20:48:41+01:00</updated>
   <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
@@ -93,11 +93,11 @@ I have to admit it, I never was a fan of it and it was about time to do it. So n
 
 <p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong>:</p>
 
-<p><a href="/images/bio4j08first20RelTypes.png"><img src="/images/bio4j08first20RelTypes.png"></a></p>
+<p><a href="/images/bio4j08first20RelTypes.png">{% img /images/bio4j08first20RelTypes.png %}</a></p>
 
 <p>Here, the same thing but for the <strong>first 20 Node types</strong>:</p>
 
-<p><a href="/images/bio4j08first20NodeTypes.png"><img src="/images/bio4j08first20NodeTypes.png"></a></p>
+<p><a href="/images/bio4j08first20NodeTypes.png">{% img /images/bio4j08first20NodeTypes.png %}</a></p>
 
 <p>You can also check these two files including the numbers for all the existing types:</p>
 
@@ -195,11 +195,11 @@ Just as a heads up, here are the <strong>general numbers of Bio4j 0.7</strong> :
 
 <p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong> (click on the image below to check the interactive chart):</p>
 
-<p><a href="http://bio4j.com/imgs/release07/relsBarChart.html"><img src="/images/first20RelTypesChart-1024x797.png"></a></p>
+<p><a href="http://bio4j.com/imgs/release07/relsBarChart.html">{% img /images/first20RelTypesChart-1024x797.png %}</a></p>
 
 <p>Here, the same thing but for the <strong>first 20 Node types</strong> (click on the image below to check the interactive chart):</p>
 
-<p><a href="http://bio4j.com/imgs/release07/nodesBarChart.html"><img src="/images/first20NodeTypesChart-1024x794.png"></a></p>
+<p><a href="http://bio4j.com/imgs/release07/nodesBarChart.html">{% img /images/first20NodeTypesChart-1024x794.png %}</a></p>
 
 <p>You can also check these two files including the numbers from all existing types:</p>
 
@@ -276,7 +276,7 @@ Pablo</li>
 
 <h2 id="availability-in-all-regions">Availability in all Regions</h2>
 
-<p><a href="http://aws.amazon.com"><img class="right" src="http://d36cz9buwru1tt.cloudfront.net/logo_aws.gif"></a></p>
+<p><a href="http://aws.amazon.com">{% img right http://d36cz9buwru1tt.cloudfront.net/logo_aws.gif %}</a></p>
 
 <p>The AWS region you are based in won’t be a problem for using Bio4j anymore. EBS Snapshots have been created in all regions as well as CloudFormation templates have been updated so that they can now be used regardless the region where you want to create the stack. </p>
 
@@ -310,11 +310,11 @@ Pablo</li>
 
 <p>Using the data browser tab of the Web administration tool you can explore in real-time the contents of Bio4j!</p>
 
-<p><img src="/images/Bio4jDataBrowser-1024x699.png"></p>
+<p>{% img /images/Bio4jDataBrowser-1024x699.png %}</p>
 
 <p>In order to get visualizations like the one shown above, you should make use of <strong>visualization profiles</strong>. There you can specify different styles associated to customizable rules which can be expressed in terms of the node properties. Here’s a screenshot showing how the visualization profile I used for the visualization above looks like:</p>
 
-<p><img src="/images/Bio4jDataBrowserVizProfile-1024x752.png"></p>
+<p>{% img /images/Bio4jDataBrowserVizProfile-1024x752.png %}</p>
 
 <blockquote>
   <p>Just beware of one thing, the behavior of the tool is such that it does not distinguish between highly connected nodes and more isolated ones. Because of this, clicking nodes such as <strong>Trembl</strong> dataset node is not advisable unless you want to see it freeze forever -<em>this node has more than 15 million relationships linking it to proteins</em>.</p>
@@ -325,7 +325,7 @@ Pablo</li>
 <p>Cypher what?!</p>
 
 <blockquote>
-  <p><a href="http://docs.neo4j.org/chunked/milestone/cypher-query-lang.html"><img class="right" src="http://a1.twimg.com/profile_images/195275920/square-logo-no-text-2_normal.png"></a>
+  <p><a href="http://docs.neo4j.org/chunked/milestone/cypher-query-lang.html">{% img right http://a1.twimg.com/profile_images/195275920/square-logo-no-text-2_normal.png %}</a>
 <strong>Cypher **is a **declarative language</strong> which allows for expressive and efficient querying of the graph store without having to write traversers in code. It <strong>focuses on the clarity of expressing what to retrieve</strong> from a graph, <strong>not how to do it</strong>, in contrast to imperative languages like Java, and scripting languages like Gremlin.</p>
 </blockquote>
 
@@ -346,7 +346,7 @@ START d=node:dataset_name_index(dataset_name_index = "Swiss-Prot")
 <p>Gremlins? What do they have to do with Bio4j!?</p>
 
 <blockquote>
-  <p><a href="https://github.com/tinkerpop/gremlin/wiki"><img class="right" src="https://raw.github.com/tinkerpop/gremlin/master/doc/images/gremlin-standing-small.png"></a>
+  <p><a href="https://github.com/tinkerpop/gremlin/wiki">{% img right https://raw.github.com/tinkerpop/gremlin/master/doc/images/gremlin-standing-small.png %}</a>
 <strong>Gremlin is a graph traversal language that can be natively used in various JVM languages</strong> - it currently provides native support for Java, Groovy, and Scala. However, it can express in a few lines of code what it would take many, many lines of code in Java to express.</p>
 </blockquote>
 

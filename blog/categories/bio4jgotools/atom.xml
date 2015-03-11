@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bio4jGoTools | bio4j]]></title>
   <link href="http://bio4j.com/blog/categories/bio4jgotools/atom.xml" rel="self"/>
   <link href="http://bio4j.com/"/>
-  <updated>2015-02-19T15:44:32+01:00</updated>
+  <updated>2015-03-11T20:48:41+01:00</updated>
   <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
@@ -31,29 +31,29 @@ Even though I got stuck a couple of times trying to figure out how to use some o
 
 <p>When I first loaded the gexf file in Gephi without applying any kind of filters this is what I got:</p>
 
-<p><img src="/images/EHECMolFuncDraft.png"></p>
+<p>{% img /images/EHECMolFuncDraft.png %}</p>
 
 <p>As you (maybe) can see, the size of GO term nodes is proportional to the number of proteins they annotate; still it pretty much looks just like a big hair-ball…</p>
 
 <p>Then I applied the following set of filters:</p>
 
-<p><img src="/images/EHECMolFuncFilters.jpg"></p>
+<p>{% img /images/EHECMolFuncFilters.jpg %}</p>
 
 <p>in order to get the GO terms with at least 6 protein annotations plus the proteins which are annotating these terms <em>(their neighborhoods)</em>; and this is what it looked like (after applying a <em>Parallel Force Atlas</em> layout algorithm):</p>
 
-<p><img src="/images/EHECMolFuncPreliminary.png"></p>
+<p>{% img /images/EHECMolFuncPreliminary.png %}</p>
 
 <p>I decided then to get rid of the protein labels, since they were way too many and not so useful to be seen; for that I used the option: “Hide nodes/edges labels if not in filtered graph”.
 After doing this and applying the black background preview setting, the visualization finally looked pretty decent:</p>
 
-<p><img src="/images/EHECMolFuncFinal.png"></p>
+<p>{% img /images/EHECMolFuncFinal.png %}</p>
 
 <p>Please go <a href="http://bio4j.com/imgs/EHEC_MolecularFunction_SeaDragon/">here</a> to check the version exported with <a href="https://gephi.org/plugins/seadragon/">Sea Dragon plugin</a> where you can zoom and move around!</p>
 
 <p>Well, if you like the result <em>(or you don’t but you want to play with this and get a better viz!)</em>, I just uploaded a new version of <a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">Bio4j GO Tools</a> viewer where you can download the corresponding .gexf file for your GO annotations XML file. 
 Just press the button highlighted in the screenshot and enter the URL for your GO annotations XML file:</p>
 
-<p><img src="/images/gexfButtonBio4jGOToolsScreenshot.jpg"></p>
+<p>{% img /images/gexfButtonBio4jGOToolsScreenshot.jpg %}</p>
 
 <p>You can use the public EHEC GO annotation results URL I used as a sample for this post: </p>
 
@@ -136,7 +136,7 @@ The url of the app is still the <a href="http://gotools.bio4j.com:8080/Bio4jTest
 
 <p>Here you have a screenshot of a small sample of GO Annotation results:</p>
 
-<p><a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html"><img src="/images/goAnnotationGraphScreenShot-1024x725.jpg"></a></p>
+<p><a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">{% img /images/goAnnotationGraphScreenShot-1024x725.jpg %}</a></p>
 ]]></content>
   </entry>
   
@@ -157,7 +157,7 @@ The url of the app is still the <a href="http://gotools.bio4j.com:8080/Bio4jTest
   <li>Links to terms gene-ontology sites</li>
 </ul>
 
-<p><a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html"><img src="/images/screenShotBlogGoTools-1024x762.jpg"></a></p>
+<p><a href="http://gotools.bio4j.com:8080/Bio4jTestServer/Bio4jGoToolsWeb.html">{% img /images/screenShotBlogGoTools-1024x762.jpg %}</a></p>
 
 <p>In order to visualize your results just click on the “load file” button and select a XML file you previously generated using the GO Annotation service available in the first tab of the app.</p>
 ]]></content>
@@ -186,7 +186,7 @@ That’s where Bio4j Go Tools comes in as the first real-world example using Bio
 
 <p>A user-friendly <a href="https://github.com/pablopareja/Bio4jGoTools">AIR application</a> has been developed allowing the user to directly use these services abstracting the logic of the different requests.</p>
 
-<p><a href="https://github.com/pablopareja/Bio4jGoTools"><img src="/images/Bio4jGoToolsScreenShot.jpg" width="739" title="Bio4j Go Tools AIR app screenshot" ></a></p>
+<p><a href="https://github.com/pablopareja/Bio4jGoTools">{% img /images/Bio4jGoToolsScreenShot.jpg 739 Bio4j Go Tools AIR app screenshot %}</a></p>
 
 <p>Enjoy it  ;)</p>
 

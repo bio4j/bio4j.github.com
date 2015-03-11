@@ -9,7 +9,7 @@
   <meta name="author" content="oh no sequences!">
 
   
-  <meta name="description" content="Hi all,I just wanted to write a very short post informing about the changes in the Bio4jBasicRestServerTemplate.   Template what!? If that’s what y...">
+  <meta name="description" content="Hi everyone!There have already been a good few posts showing different uses and applications of Bio4j, but what about Bio4j data itself?Today I’m g...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +108,93 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/bio4j-0-7-some-numbers/">Bio4j 0.7, some numbers</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-03-05T13:28:27+01:00" pubdate>Mar 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi everyone!</p>
+
+<p>There have already been a good few posts showing different uses and applications of Bio4j, but what about Bio4j data itself?
+Today I’m going to show you some <strong>basic statistics</strong> about the different types of nodes and relationships Bio4j is made up of.
+Just as a heads up, here are the <strong>general numbers of Bio4j 0.7</strong> :</p>
+
+<ul>
+  <li>Number of Relationships: <strong>530.642.683</strong></li>
+  <li>Number of Nodes: <strong>76.071.411</strong></li>
+  <li>Relationship types: <strong>139</strong></li>
+  <li>Node types: <strong>38</strong></li>
+</ul>
+
+<p>Ok, but how are those relationships and nodes distributed among the different types?  In this chart you can see the <strong>first 20 Relationship types</strong> (click on the image below to check the interactive chart):</p>
+
+<p><a href="http://bio4j.com/imgs/release07/relsBarChart.html"><img src="/images/first20RelTypesChart-1024x797.png" /></a></p>
+
+<p>Here, the same thing but for the <strong>first 20 Node types</strong> (click on the image below to check the interactive chart):</p>
+
+<p><a href="http://bio4j.com/imgs/release07/nodesBarChart.html"><img src="/images/first20NodeTypesChart-1024x794.png" /></a></p>
+
+<p>You can also check these two files including the numbers from all existing types:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.7/statistics/Bio4j07NodeStatistics.txt">Node statistics</a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.7/statistics/Bio4j07RelStatistics.txt">Relationship statiscis</a></li>
+</ul>
+
+<p>All this data was obtained with the program <a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/GetNodeAndRelsStatistics.java"><strong>GetNodeAndRelsStatistics</strong></a>.</p>
+
+<p>Have a good day!</p>
+
+<p><a href="http://twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+
+<h2 id="comments">comments</h2>
+
+<ul>
+  <li>
+    <p><strong>Patrick Durusau</strong>
+Excellent!
+Question: When I checked at PubMed, I did not find Neo4j cited in any of the medical literature. I am not a medical professional but am interested in what might promote Bio4j in the medical research community?
+It is too good of a resource to be unnoticed.
+Patrick</p>
+
+    <ul>
+      <li><strong>ppareja</strong>
+Hi Patrick,
+I’m glad you liked the post.
+It’s true that Bio4j may not have caught the attention of many people yet who could definitely make a good use out of it. What are the reasons for that? Well, I think it could be a mixture of factors.
+Some people don’t like too much learning new technologies/strategies/workflows… and tend to stick to things they already know as long as possible – which is totally respectable and undestandable. Other people though, may simply not have found about it yet… It’s also possible that due to the lack of a well structured project documentation, potential users get lost in their way when trying to figure out what’s Bio4j about and/or miss the parts they could be interested in.
+I could keep on going with more possible reasons that are coming to my mind but still, couldn’t be really objective – it’s me who created this project  :D
+The point you bring up is actually one of the reasons why we value so much any sort of feedback for the project, (specially constructive ‘bad’ feedback that help us realize its weaknesses)
+Let me know if you come up with an idea to let more people know about Bio4j !
+Pablo</li>
+    </ul>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -987,45 +1074,6 @@ As always with everything we do at <a href="http://www.ohnosequences.com">Oh no 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/bio4j-incorporates-git-flow-model/">Bio4j incorporates git-flow model</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2011-09-19T13:16:15+02:00" pubdate>Sep 19<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hi all!
-So summer has almost come to an end and I have now time again to continue with the development of Bio4j project. 
-This autumn comes with plenty of new features that will be released in the next few months; the first of them: git-flow model.
-Bio4j is moving forward fast and it was already time to organize its development, supporting it with an adequate model. Here is where git-flow comes in, providing a simple but yet powerful development model where releases, features, hot-fixes… can be managed without having to go crazy putting them all together. 
-Here you have a general schema of the model:</p>
-
-<p><img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" /></p>
-
-<p>Since <a href="http://twitter.com/nvie">@nvie</a> wrote a really good post explaining the details of his model, I’ll just provide <a href="http://nvie.com/posts/a-successful-git-branching-model/">this link</a> to it  instead of giving a much poorer explanation than the one in the article.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1043,6 +1091,10 @@ Here you have a general schema of the model:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/bio4j-updates/">Bio4j: updates</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/bio4j-goes-to-gsoc-mentor-summit-2014/">Bio4j goes to GSoC mentor summit 2014</a>
       </li>
     
@@ -1056,10 +1108,6 @@ Here you have a general schema of the model:</p>
     
       <li class="post">
         <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/bio4j-modules-adapt-the-database-to-your-own-needs/">Bio4j modules, adapt the database to your own needs</a>
       </li>
     
   </ul>
