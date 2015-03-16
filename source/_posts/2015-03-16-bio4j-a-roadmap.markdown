@@ -14,41 +14,33 @@ tag:
 - overview
 ---
 
-## Bio4j: a roadmap
+# Bio4j: a roadmap
 
+> The scope for this is: what's going to happen during 2015 in Bio4j. Right now this is just a list of points I want covered. Feel free to add / remove things, or comment in the commits if you prefer.
+> 
+>  **ETA**: Estimated time of arrival
 
-### new data integrated
+## New data
 
-*ETA?*
+- **ETA?** Human genome data, other genomic data. support for stabbing queries etc
+- **ETA?** [Reactome](http://www.reactome.org/)
 
-- ucsc human genome data, other genomic data
-- reactome
-- ...
+## Scala API
 
-### Data release and distribution improvements
+- **ETA?** based on Scarph, the work of the nice guys at [oh no sequences!](http://ohnosequences.com). If you're working (or plan to) work with graphs in Scala, definitely keep an eye on this!! Incredibly expressive super typed. Complete interoperability with the Java API in terms of data
+- **ETA?** AWS deployment based on [Statika](http://ohnosequences.com/statika)
 
-*ETA?*
+## Release and data distribution improvements
 
-- in-sync automated data import and releases
-- improve usability from AWS
-- standard data import brings easier in-house deployment tool
+- **ETA?** in-sync automated data import and releases, every 6 months. Predictable, stable, coherent, automated.
+- **ETA?** small testing data subset based on SwissProt.
+<!-- - standard data import brings easier in-house deployment tool -->
 
-### A Scala API
+## Java API improvements
 
-*ETA?*
+- **ETA?** extend angulillos with more sophisticated combinators for traversals
+- **ETA?** use any Tinkerpop3 backend! use Bio4j with virtually _any_ graph db
 
-- based on Scarph, the work of the nice guys at [oh no sequences!](http://ohnosequences.com). If you're working (or plan to) work with graphs in Scala, definitely keep an eye on this!!
-- incredibly expressive super typed
-- completely interoperability with the Java API in terms of data
-- AWS deployment based on Statika
+## Documentation
 
-### Angulillos improvements
-
-*ETA?*
-
-- use any Tinkerpop3 backend! use Bio4j with virtually _any_ graph db
-- extend angulillos with more sophisticated combinators for traversals
-
-### Automated testing?
-
-*ETA?*
+- **ETA?** examples for every graph, model docs integrated with the source code
