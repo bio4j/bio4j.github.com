@@ -44,3 +44,15 @@ tag:
 ## Documentation
 
 - **ETA?** examples for every graph, model docs integrated with the source code
+ 
+## Dataviz
+
+In principle they would all be data visualizations that don't imply server requests. _(That doesn't mean that we won't be developing webapps in the future but we can first get a lot from what we already have without complicating things much more)_ We could include:
+
+ - A few _dashboards_ built with [dc.js](http://dc-js.github.io/dc.js/) This kind of dataviz is quite nice to play with and people generally just love it _(even though they might not understand what's going on too much and they just click randomly at the charts to see what happens... :) )_
+ - We should definitely have some sort of minimally interactive visualization of Bio4j data model, IMHO this is crucial not only for people that are willing to use Bio4j but also to get the big picture of what kind of data is included in the database.
+ - A set of biologically-wise interesting/useful visualizations _( @rtobes @marina-manrique @epareja @eparejatobes please some help here! ;) )_
+ 
+ ## Neo4j distribution  
+
+I think this would be very important in order to regain some momentum for the project. The workload to get this running should not be much and, in turn, the benefits in terms of both visibility and potential engagements would be quite big.
