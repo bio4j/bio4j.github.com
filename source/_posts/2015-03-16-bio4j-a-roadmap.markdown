@@ -42,6 +42,7 @@ tag:
 
 - **ETA?** in-sync automated data import and releases, every 6 months. Predictable, stable, coherent, automated.
 - **ETA?** small testing data subset based on SwissProt.
+
 <!-- - standard data import brings easier in-house deployment tool -->
 
 ## Java API improvements
