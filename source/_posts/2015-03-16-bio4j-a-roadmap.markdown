@@ -24,60 +24,56 @@ tag:
 
 ## New data
 
-**People** [@eparejatobes][@eparejatobes] [@rtobes][@rtobes] [@marina-manrique][@marina-manrique] [@epareja][@epareja]
+We are focused on bringing more genomics data to Bio4j. We are already working on ways of modeling sequences and position-based (annotations) data in a graph paradigm, which we will use for the integration of Human genome data, including assemblies and annotations integrated with the rest of Bio4j graphs.
 
-- **ETA?** Human genome data, other genomic data. support for stabbing queries etc
-- **ETA?** [Reactome](http://www.reactome.org/)
+[Reactome][Reactome] is a possibility, as sequence data: RefSeq? others?
 
-## Scala API
+- **People** [@eparejatobes][@eparejatobes] [@rtobes][@rtobes] [@marina-manrique][@marina-manrique] [@epareja][@epareja]
+- **ETA** end of April for the human genome data?
 
-**People** [@eparejatobes][@eparejatobes] [@laughedelic][@laughedelic]
+## Bio4j Scala API
 
-- **ETA?** based on Scarph, the work of the nice guys at [oh no sequences!](http://ohnosequences.com). If you're working (or plan to) work with graphs in Scala, definitely keep an eye on this!! Incredibly expressive super typed. Complete interoperability with the Java API in terms of data
-- **ETA?** AWS deployment based on [Statika](http://ohnosequences.com/statika)
+Based on _Scarph_, the work of the nice guys at [oh no sequences!](http://ohnosequences.com). If you're working (or plan to) work with graphs in Scala, definitely keep an eye on this!! Incredibly expressive super typed. 
+
+Complete interoperability with the Java API in terms of data; data imported with the Java API will be accessible through the Scala API. We will work first on writing the model schema in Scarph, with AWS deployment based on [Statika](http://ohnosequences.com/statika) coming after that. We will maintain the two (Java and Scala) Bio4j schema representations in sync, making sure that you have access to the same graphs and data.
+
+- **People** [@eparejatobes][@eparejatobes] [@laughedelic][@laughedelic]
+- **ETA** May/June?
 
 ## Release and data distribution improvements
 
-**People** [@laughedelic][@laughedelic] [@eparejatobes][@eparejatobes] [@pablopareja][@pablopareja]
+We want our data distribution and releases to be more predictable, coherent and automated. There will be in-sync automated data import and releases for the Titan-based data distribution, every **6 months**. You will be able to specify statically which version of the imported data you want to use; for this we will develop a concept of data distribution, which will also depend on the import code that was ran to generate it. The import code will be separated from the Bio4j schema.
 
-- **ETA?** in-sync automated data import and releases, every 6 months. Predictable, stable, coherent, automated.
-- **ETA?** small testing data subset based on SwissProt.
+On a different angle, we are going to start offering a smaller data subset based on SwissProt, mainly for testing or exploratory purposes. We hope that this will lower the entry barrier for those who just want to play with Bio4j and see what it has to offer.
 
-<!-- - standard data import brings easier in-house deployment tool -->
+- **People** [@laughedelic][@laughedelic] [@eparejatobes][@eparejatobes] [@pablopareja][@pablopareja]
+- **ETA** September?
 
 ## Java API improvements
 
-**People** [@eparejatobes][@eparejatobes] [@laughedelic][@laughedelic]
+The work here will mostly be on taking Angulillos to 1.0 and and start the development of the 1.x series, which will have support for an even more expressive API.
 
-- **ETA?** extend angulillos with more sophisticated combinators for traversals
-- **ETA?** use any Tinkerpop3 backend! use Bio4j with virtually _any_ graph db
+For the 1.x series, we want to extend angulillos with more sophisticated combinators for traversals. Use any Tinkerpop3 backend! use Bio4j with virtually _any_ graph db. TinkerPop is now [Apache TinkerPop](https://tinkerpop.incubator.apache.org/).
+
+- **People** [@eparejatobes][@eparejatobes] [@laughedelic][@laughedelic]
+- **ETA** April for Angulillos 1.0, October? (depends on TinkerPop3) for Angulillos 1.x first releases
 
 ## Neo4j distribution
 
-**People** [@pablopareja][@pablopareja] [@eparejatobes][@eparejatobes]
+We could finish the implementation of angulillos-neo4j, write bio4j/bio4j-neo4j. Is this actually valuable? If we develop a version of angulillos capable of wrapping any Tinkerpop3-compatible graph DB, we could use the tinkerpop3 version of Neo4j with that.
 
-- **ETA?** Finish the implementation of angulillos-neo4j
-- **ETA?** write bio4j/bio4j-neo4j
-
-Is this actually valuable? If we develop a version of angulillos capable of wrapping any Tinkerpop3-compatible graph DB, we could use the tinkerpop3 version of Neo4j with that.
+- **People** [@pablopareja][@pablopareja] [@eparejatobes][@eparejatobes]
+- **ETA** October/November?
 
 ## Documentation
 
-[@eparejatobes][@eparejatobes] [@rtobes][@rtobes] [@pablopareja][@pablopareja] [@marina-manrique][@marina-manrique]
+Examples for every graph, model docs integrated with the source code. A paper; by the time this post gets public we should already have a preprint.
 
-- **ETA?** examples for every graph, model docs integrated with the source code
-- **ETA?** a paper; by the time this gets public we should already have a preprint
- 
-## Datavis
+- **People** [@eparejatobes][@eparejatobes] [@rtobes][@rtobes] [@pablopareja][@pablopareja] [@marina-manrique][@marina-manrique]
+- **ETA** April/May?
 
-**People** [@pablopareja][@pablopareja] [@rtobes][@rtobes] [@epareja][@epareja]
 
-In principle they would all be data visualizations that don't imply server requests. _(That doesn't mean that we won't be developing webapps in the future but we can first get a lot from what we already have without complicating things much more)_ We could include:
-
-- A few _dashboards_ built with [dc.js](http://dc-js.github.io/dc.js/) This kind of dataviz is quite nice to play with and people generally just love it _(even though they might not understand what's going on too much and they just click randomly at the charts to see what happens... :) )_
-- We should definitely have some sort of minimally interactive visualization of Bio4j data model, IMHO this is crucial not only for people that are willing to use Bio4j but also to get the big picture of what kind of data is included in the database.
-- A set of biologically-wise interesting/useful visualizations _( @rtobes @marina-manrique @epareja @eparejatobes please some help here! ;) )_
-
+<!-- links -->
 
 [@eparejatobes]: https://github.com/eparejatobes
 [@pablopareja]: https://github.com/pablopareja
@@ -85,4 +81,8 @@ In principle they would all be data visualizations that don't imply server reque
 [@rtobes]: https://github.com/rtobes
 [@marina-manrique]: https://github.com/marina-manrique
 [@epareja]: https://github.com/epareja
+
+[TinkerPop]: https://tinkerpop.incubator.apache.org/
+[Reactome]: http://www.reactome.org/
+
  
