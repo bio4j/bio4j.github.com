@@ -74,7 +74,13 @@ Examples for every graph, model docs integrated with the source code. A paper; b
 
 ## Bio4j 1.0
 
-The idea is that by the end of 2015 we should have a API-stable, tested, super-cool version of Bio4j which will be Bio4j 1.0.
+The idea is that by the end of 2015 we should have a API-stable, tested, super-cool version of Bio4j which will be Bio4j 1.0. We see as must-have for that
+
+1. a stable API and model, available in both Java and Scala versions
+2. comprehensive documentation and examples
+3. solid, easy to use tools for AWS deployment
+4. integrated data covering all the structured data needed for the most common Bioinformatics tasks
+5. automated periodic data releases
 
 
 <!-- links -->
