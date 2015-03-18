@@ -14,7 +14,9 @@ tag:
 - overview
 ---
 
-> The scope for this is: what's going to happen during 2015 in Bio4j. Right now this is just a list of points I want covered. Feel free to add / remove things, or comment in the commits if you prefer.
+> The scope for this is: what's going to happen during 2015 in Bio4j. The goal I see for this year is **Bio4j `1.0`**; what's so special about `1.0`? From wikipedia: _a major milestone, indicating that the software is "complete", that it has all major features, and is considered reliable enough for general release_. 
+> 
+> Right now this is just a list of points I want covered. Feel free to add / remove things, or comment in the commits if you prefer.
 > 
 >  **ETA**: Estimated time of arrival
 >  
@@ -69,6 +71,10 @@ Examples for every graph, model docs integrated with the source code. A paper; b
 
 - **People** [@eparejatobes][@eparejatobes] [@rtobes][@rtobes] [@pablopareja][@pablopareja] [@marina-manrique][@marina-manrique]
 - **ETA** April/May?
+
+## Bio4j 1.0
+
+The idea is that by the end of 2015 we should have a API-stable, tested, super-cool version of Bio4j which will be Bio4j 1.0.
 
 
 <!-- links -->
