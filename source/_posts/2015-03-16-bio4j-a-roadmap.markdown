@@ -14,8 +14,6 @@ tag:
 - overview
 ---
 
-# Bio4j: a roadmap
-
 > The scope for this is: what's going to happen during 2015 in Bio4j. Right now this is just a list of points I want covered. Feel free to add / remove things, or comment in the commits if you prefer.
 > 
 >  **ETA**: Estimated time of arrival
