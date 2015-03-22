@@ -16,16 +16,17 @@ A citable preprint in the [bioRxiv][bioRxiv] describing Bio4j went online yester
 
 - **[Bio4j: a high-performance cloud-enabled graph-based data platform][Bio4j preprint]**
 
-We hope will serve as a good introduction to what is Bio4j, and what it has to offer; especially so if, for getting a general idea of Bio4j, you would rather read prose than code. If you are using Bio4j for something that you want to publish, citing it is much easier now: all bioRxiv preprints are assigned a DOI. Comments, thoughts, opinions are all more than welcome. We will submit a paper based on this preprint to an open access journal. For completeness, here's the citation info and the abstract:
+We hope will serve as a good introduction to what is Bio4j, and what it has to offer; especially so if, for getting a general idea of Bio4j, you would rather read prose than code. If you are using Bio4j for something that you want to publish, citing it is much easier now: all bioRxiv preprints are assigned a DOI. Comments, thoughts, opinions are all more than welcome! We will submit a paper based on this preprint to an open access journal. For completeness, here's the citation info and the abstract:
 
 ----
+<br/>
 
-##### Bio4j: a high-performance cloud-enabled graph-based data platform
+### Bio4j: a high-performance cloud-enabled graph-based data platform
 
 _Pablo Pareja-Tobes, Raquel Tobes, Marina Manrique, Eduardo Pareja, Eduardo Pareja-Tobes_ <br/>
 **bioRxiv** -- **doi**: [10.1101/016758](http://dx.doi.org/10.1101/016758)
 
-##### Abstract
+<!-- ### Abstract -->
 
 **Background.** Next Generation Sequencing and other high-throughput technologies have brought a revolution to the bioinformatics landscape, by offering sheer amounts of data about previously unaccessible domains in a cheap and scalable way. However, fast, reproducible, and cost-effective data analysis at such scale remains elusive. A key need for achieving it is being able to access and query the vast amount of publicly available data, specially so in the case of knowledge-intensive, semantically rich data: incredibly valuable information about proteins and their functions, genes, pathways, or all sort of biological knowledge encoded in ontologies remains scattered, semantically and physically fragmented.
 
