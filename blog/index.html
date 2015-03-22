@@ -9,7 +9,7 @@
   <meta name="author" content="oh no sequences!">
 
   
-  <meta name="description" content="We’ve spent the past few months working really hard on Bio4j. There has not been a lot of updates here basically because there were too many new th...">
+  <meta name="description" content="A citable preprint in the bioRxiv describing Bio4j went online yesterday:  Bio4j: a high-performance cloud-enabled graph-based data platformIt serv...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +108,60 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/bio4j-preprint-available/">Bio4j preprint available</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2015-03-22T18:20:00+01:00" pubdate>Mar 22<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A citable preprint in the <a href="http://biorxiv.org/">bioRxiv</a> describing Bio4j went online yesterday:</p>
+
+<ul>
+  <li><strong><a href="http://biorxiv.org/content/early/2015/03/20/016758">Bio4j: a high-performance cloud-enabled graph-based data platform</a></strong></li>
+</ul>
+
+<p>It serves (we hope) as a good introduction to what is Bio4j, and what it has to offer; especially so if, for getting a general idea of Bio4j, you would rather read prose than code. If you are using Bio4j for something that you want to publish, citing it is much easier now: all bioRxiv preprints are assigned a DOI. Comments, thoughts, opinions are all more than welcome! We will submit a paper based on this preprint to an open access journal. For completeness, here’s the citation info and the abstract:</p>
+
+<hr />
+<p><br /></p>
+
+<h3 id="bio4j-a-high-performance-cloud-enabled-graph-based-data-platform">Bio4j: a high-performance cloud-enabled graph-based data platform</h3>
+
+<p><em>Pablo Pareja-Tobes, Raquel Tobes, Marina Manrique, Eduardo Pareja, Eduardo Pareja-Tobes</em> <br />
+<strong>bioRxiv</strong> – <strong>doi</strong>: <a href="http://dx.doi.org/10.1101/016758">10.1101/016758</a></p>
+
+<!-- ### Abstract -->
+
+<p><strong>Background.</strong> Next Generation Sequencing and other high-throughput technologies have brought a revolution to the bioinformatics landscape, by offering sheer amounts of data about previously unaccessible domains in a cheap and scalable way. However, fast, reproducible, and cost-effective data analysis at such scale remains elusive. A key need for achieving it is being able to access and query the vast amount of publicly available data, specially so in the case of knowledge-intensive, semantically rich data: incredibly valuable information about proteins and their functions, genes, pathways, or all sort of biological knowledge encoded in ontologies remains scattered, semantically and physically fragmented.</p>
+
+<p><strong>Methods and Results.</strong> Guided by this, we have designed and developed Bio4j. It aims to offer a platform for the integration of semantically rich biological data using typed graph models. We have modeled and integrated most publicly available data linked with proteins into a set of interdependent graphs. Data querying is possible through a data model aware Domain Specific Language implemented in Java, letting the user write typed graph traversals over the integrated data. A ready to use cloud-based data distribution, based on the Titan graph database engine is provided; generic data import code can also be used for in-house deployment.</p>
+
+<p><strong>Conclusion.</strong> Bio4j represents a unique resource for the current Bioinformatician, providing at once a solution for several key problems: data integration; expressive, high performance data access; and a cost-effective scalable cloud deployment model.</p>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -675,107 +729,6 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/bio4jexplorer-new-features-and-design/">Bio4jExplorer, new features and design!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2012-03-09T21:57:56+01:00" pubdate>Mar 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello everyone,</p>
-
-<p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
-
-<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="/images/bio4jExplorerScreenshot-1024x712.png" /></a></p>
-
-<h3 id="node--relationship-properties">Node &amp; Relationship properties</h3>
-
-<p>You can now check with Bio4jExplorer the properties that has either a node or relationship in the table situated on the lower part of the interface. Five columns are included:</p>
-
-<ul>
-  <li><strong>Name:</strong> property name</li>
-  <li><strong>Type:</strong> property type (<code>String</code>, <code>int</code>, <code>float</code>, <code>String[]</code>, …)</li>
-  <li><strong>Indexed:</strong> either the property is indexed or not (yes/no)</li>
-  <li><strong>Index name</strong>: name of the index associated to this property -if there’s any 
-<strong>Index name</strong>: type of the index associated to this property -if there’s any </li>
-</ul>
-
-<p><img src="/images/bio4jExplorerPropertiesTable.png" /></p>
-
-<h3 id="node--relationship-data-source">Node &amp; Relationship Data source</h3>
-
-<p>You can also see now from which source a Node or Relationship was imported, <em>some examples would be Uniprot, Uniref, GO, RefSeq…</em></p>
-
-<p><img src="/images/bio4jExplorerDataSourceLabel.png" /></p>
-
-<h3 id="relationships-name-property">Relationships Name property</h3>
-
-<p>With this new version you can directly check here the “internal” name of relationships without having to go to the respective javadoc documentation. </p>
-
-<p><img src="h/images/bio4jExplorerRelationshipsNameProperty.png" /></p>
-
-<p>This is quite useful when you are writing your Cypher or Gremlin queries, just check it, copy it, and paste it in your query.  An example using the relationship shown in the picture would be this query included in the <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet">Bio4j Cypher cheatsheet</a>:</p>
-
-<p><strong><em>Get proteins (accession and names) associated to an interpro motif (limited to 10 results)</em></strong></p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">&gt; 
-</span><span class="line">START i=node:interpro_id_index(interpro_id_index = "IPR023306")
-</span><span class="line"> MATCH i &lt;-[:**PROTEIN_INTERPRO**]- p
-</span><span class="line"> return p.accession, p.fullname, p.name, p.short_name
-</span><span class="line"> limit 10</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>The url for Bio4jExplorer is the same as before:</p>
-
-<ul>
-  <li><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html</strong></a></li>
-</ul>
-
-<p>In case you are interested on how the tool is implemented, please go to <a href="blog//2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships">the previous post about Bio4jExplorer</a> where you can find information about the different code repos and more info.</p>
-
-<p><strong>If you want to check the files including the hard-coded information regarding how nodes, relationships, and indexes are organized</strong>, and which is the input for the program which creates the AWS SimpleDB domain, I just uploaded them to the bio4j-public S3 bucket. Please click on their names to download them:</p>
-
-<ul>
-  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodesBio4j.txt"><strong>NodesBio4j.txt</strong></a></li>
-  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodeIndexesBio4j.txt"><strong>NodeIndexesBio4j.txt</strong></a></li>
-  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodePropertiesBio4j.txt"><strong>NodePropertiesBio4j.txt</strong></a></li>
-  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipsBio4j.txt"><strong>RelationshipsBio4j.txt</strong></a></li>
-  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipPropertiesBio4j.txt"><strong>RelationshipPropertiesBio4j.txt</strong></a></li>
-  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipIndexesBio4j.txt"><strong>RelationshipIndexesBio4j.txt</strong></a></li>
-</ul>
-
-<p>I wish you all a great weekend!</p>
-
-<p>I’ll have mine at the beach enjoying our great springy weather with lots of sun down here in Andalucia ;)</p>
-
-<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -791,6 +744,10 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/bio4j-preprint-available/">Bio4j preprint available</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/bio4j-updates/">Bio4j: updates</a>
       </li>
     
@@ -804,10 +761,6 @@ For that we used the file <strong>meged.dmp</strong> provided in the <a href="ft
     
       <li class="post">
         <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
       </li>
     
   </ul>

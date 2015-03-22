@@ -9,7 +9,7 @@
   <meta name="author" content="oh no sequences!">
 
   
-  <meta name="description" content="Hi all!So summer has almost come to an end and I have now time again to continue with the development of Bio4j project. This autumn comes with plen...">
+  <meta name="description" content="Hi!I just uploaded a new tool aimed to be used both as a reference manual and initial contact for Bio4j domain model: Bio4jExplorerBio4jExplorer al...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +108,65 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships/">Bio4jExplorer: familiarize yourself with Bio4j nodes and relationships </a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2011-10-10T19:19:03+02:00" pubdate>Oct 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi!</p>
+
+<p>I just uploaded a new tool aimed to be used both as a reference manual and initial contact for Bio4j domain model: <strong><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html">Bio4jExplorer</a></strong>
+Bio4jExplorer allows you to:</p>
+
+<ul>
+  <li>Navigate through all nodes and relationships</li>
+  <li>Access the javadocs of any node or relationship</li>
+  <li>Graphically explore the neighborhood of a node/relationship</li>
+  <li>Look up for the different indexes that may serve as an entry point for a node</li>
+  <li>Check incoming/outgoing relationships of a specific node</li>
+  <li>Check start/end nodes of a specific relationship</li>
+</ul>
+
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="https://s3-eu-west-1.amazonaws.com/pablo-tests/Bio4jExplorerScreenshot.jpg" /></a></p>
+
+<p>Both nodes and relationships in the graph visualization are clickable and lead to their respective record. Besides, you can choose between two different layout algorithms: Level layout and Circular layout; <em>(nodes are also draggable so that you can configure the layout as you wish)</em></p>
+
+<p>For those interested on how this was done, on the server side I created an <a href="http://aws.amazon.com/">AWS</a> <a href="http://aws.amazon.com/simpledb/">SimpleDB</a> database holding all the information about the model of Bio4j, i.e. everything regarding nodes, relationships, indexes… <em>(<a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/CreateSimpleDBModel.java">here</a> you can check the program used for creating this database using <a href="http://aws.amazon.com/sdkforjava/">java aws sdk</a>)</em>.
+Meanwhile, in the client side I used <a href="http://flare.prefuse.org/">Flare prefuse</a> AS3 library for the graph visualization.
+As always with everything we do at <a href="http://www.ohnosequences.com">Oh no sequences!</a>, everything taking part in this tool is open source. You can check the different code repositories at the following addresses:</p>
+
+<ul>
+  <li><a href="https://github.com/bio4j/Bio4jExplorer/tree/develop"><strong>Bio4jExplorer:</strong></a> Github repository for the AS3 client.</li>
+  <li><a href="https://github.com/bio4j/Bio4jExplorerServer/tree/develop"><strong>Bio4jExplorerServer:</strong></a> Github repository for the java web server.</li>
+  <li><a href="https://github.com/bio4j/Bio4jTools/tree/develop"><strong>Bio4jTools:</strong></a> Github repository including the program for creating the SimpleDB database.</li>
+</ul>
+
+<p>All kinds of feedback/suggestions are welcome ;)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -531,6 +590,10 @@ Thanks..</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/bio4j-preprint-available/">Bio4j preprint available</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/bio4j-updates/">Bio4j: updates</a>
       </li>
     
@@ -544,10 +607,6 @@ Thanks..</p>
     
       <li class="post">
         <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
       </li>
     
   </ul>

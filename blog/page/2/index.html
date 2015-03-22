@@ -9,7 +9,7 @@
   <meta name="author" content="oh no sequences!">
 
   
-  <meta name="description" content="Hi everyone!There have already been a good few posts showing different uses and applications of Bio4j, but what about Bio4j data itself?Today I’m g...">
+  <meta name="description" content="Hello everyone,I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both po...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,6 +108,107 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/bio4jexplorer-new-features-and-design/">Bio4jExplorer, new features and design!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-03-09T21:57:56+01:00" pubdate>Mar 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hello everyone,</p>
+
+<p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
+
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="/images/bio4jExplorerScreenshot-1024x712.png" /></a></p>
+
+<h3 id="node--relationship-properties">Node &amp; Relationship properties</h3>
+
+<p>You can now check with Bio4jExplorer the properties that has either a node or relationship in the table situated on the lower part of the interface. Five columns are included:</p>
+
+<ul>
+  <li><strong>Name:</strong> property name</li>
+  <li><strong>Type:</strong> property type (<code>String</code>, <code>int</code>, <code>float</code>, <code>String[]</code>, …)</li>
+  <li><strong>Indexed:</strong> either the property is indexed or not (yes/no)</li>
+  <li><strong>Index name</strong>: name of the index associated to this property -if there’s any 
+<strong>Index name</strong>: type of the index associated to this property -if there’s any </li>
+</ul>
+
+<p><img src="/images/bio4jExplorerPropertiesTable.png" /></p>
+
+<h3 id="node--relationship-data-source">Node &amp; Relationship Data source</h3>
+
+<p>You can also see now from which source a Node or Relationship was imported, <em>some examples would be Uniprot, Uniref, GO, RefSeq…</em></p>
+
+<p><img src="/images/bio4jExplorerDataSourceLabel.png" /></p>
+
+<h3 id="relationships-name-property">Relationships Name property</h3>
+
+<p>With this new version you can directly check here the “internal” name of relationships without having to go to the respective javadoc documentation. </p>
+
+<p><img src="h/images/bio4jExplorerRelationshipsNameProperty.png" /></p>
+
+<p>This is quite useful when you are writing your Cypher or Gremlin queries, just check it, copy it, and paste it in your query.  An example using the relationship shown in the picture would be this query included in the <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet">Bio4j Cypher cheatsheet</a>:</p>
+
+<p><strong><em>Get proteins (accession and names) associated to an interpro motif (limited to 10 results)</em></strong></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">&gt; 
+</span><span class="line">START i=node:interpro_id_index(interpro_id_index = "IPR023306")
+</span><span class="line"> MATCH i &lt;-[:**PROTEIN_INTERPRO**]- p
+</span><span class="line"> return p.accession, p.fullname, p.name, p.short_name
+</span><span class="line"> limit 10</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>The url for Bio4jExplorer is the same as before:</p>
+
+<ul>
+  <li><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><strong>http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html</strong></a></li>
+</ul>
+
+<p>In case you are interested on how the tool is implemented, please go to <a href="blog//2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships">the previous post about Bio4jExplorer</a> where you can find information about the different code repos and more info.</p>
+
+<p><strong>If you want to check the files including the hard-coded information regarding how nodes, relationships, and indexes are organized</strong>, and which is the input for the program which creates the AWS SimpleDB domain, I just uploaded them to the bio4j-public S3 bucket. Please click on their names to download them:</p>
+
+<ul>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodesBio4j.txt"><strong>NodesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodeIndexesBio4j.txt"><strong>NodeIndexesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/NodePropertiesBio4j.txt"><strong>NodePropertiesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipsBio4j.txt"><strong>RelationshipsBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipPropertiesBio4j.txt"><strong>RelationshipPropertiesBio4j.txt</strong></a></li>
+  <li><a href="https://s3-eu-west-1.amazonaws.com/bio4j-public/simple-db-files/RelationshipIndexesBio4j.txt"><strong>RelationshipIndexesBio4j.txt</strong></a></li>
+</ul>
+
+<p>I wish you all a great weekend!</p>
+
+<p>I’ll have mine at the beach enjoying our great springy weather with lots of sun down here in Andalucia ;)</p>
+
+<p><a href="http://www.twitter.com/pablopareja"><strong>@pablopareja</strong></a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1015,65 +1116,6 @@ In order to use it, just create a <a href="http://www.bio4j.com/docs/bio4jmodel/
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/10/bio4jexplorer-familiarize-yourself-with-bio4j-nodes-and-relationships/">Bio4jExplorer: familiarize yourself with Bio4j nodes and relationships </a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2011-10-10T19:19:03+02:00" pubdate>Oct 10<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hi!</p>
-
-<p>I just uploaded a new tool aimed to be used both as a reference manual and initial contact for Bio4j domain model: <strong><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html">Bio4jExplorer</a></strong>
-Bio4jExplorer allows you to:</p>
-
-<ul>
-  <li>Navigate through all nodes and relationships</li>
-  <li>Access the javadocs of any node or relationship</li>
-  <li>Graphically explore the neighborhood of a node/relationship</li>
-  <li>Look up for the different indexes that may serve as an entry point for a node</li>
-  <li>Check incoming/outgoing relationships of a specific node</li>
-  <li>Check start/end nodes of a specific relationship</li>
-</ul>
-
-<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="https://s3-eu-west-1.amazonaws.com/pablo-tests/Bio4jExplorerScreenshot.jpg" /></a></p>
-
-<p>Both nodes and relationships in the graph visualization are clickable and lead to their respective record. Besides, you can choose between two different layout algorithms: Level layout and Circular layout; <em>(nodes are also draggable so that you can configure the layout as you wish)</em></p>
-
-<p>For those interested on how this was done, on the server side I created an <a href="http://aws.amazon.com/">AWS</a> <a href="http://aws.amazon.com/simpledb/">SimpleDB</a> database holding all the information about the model of Bio4j, i.e. everything regarding nodes, relationships, indexes… <em>(<a href="https://github.com/bio4j/Bio4jTools/blob/develop/src/com/era7/bioinfo/bio4j/tools/CreateSimpleDBModel.java">here</a> you can check the program used for creating this database using <a href="http://aws.amazon.com/sdkforjava/">java aws sdk</a>)</em>.
-Meanwhile, in the client side I used <a href="http://flare.prefuse.org/">Flare prefuse</a> AS3 library for the graph visualization.
-As always with everything we do at <a href="http://www.ohnosequences.com">Oh no sequences!</a>, everything taking part in this tool is open source. You can check the different code repositories at the following addresses:</p>
-
-<ul>
-  <li><a href="https://github.com/bio4j/Bio4jExplorer/tree/develop"><strong>Bio4jExplorer:</strong></a> Github repository for the AS3 client.</li>
-  <li><a href="https://github.com/bio4j/Bio4jExplorerServer/tree/develop"><strong>Bio4jExplorerServer:</strong></a> Github repository for the java web server.</li>
-  <li><a href="https://github.com/bio4j/Bio4jTools/tree/develop"><strong>Bio4jTools:</strong></a> Github repository including the program for creating the SimpleDB database.</li>
-</ul>
-
-<p>All kinds of feedback/suggestions are welcome ;)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1091,6 +1133,10 @@ As always with everything we do at <a href="http://www.ohnosequences.com">Oh no 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/bio4j-preprint-available/">Bio4j preprint available</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/bio4j-updates/">Bio4j: updates</a>
       </li>
     
@@ -1104,10 +1150,6 @@ As always with everything we do at <a href="http://www.ohnosequences.com">Oh no 
     
       <li class="post">
         <a href="/blog/2013/11/new-bio4j-success-berkeley-phylogenomics-grant/">Berkeley Phylogenomics Group receives an NSF grant to develop a graph DB for Big Data challenges in genomics building on Bio4j</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/10/bio4j-09-the-billion-relationships-is-here/">Bio4j 0.9 the billion relationships are here!</a>
       </li>
     
   </ul>

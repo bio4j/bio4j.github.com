@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Data mining | bio4j]]></title>
   <link href="http://bio4j.com/blog/categories/data-mining/atom.xml" rel="self"/>
   <link href="http://bio4j.com/"/>
-  <updated>2015-03-11T20:48:41+01:00</updated>
+  <updated>2015-03-22T20:26:30+01:00</updated>
   <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
@@ -26,7 +26,7 @@
 
 <p>I decided to mine the data in order to find <strong>circuits/simple cycles of length 3</strong> where <strong>at least one protein is from Swiss-Prot dataset</strong>:</p>
 
-<p>{% img /images/PPICircuit.png %}</p>
+<p><img src="/images/PPICircuit.png"></p>
 
 <p>I would like to point out that the <strong>direction</strong> here <strong>is important</strong> and these two cycles:</p>
 
@@ -83,7 +83,7 @@ After running the program you get two files:</p>
 
 <p>Finally, I also created a really simple chart including the absolute frequency of the first 20 proteins with more occurrences in the cycles that were found.</p>
 
-<p>{% img /images/proteinsFrequencyChart.png %}</p>
+<p><img src="/images/proteinsFrequencyChart.png"></p>
 
 <p>Well, that’s all for now. Have a good day!</p>
 

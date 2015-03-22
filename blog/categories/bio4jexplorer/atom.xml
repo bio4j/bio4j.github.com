@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bio4jExplorer | bio4j]]></title>
   <link href="http://bio4j.com/blog/categories/bio4jexplorer/atom.xml" rel="self"/>
   <link href="http://bio4j.com/"/>
-  <updated>2015-03-11T20:48:41+01:00</updated>
+  <updated>2015-03-22T20:26:30+01:00</updated>
   <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
@@ -22,7 +22,7 @@
 
 <p>I’m happy to announce a new set of features for our tool Bio4jExplorer plus some changes in its design. I hope this may help both potential and current users to get a better understanding of Bio4j DB structure and contents.</p>
 
-<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html">{% img /images/bio4jExplorerScreenshot-1024x712.png %}</a></p>
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="/images/bio4jExplorerScreenshot-1024x712.png"></a></p>
 
 <h3 id="node--relationship-properties">Node &amp; Relationship properties</h3>
 
@@ -36,19 +36,19 @@
 <strong>Index name</strong>: type of the index associated to this property -if there’s any </li>
 </ul>
 
-<p>{% img /images/bio4jExplorerPropertiesTable.png %}</p>
+<p><img src="/images/bio4jExplorerPropertiesTable.png"></p>
 
 <h3 id="node--relationship-data-source">Node &amp; Relationship Data source</h3>
 
 <p>You can also see now from which source a Node or Relationship was imported, <em>some examples would be Uniprot, Uniref, GO, RefSeq…</em></p>
 
-<p>{% img /images/bio4jExplorerDataSourceLabel.png %}</p>
+<p><img src="/images/bio4jExplorerDataSourceLabel.png"></p>
 
 <h3 id="relationships-name-property">Relationships Name property</h3>
 
 <p>With this new version you can directly check here the “internal” name of relationships without having to go to the respective javadoc documentation. </p>
 
-<p>{% img h/images/bio4jExplorerRelationshipsNameProperty.png %}</p>
+<p><img src="h/images/bio4jExplorerRelationshipsNameProperty.png"></p>
 
 <p>This is quite useful when you are writing your Cypher or Gremlin queries, just check it, copy it, and paste it in your query.  An example using the relationship shown in the picture would be this query included in the <a href="https://github.com/bio4j/Bio4j/wiki/Bio4j-cypher-cheat-sheet">Bio4j Cypher cheatsheet</a>:</p>
 
@@ -108,7 +108,7 @@ Bio4jExplorer allows you to:</p>
   <li>Check start/end nodes of a specific relationship</li>
 </ul>
 
-<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html">{% img https://s3-eu-west-1.amazonaws.com/pablo-tests/Bio4jExplorerScreenshot.jpg %}</a></p>
+<p><a href="http://gotools.bio4j.com:8080/Bio4jExplorerServer/Bio4jExplorer.html"><img src="https://s3-eu-west-1.amazonaws.com/pablo-tests/Bio4jExplorerScreenshot.jpg"></a></p>
 
 <p>Both nodes and relationships in the graph visualization are clickable and lead to their respective record. Besides, you can choose between two different layout algorithms: Level layout and Circular layout; <em>(nodes are also draggable so that you can configure the layout as you wish)</em></p>
 

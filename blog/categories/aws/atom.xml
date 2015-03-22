@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AWS | bio4j]]></title>
   <link href="http://bio4j.com/blog/categories/aws/atom.xml" rel="self"/>
   <link href="http://bio4j.com/"/>
-  <updated>2015-03-11T20:48:41+01:00</updated>
+  <updated>2015-03-22T20:26:30+01:00</updated>
   <id>http://bio4j.com/</id>
   <author>
     <name><![CDATA[oh no sequences!]]></name>
@@ -98,29 +98,29 @@
 
 <p>So, let’s see how easy it actually is to create your stack. First you should go to the <code>CloudFormation</code> tab in the amazon console and click the button: <code>Create New Stack</code>:</p>
 
-<p>{% img /images/CloudFormationCreateStackScreenShot.jpg %}</p>
+<p><img src="/images/CloudFormationCreateStackScreenShot.jpg"></p>
 
 <p>You will see this new window now where you should choose the option <strong>Provide a template URL’</strong> and paste there the URL I just provided before. You should also give your stack a name filling the field <code>Stack name</code>. Then click <code>Continue</code>.</p>
 
-<p>{% img /images/CreateStackSecondStepScreenShot.jpg %}</p>
+<p><img src="/images/CreateStackSecondStepScreenShot.jpg"></p>
 
 <p>Ok, now you should be seeing this:</p>
 
-<p>{% img /images/CreateStackThirdStepScreenShot1.jpg %}</p>
+<p><img src="/images/CreateStackThirdStepScreenShot1.jpg"></p>
 
 <p>Provide then your key-pair name, availability zone, and finally enter the type of instance you want to launch.
 Once you clicked continue you’ll see a review of all the parameters you entered so far like:</p>
 
-<p>{% img /images/CreateStackFourthStepScreenShot1.jpg %}</p>
+<p><img src="/images/CreateStackFourthStepScreenShot1.jpg"></p>
 
 <p>Check everything is as you wish and click continue.
 You should be seeing then something like this:</p>
 
-<p>{% img /images/CreateStackFifthStepScreenShot.jpg %}</p>
+<p><img src="/images/CreateStackFifthStepScreenShot.jpg"></p>
 
 <p>Now you just have to wait for about 30 seconds until after refreshing the stack state changes to green color and says “CREATE_COMPLETE”. Click on the output tab and you will see the IP address you need to connect with SSH to your new instance.</p>
 
-<p>{% img /images/CreateStackSixthStepScreenShot.jpg %}</p>
+<p><img src="/images/CreateStackSixthStepScreenShot.jpg"></p>
 
 <p>So now you just have to connect to your instance and you should have your fresh backed Bio4j DB under the folder <code>/mnt/bio4j_volume/bio4jdb</code> ;)</p>
 
