@@ -16,7 +16,7 @@ A citable preprint in the [bioRxiv][bioRxiv] describing Bio4j went online yester
 
 - **[Bio4j: a high-performance cloud-enabled graph-based data platform][Bio4j preprint]**
 
-We hope will serve as a good introduction to what is Bio4j, and what it has to offer; especially so if, for getting a general idea of Bio4j, you would rather read prose than code. If you are using Bio4j for something that you want to publish, citing it is much easier now: all bioRxiv preprints are assigned a DOI. Comments, thoughts, opinions are all more than welcome! We will submit a paper based on this preprint to an open access journal. For completeness, here's the citation info and the abstract:
+It serves (we hope) as a good introduction to what is Bio4j, and what it has to offer; especially so if, for getting a general idea of Bio4j, you would rather read prose than code. If you are using Bio4j for something that you want to publish, citing it is much easier now: all bioRxiv preprints are assigned a DOI. Comments, thoughts, opinions are all more than welcome! We will submit a paper based on this preprint to an open access journal. For completeness, here's the citation info and the abstract:
 
 ----
 <br/>
