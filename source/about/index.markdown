@@ -10,7 +10,7 @@ Bio4j is a project initiated and led by **[Oh no sequences!](http://ohnosequence
 ### core team
 
 - **[Pablo Pareja](http://ohnosequences.com/ppareja)** _project leader and main developer_
-- **[Eduardo Pareja-Tobes](http://ohnosequences.com/eparejatobes)** _technical lead, architecture_
+- **[Eduardo Pareja-Tobes](http://ohnosequences.com/eparejatobes)** _project leader, technical lead, architecture_
 - **[Raquel Tobes](http://ohnosequences.com/rtobes)** _biological data integration_
 - **[Alexey Alekhin](http://ohnosequences.com/aalekhin)** _Statika and release process, Scala, developer_
 - **[Marina Manrique](http://ohnosequences.com/mmanrique)** _biological data integration_

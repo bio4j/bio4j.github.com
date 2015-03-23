@@ -14,4 +14,8 @@ For more, go to [bio4j/bio4j](https://github.com/bio4j/bio4j) at GitHub.
 
 ##  Licensing
 
-Bio4j is an **open source** platform released under the [**AGPLv3**](http://www.gnu.org/licenses/agpl.html) license.
+Bio4j is an **open source** platform released under the **[AGPLv3](http://www.gnu.org/licenses/agpl.html)** license.
+
+## Citing Bio4j
+
+**Bio4j: a high-performance cloud-enabled graph-based data platform.** Pablo Pareja-Tobes, Raquel Tobes, Marina Manrique, Eduardo Pareja, Eduardo Pareja-Tobes <br /> *bioRxiv* -- **doi** [10.1101/016758](http://dx.doi.org/10.1101/016758)
