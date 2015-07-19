@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Bio4j Titan is here"
+date: 2014-10-21 17:18
+comments: false
+author: Pablo Pareja Tobes
+categories:
+- News
+tag:
+- code
+- news
+- release
+- titan
+---
+
+We are really excited to announce that **Bio4j** finally has a **[Titan](http://thinkaurelius.github.io/titan/)** graph database distribution ready to be used! 
+With **bio4j-titan-0.4.0** we open the way to more yet to come using this technology. 
+It's been a while since the last blog post but that does not mean than things slowed down on our side, all on the contrary, we actually have many things to get you updated on. 
+Here's a short sum up:
+
+- Angulillos
+  - angulillos-titan
+- Statika
+
+- Distribution independent data model 
+
+- Distribution independent importing code!
+
+- Some data model changes
+
+- Adding schema restrictions to the DB
